@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./style/style.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <section>
+        <h1>Challenger</h1>
+        <h1>Surviving</h1>
+        <h1>Islands:</h1>
+        <h1>E級玩家</h1>
+        <p>2023 師大資工營 NTNU CSIE CAMP</p>
+        <button>立即報名</button>
+        <br />
+      </section>
     </div>
   );
-}
+};
 
 export default App;
