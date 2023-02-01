@@ -13,3 +13,8 @@ node --version
 npx create-react-app my-app
 ```
 安裝後約有200MB
+下載後，執行以下指令
+```
+cd my-app
+npm start
+```
