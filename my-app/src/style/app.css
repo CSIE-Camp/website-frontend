@@ -1,0 +1,34 @@
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+section {
+  display: flex;
+}
+section .left {
+  padding: 1rem;
+}
+section .right {
+  flex-direction: column;
+  text-align: justify;
+}
+section .right h1 {
+  letter-spacing: 1rem;
+  color: #ffffff;
+}
+section .right h1 span {
+  letter-spacing: 2rem;
+}
+section .right h1 span.C {
+  color: yellow;
+}
+section .right h1 span.S {
+  color: #d10000;
+}
+section .right h1 span.I {
+  color: #69bfba;
+}
+section .right h1 span.E {
+  color: #edb4cf;
+}/*# sourceMappingURL=app.css.map */

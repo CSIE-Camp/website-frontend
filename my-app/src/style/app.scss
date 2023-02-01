@@ -1,0 +1,34 @@
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+section {
+  display: flex;
+  .left {
+    padding: 1rem;
+  }
+  .right {
+    flex-direction: column;
+    text-align: justify;
+    h1 {
+      //font-family: "ToronoGlitchSans H4", sans-serif;
+      letter-spacing: 1rem;
+      color: #ffffff;
+      span {
+        letter-spacing: 2rem;
+      }
+      span.C {
+        color: yellow;
+      }
+      span.S {
+        color: #d10000;
+      }
+      span.I {
+        color: #69bfba;
+      }
+      span.E {
+        color: #edb4cf;
+      }
+    }
+  }
+}

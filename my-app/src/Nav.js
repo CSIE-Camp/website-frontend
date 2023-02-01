@@ -2,16 +2,28 @@ import React from "react";
 const Nav = () => {
   return (
     <div>
-      <div>
-        <img src="" alt="" />
+      <div class="nav">
+        <div class="logo">
+          <a href="#">
+            <img src={require("./image/Logo.png")} alt="Background" />
+          </a>
+        </div>
+        <ul>
+          <li>
+            <a href="#">營隊介紹</a>
+          </li>
+          <li>
+            <a href="#">報名資訊</a>
+          </li>
+          <li>
+            <a href="#">更多</a>
+          </li>
+          <li>
+            <a href="#">登入/註冊</a>
+          </li>
+        </ul>
+        <br />
       </div>
-      <ul>
-        <li>營隊介紹</li>
-        <li>報名資訊</li>
-        <li>更多</li>
-        <li>登入/註冊</li>
-      </ul>
-      <br />
     </div>
   );
 };

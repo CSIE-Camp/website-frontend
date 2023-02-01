@@ -1,4 +1,55 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  background-image: url(image/Blue_background.png);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+div.nav {
+  background: white;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  flex: 5 1 400px;
+}
+div.nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+div.nav ul li {
+  padding: 10px;
+}
+div.nav ul li a {
+  display: flex;
+  padding: 1rem;
+  background: rgba(183, 183, 183, 0.3);
+  color: black;
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  border-radius: 18px;
+}
+div.nav ul li a:hover {
+  background: #000000;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
