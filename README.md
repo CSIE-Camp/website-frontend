@@ -12,3 +12,4 @@ node --version
 ``` 
 npx create-react-app my-app
 ```
+安裝後約有200MB
