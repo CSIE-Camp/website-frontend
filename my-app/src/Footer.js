@@ -20,6 +20,7 @@ const Footer = () => {
             <img src={require("./image/messenger.png")} alt="messenger" />
           </a>
         </div>
+        <p class="Copyright">Copyright © 2023 All rights reserved</p>
       </div>
     </div>
   );

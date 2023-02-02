@@ -1,3 +1,11 @@
+@font-face {
+  font-family: ToronoGlitchSans H4;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
+}
+@font-face {
+  font-family: ToronoGlitchSans H2;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono\ Glitch\ SansH2.otf);
+}
 h1 {
   font-size: 2rem;
   text-align: center;
@@ -10,25 +18,31 @@ div.card section.left {
   padding: 1rem;
 }
 div.card section.left img {
-  width: 60vw;
+  padding: 30px;
+  width: 45vw;
+  height: 45vw;
 }
 div.card section.right {
+  padding: 100px 30px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-content: space-around;
-  width: 40vw;
+  align-items: flex-start;
+  width: 55vw;
 }
 div.card section.right h1 {
   font-family: "ToronoGlitchSans H4", sans-serif;
+  padding: 5px;
+  font-weight: 900;
   letter-spacing: 1rem;
   color: #ffffff;
 }
 div.card section.right h1 span {
-  letter-spacing: 2rem;
+  font-family: "ToronoGlitchSans H4", sans-serif;
+  letter-spacing: 0.35rem;
 }
 div.card section.right h1 span.C {
-  color: yellow;
+  color: #F2B24B;
 }
 div.card section.right h1 span.S {
   color: #d10000;
@@ -40,7 +54,8 @@ div.card section.right h1 span.E {
   color: #edb4cf;
 }
 div.card section.right p {
-  font-family: "Source Code Pro";
+  letter-spacing: 0.25rem;
+  font-family: "Source Code Pro", monospace;
   font-style: normal;
   font-weight: 600;
   font-size: 1.5rem;
@@ -49,20 +64,18 @@ div.card section.right p {
   color: #FFFFFF;
 }
 div.card section.right button {
+  border: 5px solid #FFFFFF;
   color: #FFFFFF;
   font-family: "ToronoGlitchSans H2";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 60px;
   line-height: 72px;
+  letter-spacing: 1rem;
   font-size: 2.5rem;
-  border-radius: 18px;
   background: rgba(217, 217, 217, 0.35);
   border: 7px solid #FFFFFF;
   border-radius: 30px;
 }
 div.card section.right button:hover {
-  color: #000000;
-  background: rgba(217, 217, 217, 0.5);
+  color: #F7D967;
+  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
   cursor: pointer;
 }/*# sourceMappingURL=app.css.map */

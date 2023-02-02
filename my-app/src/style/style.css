@@ -7,9 +7,6 @@
 
 body {
   background-image: url(image/Blue_background.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 h1,
@@ -59,4 +56,4 @@ div.nav ul li a {
 div.nav ul li a:hover {
   background: #000000;
   color: #ffffff;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

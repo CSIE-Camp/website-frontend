@@ -1,7 +1,6 @@
 import React from "react";
 import "./style/style.css";
 import "./style/app.css";
-
 const App = () => {
   return (
     <div>
@@ -24,8 +23,8 @@ const App = () => {
           </h1>
 
           <p>2023 師大資工營 NTNU CSIE CAMP</p>
-          <button>立即報名</button>
-          <br />
+
+          <button class="register">立即報名</button>
         </section>
       </div>
     </div>
