@@ -9,8 +9,16 @@ const Footer = () => {
         <h1>聯絡方式</h1>
         <p>example@gmail.com</p>
         <p>0900-000000</p>
-        <div>
-          <img src="" alt="" />
+        <div class="icon">
+          <a href="#">
+            <img src={require("./image/fb.png")} alt="fb" />
+          </a>
+          <a href="#">
+            <img src={require("./image/ig.png")} alt="ig" />
+          </a>
+          <a href="#">
+            <img src={require("./image/messenger.png")} alt="messenger" />
+          </a>
         </div>
       </div>
     </div>

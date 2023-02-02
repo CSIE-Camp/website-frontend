@@ -7,7 +7,7 @@ const App = () => {
     <div>
       <div class="card">
         <section class="left">
-          <img src={require("./image/Photos.png")} alt="" />
+          <img src={require("./image/Photos.png")} alt="Photo Wall" />
         </section>
         <section class="right">
           <h1>

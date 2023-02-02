@@ -1,7 +1,32 @@
 div.card_foot {
     background: #ffffff;
-}
+    display: flex;
+    flex-flow: column wrap;
 
-h1 {
-    font-size: 3rem;
+    h1 {
+        font-family: 'ToronoGlitchSans H2';
+        font-style: normal;
+        font-weight: 900;
+        line-height: 48px;
+        font-size: 2.5rem;
+    }
+
+    p {
+        text-align: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+
+    div.icon {
+        display: flex;
+        justify-content: center;
+
+        a {
+            img {
+                padding: 25px;
+            }
+        }
+    }
 }
