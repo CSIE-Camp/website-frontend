@@ -4,9 +4,11 @@
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
 }
+
 body {
   background-image: (url(image/Blue_background.png));
 }
+
 h1,
 h2,
 h3,
@@ -15,13 +17,19 @@ h5,
 h6 {
   font-weight: normal;
 }
+
 a {
   text-decoration: none;
 }
 
 div.nav {
   background: white;
-  //width: 90%;
+  height: 10vw;
+
+  img {
+    height: 5vw;
+  }
+
   padding: 1rem 1rem;
   display: flex;
   align-items: center;
@@ -32,8 +40,10 @@ div.nav {
 
     list-style-type: none;
     justify-content: space-around;
+
     li {
       padding: 10px;
+
       a {
         display: flex;
 
@@ -48,6 +58,7 @@ div.nav {
 
         border-radius: 18px;
       }
+
       a:hover {
         background: #000000;
         color: #ffffff;

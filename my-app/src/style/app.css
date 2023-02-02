@@ -3,32 +3,59 @@ h1 {
   text-align: center;
 }
 
-section {
+div.card {
   display: flex;
 }
-section .left {
+div.card section.left {
   padding: 1rem;
 }
-section .right {
-  flex-direction: column;
-  text-align: justify;
+div.card section.left img {
+  width: 60vw;
 }
-section .right h1 {
+div.card section.right {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: 40vw;
+}
+div.card section.right h1 {
+  font-family: "ToronoGlitchSans H4", sans-serif;
   letter-spacing: 1rem;
   color: #ffffff;
 }
-section .right h1 span {
+div.card section.right h1 span {
   letter-spacing: 2rem;
 }
-section .right h1 span.C {
+div.card section.right h1 span.C {
   color: yellow;
 }
-section .right h1 span.S {
+div.card section.right h1 span.S {
   color: #d10000;
 }
-section .right h1 span.I {
+div.card section.right h1 span.I {
   color: #69bfba;
 }
-section .right h1 span.E {
+div.card section.right h1 span.E {
   color: #edb4cf;
+}
+div.card section.right p {
+  color: #FFFFFF;
+}
+div.card section.right button {
+  color: #FFFFFF;
+  font-family: "ToronoGlitchSans H2";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 72px;
+  font-size: 2.5rem;
+  border-radius: 18px;
+  background: rgba(217, 217, 217, 0.35);
+  border: 7px solid #FFFFFF;
+  border-radius: 30px;
+}
+div.card section.right button:hover {
+  color: #000000;
+  background: rgba(217, 217, 217, 0.5);
+  cursor: pointer;
 }/*# sourceMappingURL=app.css.map */

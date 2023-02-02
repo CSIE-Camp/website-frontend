@@ -2,33 +2,79 @@ h1 {
   font-size: 2rem;
   text-align: center;
 }
-section {
+
+div.card {
   display: flex;
-  .left {
+
+  section.left {
     padding: 1rem;
+
+    img {
+      width: 60vw;
+    }
+
+    //justify-content: center;
   }
-  .right {
+
+  section.right {
+    display: flex;
     flex-direction: column;
-    text-align: justify;
+    align-content: space-around;
+    width: 40vw;
+
     h1 {
-      //font-family: "ToronoGlitchSans H4", sans-serif;
+      // 字體
+      font-family: "ToronoGlitchSans H4", sans-serif;
       letter-spacing: 1rem;
       color: #ffffff;
+
       span {
         letter-spacing: 2rem;
       }
+
       span.C {
         color: yellow;
       }
+
       span.S {
         color: #d10000;
       }
+
       span.I {
         color: #69bfba;
       }
+
       span.E {
         color: #edb4cf;
       }
+    }
+
+    p {
+
+      color: #FFFFFF
+    }
+
+    button {
+      color: #FFFFFF;
+      font-family: 'ToronoGlitchSans H2';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 60px;
+      line-height: 72px;
+
+
+      font-size: 2.5rem;
+      border-radius: 18px;
+
+      background: rgba(217, 217, 217, 0.35);
+      border: 7px solid #FFFFFF;
+      border-radius: 30px;
+    }
+
+    button:hover {
+      color: #000000;
+      background: rgba(217, 217, 217, 0.5);
+      cursor: pointer;
     }
   }
 }

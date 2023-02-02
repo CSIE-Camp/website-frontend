@@ -24,10 +24,14 @@ a {
 
 div.nav {
   background: white;
+  height: 10vw;
   padding: 1rem 1rem;
   display: flex;
   align-items: center;
   flex: 5 1 400px;
+}
+div.nav img {
+  height: 5vw;
 }
 div.nav ul {
   display: flex;
