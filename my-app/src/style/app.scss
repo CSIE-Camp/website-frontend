@@ -32,53 +32,62 @@ div.card {
     padding: 100px 30px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
-    align-items: flex-start;
-    // align-content: space-around;
     width: 55vw;
 
-    h1 {
-      font-family: "ToronoGlitchSans H4", sans-serif;
-      padding: 5px;
-      font-weight: 900;
-      letter-spacing: 1rem;
-      color: #ffffff;
+    div.words {
 
-      span {
+      align-items: flex-start;
+      display: flex;
+      flex-flow: column;
+
+      h1 {
         font-family: "ToronoGlitchSans H4", sans-serif;
-        letter-spacing: 0.35rem;
+        padding: 5px;
+        font-weight: 900;
+        letter-spacing: 1rem;
+        color: #ffffff;
+
+        span {
+          font-family: "ToronoGlitchSans H4", sans-serif;
+          letter-spacing: 0.35rem;
+        }
+
+        span.C {
+          color: #F2B24B;
+        }
+
+        span.S {
+          color: #d10000;
+        }
+
+        span.I {
+          color: #69bfba;
+        }
+
+        span.E {
+          color: #edb4cf;
+        }
       }
 
-      span.C {
-        color: #F2B24B;
-      }
+      p {
+        text-align-last: center;
+        letter-spacing: 3px;
+        font-family: 'Source Code Pro', monospace;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 44px;
 
-      span.S {
-        color: #d10000;
-      }
-
-      span.I {
-        color: #69bfba;
-      }
-
-      span.E {
-        color: #edb4cf;
+        text-align: center;
+        color: #FFFFFF
       }
     }
 
-    p {
-      letter-spacing: 0.25rem;
-      font-family: 'Source Code Pro', monospace;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 1.5rem;
-      line-height: 44px;
-
-      text-align: center;
-      color: #FFFFFF
-    }
-
-    button {
+    button.register {
+      text-align: justify;
+      padding: 10px;
       border: 5px solid #FFFFFF;
       color: #FFFFFF;
       font-family: 'ToronoGlitchSans H2';
@@ -86,7 +95,7 @@ div.card {
       letter-spacing: 1rem;
       font-size: 2.5rem;
       background: rgba(217, 217, 217, 0.35);
-      border: 7px solid #FFFFFF;
+
       border-radius: 30px;
     }
 

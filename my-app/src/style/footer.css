@@ -1,9 +1,9 @@
-div.card_foot {
+footer {
   background: #ffffff;
   display: flex;
   flex-flow: column wrap;
 }
-div.card_foot h1 {
+footer h1 {
   padding: 10px;
   font-family: "ToronoGlitchSans H2";
   font-style: normal;
@@ -11,7 +11,7 @@ div.card_foot h1 {
   line-height: 48px;
   font-size: 2.5rem;
 }
-div.card_foot p {
+footer p {
   padding: 5px;
   text-align: center;
   font-family: "Inter";
@@ -19,17 +19,17 @@ div.card_foot p {
   font-weight: 400;
   font-size: 1.5rem;
 }
-div.card_foot p.Copyright {
+footer p.Copyright {
   margin: 5px;
   padding: 5px;
   font-size: 1rem;
   line-height: 1rem;
 }
-div.card_foot div.icon {
+footer div.icon {
   display: flex;
   justify-content: center;
 }
-div.card_foot div.icon a img {
+footer div.icon a img {
   width: 100px;
   padding: 25px;
 }/*# sourceMappingURL=footer.css.map */
