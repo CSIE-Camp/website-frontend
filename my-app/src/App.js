@@ -7,11 +7,13 @@ const App = () => {
       <main>
         <div class="card">
           <section class="left">
-            <img
-              src={require("./image/Photos.png")}
-              title="歷屆資工營照片"
-              alt="Photo Wall"
-            />
+            <div class="img_container">
+              <img
+                src={require("./image/Photos.png")}
+                title="歷屆資工營照片"
+                alt="Photo Wall"
+              />
+            </div>
           </section>
           <section class="right">
             <div class="words">

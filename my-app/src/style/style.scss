@@ -5,6 +5,7 @@
   font-family: "Noto Sans TC", sans-serif;
 }
 
+
 body {
   z-index: 1;
   background-image: (url(image/Blue_background.png));
@@ -25,7 +26,7 @@ a {
 
 nav {
   background: white;
-  height: 10vw;
+  height: 10%;
   position: sticky;
   top: 0;
   z-index: 5;
@@ -68,4 +69,25 @@ nav {
       }
     }
   }
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3091ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0c1794;
 }

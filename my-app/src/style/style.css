@@ -25,7 +25,7 @@ a {
 
 nav {
   background: white;
-  height: 10vw;
+  height: 10%;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -61,4 +61,25 @@ nav ul li a {
 nav ul li a:hover {
   background: #000000;
   color: #ffffff;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3091ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0c1794;
 }/*# sourceMappingURL=style.css.map */
