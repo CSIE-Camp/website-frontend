@@ -27,3 +27,6 @@ npm start
 
 - 要寫的 html 會放在 App.js 的 div 標籤裡面，div container 純粹用來包住 html ，沒有其他用途。
 
+## Problem 
+- 報名按鈕的位置
+- CSIE 的字樣對齊
