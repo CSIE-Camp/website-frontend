@@ -25,7 +25,7 @@ npm start
 
 - 所有要編輯的都方在 `src` 裡面，其他資料夾盡量不要動。
 
-- 要寫的 html 會放在 `App.js` 的 `div` 標籤裡面，div container 純粹用來包住 `html` ，沒有其他用途。
+- 要寫的 html 會放在 `App.js` 的 `div` 標籤裡面，div container 純粹用來包住 `html` 。
 
 ## Problem 
 * 報名按鈕的位置
