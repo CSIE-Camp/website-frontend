@@ -14,16 +14,12 @@ node --version
 
 指令
 
-```
-npx create-react-app my-app
-```
-
-- 安裝後約有 200MB
-- 下載後，進到資料夾，執行以下指令
 
 ```
 cd my-app
+npm i dependencies
 npm start
+ 
 ```
 
 之後會在預設瀏覽器開啟網頁，即完成環境架設。
