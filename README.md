@@ -17,7 +17,7 @@ node --version
 
 ```
 cd my-app
-npm i dependencies
+npm i
 npm start
 ```
 
