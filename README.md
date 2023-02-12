@@ -38,3 +38,5 @@ npm start
 - 先在 Vscode 下載 Extension: [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
 - 下載完後，開啟 `.scss` 的檔案，右下角會有 Watching Sass，點一下會開始編譯程式碼
 - 會在資料夾自動產生 `.css` 檔
+成功的會有以下圖示
+
