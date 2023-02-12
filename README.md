@@ -19,7 +19,6 @@ node --version
 cd my-app
 npm i dependencies
 npm start
- 
 ```
 
 之後會在預設瀏覽器開啟網頁，即完成環境架設。
