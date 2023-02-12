@@ -19,7 +19,7 @@ npx create-react-app my-app
 ```
 
 - 安裝後約有 200MB
-- 下載後，執行以下指令
+- 下載後，進到資料夾，執行以下指令
 
 ```
 cd my-app
