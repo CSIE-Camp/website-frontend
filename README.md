@@ -26,6 +26,13 @@ npm start
 
 - 要寫的 html 會放在 `App.js` 的 `div` 標籤裡面，div container 純粹用來包住 `html` 。
 
+# Git
+branch name: `Panda`, `NingQung`, `othsueh`, `Danny` 
+>要開始寫之前，記得checkout 到自己的`branch`
+```
+git checkout name
+```
+
 ## Problem
 
 - 報名按鈕的位置
