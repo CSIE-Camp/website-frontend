@@ -12,18 +12,18 @@ const Nav = () => {
           </div>
           <ul>
             <li>
-              <a href="/about">營隊介紹</a>
+              <Link href="/about">營隊介紹</Link>
             </li>
             <li>
-              <a href="/info">報名資訊</a>
+              <Link href="/info">報名資訊</Link>
             </li>
             <li>
-              <a class="more" href="/more">
+              <Link class="more" href="/more">
                 更多
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/login">登入/註冊</a>
+              <Link href="/login">登入/註冊</Link>
             </li>
           </ul>
         </nav>
