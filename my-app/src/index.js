@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Nav from "./Nav";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import Footer from "./Footer";
+
 ReactDOM.render(
   <React.StrictMode>
-    <Nav />
-    <App />
-    <Footer />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.querySelector("#root")
 );
