@@ -25,33 +25,45 @@ npm start
 - 所有要編輯的都方在 `src` 裡面，其他資料夾盡量不要動。
 
 - 要寫的 html 會放在 `App.js` 的 `div` 標籤裡面，div container 純粹用來包住 `html` 。
-
-# Git
+# 注意事項
+## Git
 branch name: `Panda`, `NingQung`, `othsueh`, `Danny` 
 >要開始寫之前，記得checkout 到自己的`branch`
 ```
 git checkout name
 ```
-# 連結
-react 語法 須加上require
-```
+## 連結
+### react 語法
+1. 須加上require
+```html
 <img src={require("./image/Photos.png")} title="歷屆資工營照片" alt="Photo Wall"/>
 ```
-# 字體
+2. 
+```html
+<a href="/"></a>
+```
+有些情況要改成
+```html
+<Link to ="/">連結</Link>
+```
+
+3. react 的class 要變成className 
+## 字體
 目前特殊標題用 [Torono_Glitch_SansH2](my-app/src/style/font/torono-glitch-sans) 
 
 一般字體用 `font-family: "Noto Sans TC";`
-## Problem
-# Rafc
+
+## Rafc
 VScode Extension: [**rafc**](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 
 在.js檔中產生react模板
 
+## Problem
 - 報名按鈕的位置
 - CSIE 的字樣對齊
 - 背景重複出現、排版
 
-# SCSS 轉 CSS
+## SCSS 轉 CSS
 
 - 先在 Vscode 下載 Extension: [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) (直接在VS搜尋也可以)
 - 下載完後，開啟 `.scss` 的檔案，右下角會有 Watching Sass，點一下會開始編譯程式碼
