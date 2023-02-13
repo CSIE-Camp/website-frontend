@@ -42,6 +42,10 @@ react 語法 須加上require
 
 一般字體用 `font-family: "Noto Sans TC";`
 ## Problem
+# Rafc
+VScode Extension: [**rafc**](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+
+在.js檔中產生react模板
 
 - 報名按鈕的位置
 - CSIE 的字樣對齊
