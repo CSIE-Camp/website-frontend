@@ -26,6 +26,21 @@ npm start
 
 - 要寫的 html 會放在 `App.js` 的 `div` 標籤裡面，div container 純粹用來包住 `html` 。
 
+# Git
+branch name: `Panda`, `NingQung`, `othsueh`, `Danny` 
+>要開始寫之前，記得checkout 到自己的`branch`
+```
+git checkout name
+```
+# 連結
+react 語法 須加上require
+```
+<img src={require("./image/Photos.png")} title="歷屆資工營照片" alt="Photo Wall"/>
+```
+# 字體
+目前特殊標題用 [Torono_Glitch_SansH2](my-app/src/style/font/torono-glitch-sans) 
+
+一般字體用 `font-family: "Noto Sans TC";`
 ## Problem
 
 - 報名按鈕的位置
@@ -34,7 +49,7 @@ npm start
 
 # SCSS 轉 CSS
 
-- 先在 Vscode 下載 Extension: [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
+- 先在 Vscode 下載 Extension: [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) (直接在VS搜尋也可以)
 - 下載完後，開啟 `.scss` 的檔案，右下角會有 Watching Sass，點一下會開始編譯程式碼
 - 會在資料夾自動產生 `.css` 檔
   成功的會有以下圖示
