@@ -7,6 +7,7 @@ import About from "./page/About";
 import Info from "./page/Info";
 import More from "./page/More";
 import Login from "./page/Login";
+import Blank from "./page/Blank";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/info" element={<Info />} />
         <Route path="/more" element={<More />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/blank" element={<Blank />} />
       </Routes>
       <Footer />
     </div>
