@@ -1,5 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
+
 const Nav = () => {
   return (
     <div>
@@ -12,18 +13,18 @@ const Nav = () => {
           </div>
           <ul>
             <li>
-              <Link href="/about">營隊介紹</Link>
+              <Link to="/about">營隊介紹</Link>
             </li>
             <li>
-              <Link href="/info">報名資訊</Link>
+              <Link to="/info">報名資訊</Link>
             </li>
             <li>
-              <Link class="more" href="/more">
+              <Link to="/more" class="more">
                 更多
               </Link>
             </li>
             <li>
-              <Link href="/login">登入/註冊</Link>
+              <Link to="/login">登入/註冊</Link>
             </li>
           </ul>
         </nav>

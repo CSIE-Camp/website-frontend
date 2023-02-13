@@ -7,6 +7,7 @@ import About from "./page/About";
 import Info from "./page/Info";
 import More from "./page/More";
 import Login from "./page/Login";
+
 const App = () => {
   return (
     <div className="App">
