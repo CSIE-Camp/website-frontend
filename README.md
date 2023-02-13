@@ -38,7 +38,7 @@ react 語法 須加上require
 <img src={require("./image/Photos.png")} title="歷屆資工營照片" alt="Photo Wall"/>
 ```
 # 字體
-目前特殊標題用 [Torono_Glitch_SansH4](src\style\font\torono-glitch-sans\Torono_Glitch_SansH4.otf) 
+目前特殊標題用 [Torono_Glitch_SansH4](my-app/src/style/font/torono-glitch-sans/Torono_Glitch_SansH4.otf) 
 一般字體用 
 ## Problem
 
