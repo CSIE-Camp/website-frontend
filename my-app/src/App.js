@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style/style.css";
 import "./style/app.css";
 const App = () => {
+  let [title, setTitle] = useState("2023 師大資工營 NTNU CSIE CAMP");
+  const changeTitle = () => {
+    setTitle = "2023";
+  };
   return (
     <div>
       <main>
@@ -30,9 +34,11 @@ const App = () => {
                 <span class="E">E</span>級玩家
               </h1>
 
-              <p>2023 師大資工營 NTNU CSIE CAMP</p>
+              <p>{title}</p>
             </div>
-            <button class="register">立即報名</button>
+            <button onClick={changeTitle} class="register">
+              立即報名
+            </button>
           </section>
         </div>
       </main>
