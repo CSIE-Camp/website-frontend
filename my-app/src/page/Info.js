@@ -13,7 +13,7 @@ export const Info = () => {
       <tr class="context">3. 錄取名單將於 2021/05/24 (四) 公佈於粉絲專頁</tr>
       <tr class="context">4. 報名費用 (包含食宿、上課講義、營手冊、營服和保險等) : $6500/人</tr>
       <tr class="context">5. 屆時請錄取者務必注意網站公佈之繳費流程</tr>
-      <tr class="context">官方網址: <a target="_blank" href="https://www.facebook.com/ntnucsiecamp/">https://www.facebook.com/ntnucsiecamp/</a></tr>
+      <tr class="context2">官方網址: <a target="_blank" href="https://www.facebook.com/ntnucsiecamp/">https://www.facebook.com/ntnucsiecamp/</a></tr>
       </table>
       <p class = "subTitle">注意事項和詳閱報名簡章</p>
       <table class="important">

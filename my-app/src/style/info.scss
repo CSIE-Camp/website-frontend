@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 
@@ -13,7 +14,7 @@
 @font-face {
     font-family: ToronoGlitchSans H2;
     ;
-    src: local("ToronoGlitchSans H4"),
+    src: local("ToronoGlitchSans H2"),
         url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
 }
 
@@ -29,7 +30,8 @@ div.info {
     justify-content: center;
     align-items: center;
     color: #ffffff;
-
+    font-family: "Noto Sans TC", monospace;
+    text-align: center;
 
     h1.title {
         padding: 134px 0px 35px 0px;
@@ -44,21 +46,25 @@ div.info {
     }
 
     p.subTitle {
-        font-family: "Source Code Pro", monospace;
+        padding: 50px 0px 35px 0px;
         font-size: 50px;
     }
 
-    p.context {
-        font-family: Source Code Pro;
-        font-size: 35px;
-
-    }
 
     table.mainInfor {
-        font-family: Source Code Pro;
         font-size: 35px;
+        width: 1090px;
 
         tr.context {
+            text-align: left;
+
+            a {
+                text-decoration: none;
+                color: #ffffff
+            }
+        }
+
+        tr.context2 {
             a {
                 text-decoration: none;
                 color: #ffffff
@@ -67,22 +73,50 @@ div.info {
     }
 
     p.contextImport {
-        font-family: Source Code Pro;
         font-size: 35px;
-
     }
 
     table.important {
-        width: 912px;
-        height: 536px;
+        width: 1090px;
+        // height: 536px;
         font-size: 35px;
 
         tr.contextImport {
+            text-align: left;
+
             a {
                 text-decoration: none;
                 color: #ffffff
             }
         }
+    }
+
+    button.register {
+        text-align: center;
+        padding: 10px;
+        border: 5px solid #D9D9D9;
+        color: #FFFFFF;
+        font-family: 'ToronoGlitchSans H2';
+        line-height: 72px;
+        letter-spacing: 1rem;
+        font-size: 2.5rem;
+        background: rgba(217, 217, 217, 0.35);
+        border-radius: 30px;
+        // padding: 0px 0px 50px 0px;
+        margin: 100px 0px 30px 0px;
+
+        a {
+            font-family: 'ToronoGlitchSans H2';
+            text-decoration: none;
+            color: #ffffff
+        }
+    }
+
+    button:hover {
+        color: #F7D967;
+        background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+
+        cursor: pointer;
     }
 }
 

@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 @font-face {
@@ -9,7 +10,7 @@
 }
 @font-face {
   font-family: ToronoGlitchSans H2;
-  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
+  src: local("ToronoGlitchSans H2"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
 }
 @font-face {
   font-family: ToronoGlitchSans H4;
@@ -21,6 +22,8 @@ div.info {
   justify-content: center;
   align-items: center;
   color: #ffffff;
+  font-family: "Noto Sans TC", monospace;
+  text-align: center;
 }
 div.info h1.title {
   padding: 134px 0px 35px 0px;
@@ -33,31 +36,58 @@ div.info hr.bar {
   width: "1336px";
 }
 div.info p.subTitle {
-  font-family: "Source Code Pro", monospace;
+  padding: 50px 0px 35px 0px;
   font-size: 50px;
 }
-div.info p.context {
-  font-family: Source Code Pro;
-  font-size: 35px;
-}
 div.info table.mainInfor {
-  font-family: Source Code Pro;
   font-size: 35px;
+  width: 1090px;
+}
+div.info table.mainInfor tr.context {
+  text-align: left;
 }
 div.info table.mainInfor tr.context a {
   text-decoration: none;
   color: #ffffff;
 }
+div.info table.mainInfor tr.context2 a {
+  text-decoration: none;
+  color: #ffffff;
+}
 div.info p.contextImport {
-  font-family: Source Code Pro;
   font-size: 35px;
 }
 div.info table.important {
-  width: 912px;
-  height: 536px;
+  width: 1090px;
   font-size: 35px;
+}
+div.info table.important tr.contextImport {
+  text-align: left;
 }
 div.info table.important tr.contextImport a {
   text-decoration: none;
   color: #ffffff;
+}
+div.info button.register {
+  text-align: center;
+  padding: 10px;
+  border: 5px solid #D9D9D9;
+  color: #FFFFFF;
+  font-family: "ToronoGlitchSans H2";
+  line-height: 72px;
+  letter-spacing: 1rem;
+  font-size: 2.5rem;
+  background: rgba(217, 217, 217, 0.35);
+  border-radius: 30px;
+  margin: 100px 0px 30px 0px;
+}
+div.info button.register a {
+  font-family: "ToronoGlitchSans H2";
+  text-decoration: none;
+  color: #ffffff;
+}
+div.info button:hover {
+  color: #F7D967;
+  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+  cursor: pointer;
 }/*# sourceMappingURL=info.css.map */
