@@ -15,6 +15,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "prepare": "cd .. && husky install my-app/.husky",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,6 +41,13 @@
     ]
   },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
     "prettier": "^2.8.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,yaml,yml,html,scss,css}": [
+      "prettier --write"
+    ]
   }
 }
