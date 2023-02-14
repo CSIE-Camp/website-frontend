@@ -26,7 +26,6 @@ a {
 nav {
   background: white;
   height: 10%;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 5;

@@ -3,8 +3,12 @@
   src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
 }
 @font-face {
+  font-family: ToronoGlitchSans H1;
+  src: local("ToronoGlitchSans H1"), url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
+}
+@font-face {
   font-family: ToronoGlitchSans H2;
-  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono\ Glitch\ SansH2.otf);
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
 }
 h1 {
   font-size: 2rem;
@@ -84,18 +88,21 @@ div.card section.right div.words p {
   color: #FFFFFF;
 }
 div.card section.right button.register {
+  border-radius: 30px;
+}
+div.card section.right button.register a {
   text-align: center;
   padding: 10px;
   border: 5px solid #FFFFFF;
-  color: #FFFFFF;
-  font-family: "ToronoGlitchSans H2";
+  color: #ffffff;
+  font-family: "ToronoGlitchSans H1";
   line-height: 72px;
   letter-spacing: 1rem;
   font-size: 2.5rem;
-  background: rgba(217, 217, 217, 0.35);
+  background: rgba(98, 98, 98, 0.35);
   border-radius: 30px;
 }
-div.card section.right button:hover {
+div.card section.right button a:hover {
   color: #F7D967;
   background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
   cursor: pointer;
@@ -109,24 +116,20 @@ div.card section.right button:hover {
   }
   div.card section.left {
     order: 2;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
   div.card section.left div.img_container {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     height: 100%;
   }
   div.card section.left div.img_container img {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     height: 60vh;
   }
   section.right {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     padding: 0;
