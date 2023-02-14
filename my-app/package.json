@@ -16,8 +16,8 @@
   },
   "scripts": {
     "prepare": "cd .. && husky install my-app/.husky",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "concurrently --kill-others \"sass -w src/style:src/style\" \"react-scripts start\"",
+    "build": "sass src/style:src/style && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --ignore-path .gitignore --write ."
@@ -41,9 +41,11 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "sass": "^1.58.1"
   },
   "lint-staged": {
     "*.{js,jsx,json,yaml,yml,html,scss,css}": [
