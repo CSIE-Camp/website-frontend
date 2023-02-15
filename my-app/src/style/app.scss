@@ -1,11 +1,21 @@
 @font-face {
-  font-family: ToronoGlitchSans H4;
-  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
+  font-family: ToronoGlitchSans H1;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
 }
 
 @font-face {
   font-family: ToronoGlitchSans H2;
   src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H3;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH3.otf);
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H4;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
 }
 
 h1 {
