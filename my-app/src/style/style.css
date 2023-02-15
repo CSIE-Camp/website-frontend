@@ -26,7 +26,6 @@ a {
 nav {
   background: white;
   height: 10%;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 5;
@@ -82,4 +81,6 @@ nav ul li a:hover {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #0c1794;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
