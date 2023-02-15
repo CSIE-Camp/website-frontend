@@ -17,11 +17,7 @@ const Footer = () => {
             <img src={require("./image/ig.png")} title="IG" alt="ig" />
           </a>
           <a href="#">
-            <img
-              src={require("./image/messenger.png")}
-              title="Messenger"
-              alt="messenger"
-            />
+            <img src={require("./image/messenger.png")} title="Messenger" alt="messenger" />
           </a>
         </div>
         <p class="Copyright">Copyright © 2023 All rights reserved</p>
