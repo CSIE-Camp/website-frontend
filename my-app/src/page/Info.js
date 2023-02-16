@@ -14,7 +14,7 @@ export const Info = () => {
         <tr class="context">5. 屆時請錄取者務必注意網站公佈之繳費流程</tr>
         <tr class="context">
           官方網址:{" "}
-          <a target="_blank" href="https://www.facebook.com/ntnucsiecamp/">
+          <a target="_blank" href="https://www.facebook.com/ntnucsiecamp/" rel="noreferrer">
             https://www.facebook.com/ntnucsiecamp/
           </a>
         </tr>
@@ -30,13 +30,13 @@ export const Info = () => {
         </tr>
         <tr class="contextImport">
           3. 其餘詳細注意事項請參閱報名簡章:{" "}
-          <a target="_blank" href="https://reurl.cc/ZQdbj3">
+          <a target="_blank" href="https://reurl.cc/ZQdbj3" rel="noreferrer">
             https://reurl.cc/ZQdbj3
           </a>
         </tr>
       </table>
       <button class="register">
-        <a href="#">立即報名</a>
+        <a href="/login">立即報名</a>
       </button>
     </div>
   );
