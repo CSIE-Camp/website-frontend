@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+div.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+
+  h1.title {
+    padding: 134px 0px 35px 0px;
+    font-family: "ToronoGlitchSans H2", sans-serif;
+    font-size: 60px;
+  }
+
+  hr.bar {
+    padding: 0px 0px 0px 0px;
+    size: "1px";
+    width: "1336px";
+  }
+
+  p.subTitle {
+    font-family: "Source Code Pro", monospace;
+    font-size: 50px;
+  }
+
+  p.context {
+    font-family: Source Code Pro;
+    font-size: 35px;
+  }
+
+  table.mainInfor {
+    font-family: Source Code Pro;
+    font-size: 35px;
+
+    tr.context {
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+  }
+
+  p.contextImport {
+    font-family: Source Code Pro;
+    font-size: 35px;
+  }
+
+  table.important {
+    width: 912px;
+    height: 536px;
+    font-size: 35px;
+
+    tr.contextImport {
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+//

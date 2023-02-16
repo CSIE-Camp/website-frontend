@@ -15,10 +15,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "prepare": "cd .. && husky install my-app/.husky",
+    "start": "concurrently --kill-others \"sass -w src/style:src/style\" \"react-scripts start\"",
+    "build": "sass src/style:src/style && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --ignore-path .gitignore --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -36,6 +38,18 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "sass": "^1.58.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,yaml,yml,html,scss,css}": [
+      "prettier --write"
     ]
   }
 }
