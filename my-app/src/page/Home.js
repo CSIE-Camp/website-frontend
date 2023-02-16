@@ -32,7 +32,7 @@ const Home = () => {
               <p>2023 師大資工營 NTNU CSIE CAMP</p>
             </div>
             <button class="register">
-              <a href="#">立即報名</a>
+              <a href="/login">立即報名</a>
             </button>
           </section>
         </div>

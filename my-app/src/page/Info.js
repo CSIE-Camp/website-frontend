@@ -36,7 +36,7 @@ export const Info = () => {
         </tr>
       </table>
       <button class="register">
-        <a href="#">立即報名</a>
+        <a href="/login">立即報名</a>
       </button>
     </div>
   );
