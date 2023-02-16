@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/info.css";
+
 export const Info = () => {
   return (
     <div class="info">

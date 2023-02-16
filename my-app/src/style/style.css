@@ -140,18 +140,6 @@ footer div.icon a img {
   margin: 0;
 }
 
-@font-face {
-  font-family: ToronoGlitchSans H1;
-  src: local("ToronoGlitchSans H1"), url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
-}
-@font-face {
-  font-family: ToronoGlitchSans H2;
-  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
-}
-@font-face {
-  font-family: ToronoGlitchSans H4;
-  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
-}
 div.info {
   display: flex;
   flex-direction: column;
@@ -197,6 +185,4 @@ div.info table.important {
 div.info table.important tr.contextImport a {
   text-decoration: none;
   color: #ffffff;
-}
-
-/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
