@@ -1,65 +1,96 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 div.info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #ffffff;
+  font-family: "Noto Sans TC", monospace;
+  text-align: center;
 
   h1.title {
-    padding: 134px 0px 35px 0px;
-    font-family: "ToronoGlitchSans H2", sans-serif;
-    font-size: 60px;
+      padding: 134px 0px 35px 0px;
+      font-family: "ToronoGlitchSans H2", sans-serif;
+      font-size: 60px;
   }
 
   hr.bar {
-    padding: 0px 0px 0px 0px;
-    size: "1px";
-    width: "1336px";
+      padding: 0px 0px 0px 0px;
+      size: "1px";
+      width: "1336px";
   }
 
   p.subTitle {
-    font-family: "Source Code Pro", monospace;
-    font-size: 50px;
+      padding: 50px 0px 35px 0px;
+      font-size: 50px;
   }
 
-  p.context {
-    font-family: Source Code Pro;
-    font-size: 35px;
-  }
 
   table.mainInfor {
-    font-family: Source Code Pro;
-    font-size: 35px;
+      font-size: 35px;
+      width: 1090px;
 
-    tr.context {
-      a {
-        text-decoration: none;
-        color: #ffffff;
+      tr.context {
+          text-align: left;
+
+          a {
+              text-decoration: none;
+              color: #ffffff
+          }
       }
-    }
+
+      tr.context2 {
+          a {
+              text-decoration: none;
+              color: #ffffff
+          }
+      }
   }
 
   p.contextImport {
-    font-family: Source Code Pro;
-    font-size: 35px;
+      font-size: 35px;
   }
 
   table.important {
-    width: 912px;
-    height: 536px;
-    font-size: 35px;
+      width: 1090px;
+      // height: 536px;
+      font-size: 35px;
 
-    tr.contextImport {
-      a {
-        text-decoration: none;
-        color: #ffffff;
+      tr.contextImport {
+          text-align: left;
+
+          a {
+              text-decoration: none;
+              color: #ffffff
+          }
       }
-    }
+  }
+
+  button.register {
+      text-align: center;
+      padding: 10px;
+      border: 5px solid #D9D9D9;
+      color: #FFFFFF;
+      font-family: 'ToronoGlitchSans H2';
+      line-height: 72px;
+      letter-spacing: 1rem;
+      font-size: 2.5rem;
+      background: rgba(217, 217, 217, 0.35);
+      border-radius: 30px;
+      // padding: 0px 0px 50px 0px;
+      margin: 100px 0px 30px 0px;
+
+      a {
+          font-family: 'ToronoGlitchSans H2';
+          text-decoration: none;
+          color: #ffffff
+      }
+  }
+
+  button:hover {
+      color: #F7D967;
+      background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+
+      cursor: pointer;
   }
 }
 
