@@ -1,6 +1,4 @@
 import React from "react";
-import "../style/style.css";
-import "../style/app.css";
 
 const Home = () => {
   return (
@@ -9,7 +7,11 @@ const Home = () => {
         <div class="card">
           <section class="left">
             <div class="img_container">
-              <img src={require("../image/Photos.png")} title="歷屆資工營照片" alt="Photo Wall" />
+              <img
+                src={require("../image/Photos.png")}
+                title="歷屆資工營照片"
+                alt="Wall of Photos"
+              />
             </div>
           </section>
           <section class="right">
