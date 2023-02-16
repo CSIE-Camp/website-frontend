@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+
+@font-face {
+    font-family: ToronoGlitchSans H1;
+    src: local("ToronoGlitchSans H1"),
+        url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
+}
+
+@font-face {
+    font-family: ToronoGlitchSans H2;
+    ;
+    src: local("ToronoGlitchSans H2"),
+        url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
+}
+
+@font-face {
+    font-family: ToronoGlitchSans H4;
+    src: local("ToronoGlitchSans H4"),
+        url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
+}
+
+div.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: "Noto Sans TC", monospace;
+    text-align: center;
+
+    h1.title {
+        padding: 104px 0px 67px 0px;
+        font-family: "ToronoGlitchSans H2", sans-serif;
+        font-size: 60px;
+    }
+
+    input.register {
+        text-align: left;
+        padding: 10px;
+        border: 5px solid #D9D9D9;
+        color: #FFFFFF;
+        line-height: 72px;
+        font-size: 2.5rem;
+        background: rgba(217, 217, 217, 0.35);
+        border-radius: 30px;
+        // padding: 0px 0px 50px 0px;
+        margin: 0px 0px 20px 0px;
+        width: 780px;
+        height: 146px;
+
+    }
+
+    ::placeholder {
+        letter-spacing: 1rem;
+        font-family: 'ToronoGlitchSans H2';
+        color: #ffffff;
+    }
+
+
+    input:hover {
+        color: #F7D967;
+        background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+
+        cursor: pointer;
+    }
+
+    button.confirm {
+        padding: 10px;
+        border: 5px solid #D9D9D9;
+        color: #FFFFFF;
+        font-family: 'ToronoGlitchSans H2';
+        line-height: 72px;
+        letter-spacing: 1rem;
+        font-size: 2.5rem;
+        background: rgba(217, 217, 217, 0.35);
+        border-radius: 100px;
+        padding: 0px 30px 0px 30px;
+        margin: 100px 0px 30px 0px;
+        text-align: center;
+        width: 94px;
+        height: 94px;
+        position: absolute;
+        top: 459px;
+        left: 1080px;
+
+        a {
+
+            font-family: 'ToronoGlitchSans H2';
+            text-decoration: none;
+
+            color: #ffffff;
+
+
+
+            span.arrow {
+                display: block;
+                margin: 0px auto;
+                width: 30px;
+                height: 30px;
+                border-top: 10px solid #d9d9d9;
+                border-left: 10px solid #d9d9d9;
+                transform: rotate(135deg); // transform: rotate(180deg);
+            }
+
+            span.arrow::after {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 30px;
+                background-color: #d9d9d9;
+                transform: rotate(-45deg) translate(7px, 0px);
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    button:hover {
+        color: #F7D967;
+        background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+
+        cursor: pointer;
+    }
+}
+
+// 
