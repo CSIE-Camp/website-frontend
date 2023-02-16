@@ -30,15 +30,6 @@ div.login h1.title {
   font-family: "ToronoGlitchSans H2", sans-serif;
   font-size: 60px;
 }
-div.login p.help {
-  padding: 0px 0px 30px 0px;
-  font-size: 35px;
-}
-div.login p.help a {
-  padding: 0px 100px 0px 100px;
-  text-decoration: none;
-  color: #ffffff;
-}
 div.login input.register {
   text-align: left;
   padding: 10px;
@@ -114,4 +105,4 @@ div.login button:hover {
   color: #F7D967;
   background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
   cursor: pointer;
-}/*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=regist.css.map */

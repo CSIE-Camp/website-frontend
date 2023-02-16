@@ -8,6 +8,8 @@ import Info from "./page/Info";
 import More from "./page/More";
 import Login from "./page/Login";
 import Blank from "./page/Blank";
+import Forget from "./page/Forget";
+import Regist from "./page/Regist";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         <Route path="/more" element={<More />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blank" element={<Blank />} />
+        <Route path="/forget" element={<Forget />} />
+        <Route path="/regist" element={<Regist />} />
       </Routes>
       <Footer />
     </div>

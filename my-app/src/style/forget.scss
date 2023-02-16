@@ -81,6 +81,57 @@ div.login {
         cursor: pointer;
     }
 
+    button.send {
+        padding: 10px;
+        border: 5px solid #D9D9D9;
+        color: #FFFFFF;
+        font-family: 'ToronoGlitchSans H2';
+        line-height: 72px;
+        letter-spacing: 1rem;
+        font-size: 2.5rem;
+        background: rgba(217, 217, 217, 0.35);
+        border-radius: 100px;
+        padding: 0px 30px 0px 30px;
+        margin: 100px 0px 30px 0px;
+        text-align: center;
+        width: 94px;
+        height: 94px;
+        position: absolute;
+        top: 459px;
+        left: 1080px;
+
+        a {
+
+            font-family: 'ToronoGlitchSans H2';
+            text-decoration: none;
+
+            color: #ffffff;
+
+
+
+            span.arrow {
+                display: block;
+                margin: 0px auto;
+                width: 30px;
+                height: 30px;
+                border-top: 10px solid #d9d9d9;
+                border-left: 10px solid #d9d9d9;
+                transform: rotate(135deg); // transform: rotate(180deg);
+            }
+
+            span.arrow::after {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 30px;
+                background-color: #d9d9d9;
+                transform: rotate(-45deg) translate(7px, 0px);
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
     button.confirm {
         padding: 10px;
         border: 5px solid #D9D9D9;
