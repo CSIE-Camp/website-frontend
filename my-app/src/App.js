@@ -8,8 +8,6 @@ import Info from "./page/Info";
 import More from "./page/More";
 import Login from "./page/Login";
 import Blank from "./page/Blank";
-import "./style/style.css";
-import "./style/app.css";
 import Forget from "./page/Forget";
 import Regist from "./page/Regist";
 

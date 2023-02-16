@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/forget.css";
+
 
 export const Login = () => {
   return (
