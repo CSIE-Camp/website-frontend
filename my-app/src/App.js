@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Nav from "./Nav";
 import Home from "./page/Home";
@@ -8,6 +8,8 @@ import Info from "./page/Info";
 import More from "./page/More";
 import Login from "./page/Login";
 import Blank from "./page/Blank";
+import "./style/style.css";
+import "./style/app.css";
 
 const App = () => {
   return (
