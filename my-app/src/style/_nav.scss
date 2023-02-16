@@ -1,27 +1,28 @@
 nav {
   background: white;
-  height: 10%;
   position: sticky;
   top: 0;
   z-index: 5;
 
-  img {
-    height: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  div a img {
+    flex: 1 1 450px;
   }
 
   padding: 1rem 1rem;
-  display: flex;
-  align-items: center;
-  flex: 5 1 400px;
 
   ul {
     display: flex;
 
+    justify-content: flex-end;
     list-style-type: none;
-    justify-content: space-around;
 
     li {
-      padding: 10px;
+      padding: 0.5rem;
 
       a {
         display: flex;
@@ -30,9 +31,9 @@ nav {
         background: rgba(183, 183, 183, 0.3);
         color: black;
         font-family: "Noto Sans TC";
-        font-style: normal;
+
         font-weight: 800;
-        font-size: 2rem;
+        font-size: 1.25rem;
         line-height: 2.5rem;
         border-radius: 18px;
       }
@@ -42,5 +43,23 @@ nav {
         color: #ffffff;
       }
     }
+  }
+}
+
+// 目前所在的網頁
+.active {
+  background: #000000;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1220px) {
+  nav {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  nav {
+    justify-content: center;
   }
 }
