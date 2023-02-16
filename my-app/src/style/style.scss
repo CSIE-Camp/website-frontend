@@ -10,6 +10,26 @@ body {
   background-image: (url(image/Blue_background.png));
 }
 
+@font-face {
+  font-family: ToronoGlitchSans H1;
+  src: local("ToronoGlitchSans H1"), url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H2;
+  src: local("ToronoGlitchSans H2"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H3;
+  src: local("ToronoGlitchSans H3"), url(./font/torono-glitch-sans/Torono_Glitch_SansH3.otf);
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H4;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
+}
+
 h1,
 h2,
 h3,
@@ -26,3 +46,4 @@ a {
 @import "./nav";
 @import "./footer";
 @import "./scrollbar";
+@import "./info";

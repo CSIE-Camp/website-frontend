@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  z-index: 1;
+  background-image: url(image/Blue_background.png);
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H1;
+  src: local("ToronoGlitchSans H1"), url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
+}
+@font-face {
+  font-family: ToronoGlitchSans H2;
+  src: local("ToronoGlitchSans H2"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
+}
+@font-face {
+  font-family: ToronoGlitchSans H3;
+  src: local("ToronoGlitchSans H3"), url(./font/torono-glitch-sans/Torono_Glitch_SansH3.otf);
+}
+@font-face {
+  font-family: ToronoGlitchSans H4;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background: white;
+  height: 10%;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  flex: 5 1 400px;
+}
+nav img {
+  height: 5vw;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+nav ul li {
+  padding: 10px;
+}
+nav ul li a {
+  display: flex;
+  padding: 1rem;
+  background: rgba(183, 183, 183, 0.3);
+  color: black;
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  border-radius: 18px;
+}
+nav ul li a:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+footer {
+  background: #ffffff;
+  display: flex;
+  flex-flow: column wrap;
+}
+footer h1 {
+  padding: 10px;
+  font-family: "ToronoGlitchSans H2";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 48px;
+  font-size: 2.5rem;
+}
+footer p {
+  padding: 5px;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+footer p.Copyright {
+  margin: 5px;
+  padding: 5px;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+footer div.icon {
+  display: flex;
+  justify-content: center;
+}
+footer div.icon a img {
+  width: 100px;
+  padding: 25px;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3091ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0c1794;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H1;
+  src: local("ToronoGlitchSans H1"), url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
+}
+@font-face {
+  font-family: ToronoGlitchSans H2;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
+}
+@font-face {
+  font-family: ToronoGlitchSans H4;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
+}
+div.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+div.info h1.title {
+  padding: 134px 0px 35px 0px;
+  font-family: "ToronoGlitchSans H2", sans-serif;
+  font-size: 60px;
+}
+div.info hr.bar {
+  padding: 0px 0px 0px 0px;
+  size: "1px";
+  width: "1336px";
+}
+div.info p.subTitle {
+  font-family: "Source Code Pro", monospace;
+  font-size: 50px;
+}
+div.info p.context {
+  font-family: Source Code Pro;
+  font-size: 35px;
+}
+div.info table.mainInfor {
+  font-family: Source Code Pro;
+  font-size: 35px;
+}
+div.info table.mainInfor tr.context a {
+  text-decoration: none;
+  color: #ffffff;
+}
+div.info p.contextImport {
+  font-family: Source Code Pro;
+  font-size: 35px;
+}
+div.info table.important {
+  width: 912px;
+  height: 536px;
+  font-size: 35px;
+}
+div.info table.important tr.contextImport a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
