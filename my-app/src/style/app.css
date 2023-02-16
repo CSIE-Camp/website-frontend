@@ -72,8 +72,7 @@ div.card section.right div.words h1 span.E {
   color: #edb4cf;
 }
 div.card section.right div.words p {
-  -moz-text-align-last: center;
-       text-align-last: center;
+  text-align-last: center;
   letter-spacing: 3px;
   font-family: "Source Code Pro", monospace;
   font-style: normal;
@@ -109,23 +108,21 @@ div.card section.right button:hover {
   }
   div.card section.left {
     order: 2;
-    width: -moz-fit-content;
     width: fit-content;
   }
   div.card section.left div.img_container {
-    width: -moz-fit-content;
     width: fit-content;
     height: 100%;
   }
   div.card section.left div.img_container img {
-    width: -moz-fit-content;
     width: fit-content;
     height: 60vh;
   }
   section.right {
-    width: -moz-fit-content;
     width: fit-content;
     padding: 0;
     order: 1;
   }
-}/*# sourceMappingURL=app.css.map */
+}
+
+/*# sourceMappingURL=app.css.map */
