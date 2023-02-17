@@ -78,7 +78,11 @@ div.forget {
   }
 
   input.button {
-    margin: 0px 0px 20px 99px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  div.pwd_container {
+    position: relative;
   }
 
   button.send {
@@ -91,15 +95,13 @@ div.forget {
     background: rgba(217, 217, 217, 0.35);
     border-radius: 100px;
     padding: 0px 30px 0px 30px;
-    margin: 100px 0px 30px 0px;
+    margin: 0px 0px 30px 0px;
     text-align: center;
     width: 94px;
     height: 94px;
-    position: relative;
-    right: 110px;
-    // position: absolute;
-    // top: 459px;
-    // left: 1080px;
+    position: absolute;
+    right: 20px;
+    top: 25px;
 
     a {
       font-family: "ToronoGlitchSans H2";
@@ -144,8 +146,9 @@ div.forget {
     text-align: center;
     width: 94px;
     height: 94px;
-    position: relative;
-    right: 110px;
+    position: absolute;
+    right: 20px;
+    top: 25px;
 
     a {
       font-family: "ToronoGlitchSans H2";

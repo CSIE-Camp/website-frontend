@@ -5,13 +5,13 @@ export const Login = () => {
   return (
     <div class="login">
       <h1 class="title">登入報名資訊</h1>
-      <input class="register" placeholder="請輸入電子信箱"></input>
-      <div>
-        <input class="register button" placeholder="請輸入密碼"></input>
+      <input class="register" placeholder="    請輸入電子信箱"></input>
+      <div class="pwd_container">
+        <input class="register button" placeholder="    請輸入密碼"></input>
         <button class="confirm">
-          <a href="#next">
+          <Link to="/blank">
             <span class="arrow"></span>
-          </a>
+          </Link>
         </button>
       </div>
       <p class="help">
