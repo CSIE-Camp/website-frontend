@@ -198,11 +198,7 @@ div.card section.right button.register {
 }
 div.card section.right button:hover {
   color: #f7d967;
-  background: radial-gradient(
-    149.95% 387.57% at 54.19% 45.2%,
-    #000000 52.6%,
-    rgba(255, 255, 255, 0.63) 100%
-  );
+  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
   cursor: pointer;
 }
 
@@ -297,9 +293,9 @@ div.info {
   text-align: center;
 }
 div.info h1.title {
-  padding: 134px 0px 35px 0px;
+  padding: 2.5rem;
   font-family: "ToronoGlitchSans H2", sans-serif;
-  font-size: 60px;
+  font-size: 2.5rem;
 }
 div.info hr.bar {
   padding: 0px 0px 0px 0px;
@@ -307,50 +303,44 @@ div.info hr.bar {
   width: "1336px";
 }
 div.info p.subTitle {
-  padding: 50px 0px 35px 0px;
-  font-size: 50px;
+  padding: 2rem;
+  font-size: 1.75rem;
+  font-weight: bold;
 }
 div.info table.mainInfor {
-  font-size: 35px;
+  font-size: 1.25rem;
+  padding: 0.5rem;
   width: 1090px;
 }
 div.info table.mainInfor tr.context {
   text-align: left;
 }
-div.info table.mainInfor tr.context a {
-  text-decoration: none;
-  color: #ffffff;
+div.info table.mainInfor tr.context2 {
+  margin-top: 1rem;
 }
 div.info table.mainInfor tr.context2 a {
-  text-decoration: none;
-  color: #ffffff;
+  margin: 0.5rem;
 }
 div.info p.contextImport {
-  font-size: 35px;
+  font-size: 1.5rem;
 }
 div.info table.important {
   width: 1090px;
-  font-size: 35px;
+  font-size: 1.25rem;
 }
 div.info table.important tr.contextImport {
   text-align: left;
-}
-div.info table.important tr.contextImport a {
-  text-decoration: none;
-  color: #ffffff;
 }
 div.info button.register {
   text-align: center;
   padding: 10px;
   border: 5px solid #d9d9d9;
-  color: #ffffff;
-  font-family: "ToronoGlitchSans H2";
   line-height: 72px;
   letter-spacing: 1rem;
   font-size: 2.5rem;
   background: rgba(217, 217, 217, 0.35);
   border-radius: 30px;
-  margin: 100px 0px 30px 0px;
+  margin: 2.5rem 0 1rem 0;
 }
 div.info button.register a {
   font-family: "ToronoGlitchSans H2";
@@ -359,12 +349,13 @@ div.info button.register a {
 }
 div.info button:hover {
   color: #f7d967;
-  background: radial-gradient(
-    149.95% 387.57% at 54.19% 45.2%,
-    #000000 52.6%,
-    rgba(255, 255, 255, 0.63) 100%
-  );
+  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #f1ff27;
 }
 
 div.login {
@@ -393,8 +384,8 @@ div.login p.help a {
 div.login input.register {
   text-align: left;
   padding: 10px;
-  border: 5px solid #d9d9d9;
-  color: #ffffff;
+  border: 5px solid #D9D9D9;
+  color: #FFFFFF;
   line-height: 72px;
   font-size: 2.5rem;
   background: rgba(217, 217, 217, 0.35);
@@ -409,18 +400,14 @@ div.login ::placeholder {
   color: #ffffff;
 }
 div.login input:hover {
-  color: #f7d967;
-  background: radial-gradient(
-    149.95% 387.57% at 54.19% 45.2%,
-    #000000 52.6%,
-    rgba(255, 255, 255, 0.63) 100%
-  );
+  color: #F7D967;
+  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
   cursor: pointer;
 }
 div.login button.confirm {
   padding: 10px;
-  border: 5px solid #d9d9d9;
-  color: #ffffff;
+  border: 5px solid #D9D9D9;
+  color: #FFFFFF;
   font-family: "ToronoGlitchSans H2";
   line-height: 72px;
   letter-spacing: 1rem;
@@ -461,12 +448,8 @@ div.login button.confirm a span.arrow::after {
   top: 0;
 }
 div.login button:hover {
-  color: #f7d967;
-  background: radial-gradient(
-    149.95% 387.57% at 54.19% 45.2%,
-    #000000 52.6%,
-    rgba(255, 255, 255, 0.63) 100%
-  );
+  color: #F7D967;
+  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
   cursor: pointer;
 }
 
@@ -487,8 +470,8 @@ div.login h1.title {
 div.login input.register {
   text-align: left;
   padding: 10px;
-  border: 5px solid #d9d9d9;
-  color: #ffffff;
+  border: 5px solid #D9D9D9;
+  color: #FFFFFF;
   line-height: 72px;
   font-size: 2.5rem;
   background: rgba(217, 217, 217, 0.35);
@@ -503,18 +486,14 @@ div.login ::placeholder {
   color: #ffffff;
 }
 div.login input:hover {
-  color: #f7d967;
-  background: radial-gradient(
-    149.95% 387.57% at 54.19% 45.2%,
-    #000000 52.6%,
-    rgba(255, 255, 255, 0.63) 100%
-  );
+  color: #F7D967;
+  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
   cursor: pointer;
 }
 div.login button.confirm {
   padding: 10px;
-  border: 5px solid #d9d9d9;
-  color: #ffffff;
+  border: 5px solid #D9D9D9;
+  color: #FFFFFF;
   font-family: "ToronoGlitchSans H2";
   line-height: 72px;
   letter-spacing: 1rem;
@@ -555,12 +534,8 @@ div.login button.confirm a span.arrow::after {
   top: 0;
 }
 div.login button:hover {
-  color: #f7d967;
-  background: radial-gradient(
-    149.95% 387.57% at 54.19% 45.2%,
-    #000000 52.6%,
-    rgba(255, 255, 255, 0.63) 100%
-  );
+  color: #F7D967;
+  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
   cursor: pointer;
 }
 
@@ -590,8 +565,8 @@ div.login p.help a {
 div.login input.register {
   text-align: left;
   padding: 10px;
-  border: 5px solid #d9d9d9;
-  color: #ffffff;
+  border: 5px solid #D9D9D9;
+  color: #FFFFFF;
   line-height: 72px;
   font-size: 2.5rem;
   background: rgba(217, 217, 217, 0.35);
@@ -606,18 +581,14 @@ div.login ::placeholder {
   color: #ffffff;
 }
 div.login input:hover {
-  color: #f7d967;
-  background: radial-gradient(
-    149.95% 387.57% at 54.19% 45.2%,
-    #000000 52.6%,
-    rgba(255, 255, 255, 0.63) 100%
-  );
+  color: #F7D967;
+  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
   cursor: pointer;
 }
 div.login button.send {
   padding: 10px;
-  border: 5px solid #d9d9d9;
-  color: #ffffff;
+  border: 5px solid #D9D9D9;
+  color: #FFFFFF;
   font-family: "ToronoGlitchSans H2";
   line-height: 72px;
   letter-spacing: 1rem;
@@ -659,8 +630,8 @@ div.login button.send a span.arrow::after {
 }
 div.login button.confirm {
   padding: 10px;
-  border: 5px solid #d9d9d9;
-  color: #ffffff;
+  border: 5px solid #D9D9D9;
+  color: #FFFFFF;
   font-family: "ToronoGlitchSans H2";
   line-height: 72px;
   letter-spacing: 1rem;
@@ -701,12 +672,8 @@ div.login button.confirm a span.arrow::after {
   top: 0;
 }
 div.login button:hover {
-  color: #f7d967;
-  background: radial-gradient(
-    149.95% 387.57% at 54.19% 45.2%,
-    #000000 52.6%,
-    rgba(255, 255, 255, 0.63) 100%
-  );
+  color: #F7D967;
+  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
   cursor: pointer;
 }
 
