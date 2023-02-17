@@ -174,6 +174,7 @@ div.card section.right div.words h1 span.E {
   color: #edb4cf;
 }
 div.card section.right div.words p {
+  -moz-text-align-last: center;
   text-align-last: center;
   letter-spacing: 3px;
   font-family: "Source Code Pro", monospace;
@@ -214,17 +215,21 @@ div.card section.right button:hover {
   }
   div.card section.left {
     order: 2;
+    width: -moz-fit-content;
     width: fit-content;
   }
   div.card section.left div.img_container {
+    width: -moz-fit-content;
     width: fit-content;
     height: 100%;
   }
   div.card section.left div.img_container img {
+    width: -moz-fit-content;
     width: fit-content;
     height: 60vh;
   }
   section.right {
+    width: -moz-fit-content;
     width: fit-content;
     padding: 0;
     order: 1;
@@ -403,6 +408,11 @@ div.login input.register {
   width: 780px;
   height: 146px;
 }
+div.login ::-moz-placeholder {
+  letter-spacing: 1rem;
+  font-family: "ToronoGlitchSans H2";
+  color: #ffffff;
+}
 div.login ::placeholder {
   letter-spacing: 1rem;
   font-family: "ToronoGlitchSans H2";
@@ -417,8 +427,10 @@ div.login input:hover {
   );
   cursor: pointer;
 }
+div.login input.button {
+  margin: 0px 0px 20px 99px;
+}
 div.login button.confirm {
-  padding: 10px;
   border: 5px solid #d9d9d9;
   color: #ffffff;
   font-family: "ToronoGlitchSans H2";
@@ -428,13 +440,12 @@ div.login button.confirm {
   background: rgba(217, 217, 217, 0.35);
   border-radius: 100px;
   padding: 0px 30px 0px 30px;
-  margin: 100px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
   text-align: center;
   width: 94px;
   height: 94px;
-  position: absolute;
-  top: 459px;
-  left: 1080px;
+  position: relative;
+  right: 110px;
 }
 div.login button.confirm a {
   font-family: "ToronoGlitchSans H2";
@@ -470,7 +481,25 @@ div.login button:hover {
   cursor: pointer;
 }
 
-div.login {
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H1;
+  src: local("ToronoGlitchSans H1"), url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
+}
+@font-face {
+  font-family: ToronoGlitchSans H2;
+  src: local("ToronoGlitchSans H2"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
+}
+@font-face {
+  font-family: ToronoGlitchSans H4;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
+}
+div.regist {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -479,12 +508,12 @@ div.login {
   font-family: "Noto Sans TC", monospace;
   text-align: center;
 }
-div.login h1.title {
+div.regist h1.title {
   padding: 104px 0px 67px 0px;
   font-family: "ToronoGlitchSans H2", sans-serif;
   font-size: 60px;
 }
-div.login input.register {
+div.regist input.register {
   text-align: left;
   padding: 10px;
   border: 5px solid #d9d9d9;
@@ -497,12 +526,17 @@ div.login input.register {
   width: 780px;
   height: 146px;
 }
-div.login ::placeholder {
+div.regist ::-moz-placeholder {
   letter-spacing: 1rem;
   font-family: "ToronoGlitchSans H2";
   color: #ffffff;
 }
-div.login input:hover {
+div.regist ::placeholder {
+  letter-spacing: 1rem;
+  font-family: "ToronoGlitchSans H2";
+  color: #ffffff;
+}
+div.regist input:hover {
   color: #f7d967;
   background: radial-gradient(
     149.95% 387.57% at 54.19% 45.2%,
@@ -511,8 +545,10 @@ div.login input:hover {
   );
   cursor: pointer;
 }
-div.login button.confirm {
-  padding: 10px;
+div.regist input.button {
+  margin: 0px 0px 20px 99px;
+}
+div.regist button.confirm {
   border: 5px solid #d9d9d9;
   color: #ffffff;
   font-family: "ToronoGlitchSans H2";
@@ -522,20 +558,19 @@ div.login button.confirm {
   background: rgba(217, 217, 217, 0.35);
   border-radius: 100px;
   padding: 0px 30px 0px 30px;
-  margin: 100px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
   text-align: center;
   width: 94px;
   height: 94px;
-  position: absolute;
-  top: 459px;
-  left: 1080px;
+  position: relative;
+  right: 110px;
 }
-div.login button.confirm a {
+div.regist button.confirm a {
   font-family: "ToronoGlitchSans H2";
   text-decoration: none;
   color: #ffffff;
 }
-div.login button.confirm a span.arrow {
+div.regist button.confirm a span.arrow {
   display: block;
   margin: 0px auto;
   width: 30px;
@@ -544,7 +579,7 @@ div.login button.confirm a span.arrow {
   border-left: 10px solid #d9d9d9;
   transform: rotate(135deg);
 }
-div.login button.confirm a span.arrow::after {
+div.regist button.confirm a span.arrow::after {
   content: "";
   display: block;
   width: 10px;
@@ -554,7 +589,7 @@ div.login button.confirm a span.arrow::after {
   left: 0;
   top: 0;
 }
-div.login button:hover {
+div.regist button:hover {
   color: #f7d967;
   background: radial-gradient(
     149.95% 387.57% at 54.19% 45.2%,
@@ -564,7 +599,25 @@ div.login button:hover {
   cursor: pointer;
 }
 
-div.login {
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H1;
+  src: local("ToronoGlitchSans H1"), url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
+}
+@font-face {
+  font-family: ToronoGlitchSans H2;
+  src: local("ToronoGlitchSans H2"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
+}
+@font-face {
+  font-family: ToronoGlitchSans H4;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
+}
+div.forget {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -573,21 +626,21 @@ div.login {
   font-family: "Noto Sans TC", monospace;
   text-align: center;
 }
-div.login h1.title {
+div.forget h1.title {
   padding: 104px 0px 67px 0px;
   font-family: "ToronoGlitchSans H2", sans-serif;
   font-size: 60px;
 }
-div.login p.help {
+div.forget p.help {
   padding: 0px 0px 30px 0px;
   font-size: 35px;
 }
-div.login p.help a {
+div.forget p.help a {
   padding: 0px 100px 0px 100px;
   text-decoration: none;
   color: #ffffff;
 }
-div.login input.register {
+div.forget input.register {
   text-align: left;
   padding: 10px;
   border: 5px solid #d9d9d9;
@@ -600,12 +653,17 @@ div.login input.register {
   width: 780px;
   height: 146px;
 }
-div.login ::placeholder {
+div.forget ::-moz-placeholder {
   letter-spacing: 1rem;
   font-family: "ToronoGlitchSans H2";
   color: #ffffff;
 }
-div.login input:hover {
+div.forget ::placeholder {
+  letter-spacing: 1rem;
+  font-family: "ToronoGlitchSans H2";
+  color: #ffffff;
+}
+div.forget input:hover {
   color: #f7d967;
   background: radial-gradient(
     149.95% 387.57% at 54.19% 45.2%,
@@ -614,8 +672,10 @@ div.login input:hover {
   );
   cursor: pointer;
 }
-div.login button.send {
-  padding: 10px;
+div.forget input.button {
+  margin: 0px 0px 20px 99px;
+}
+div.forget button.send {
   border: 5px solid #d9d9d9;
   color: #ffffff;
   font-family: "ToronoGlitchSans H2";
@@ -629,16 +689,15 @@ div.login button.send {
   text-align: center;
   width: 94px;
   height: 94px;
-  position: absolute;
-  top: 459px;
-  left: 1080px;
+  position: relative;
+  right: 110px;
 }
-div.login button.send a {
+div.forget button.send a {
   font-family: "ToronoGlitchSans H2";
   text-decoration: none;
   color: #ffffff;
 }
-div.login button.send a span.arrow {
+div.forget button.send a span.arrow {
   display: block;
   margin: 0px auto;
   width: 30px;
@@ -647,7 +706,7 @@ div.login button.send a span.arrow {
   border-left: 10px solid #d9d9d9;
   transform: rotate(135deg);
 }
-div.login button.send a span.arrow::after {
+div.forget button.send a span.arrow::after {
   content: "";
   display: block;
   width: 10px;
@@ -657,8 +716,7 @@ div.login button.send a span.arrow::after {
   left: 0;
   top: 0;
 }
-div.login button.confirm {
-  padding: 10px;
+div.forget button.confirm {
   border: 5px solid #d9d9d9;
   color: #ffffff;
   font-family: "ToronoGlitchSans H2";
@@ -668,20 +726,19 @@ div.login button.confirm {
   background: rgba(217, 217, 217, 0.35);
   border-radius: 100px;
   padding: 0px 30px 0px 30px;
-  margin: 100px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
   text-align: center;
   width: 94px;
   height: 94px;
-  position: absolute;
-  top: 459px;
-  left: 1080px;
+  position: relative;
+  right: 110px;
 }
-div.login button.confirm a {
+div.forget button.confirm a {
   font-family: "ToronoGlitchSans H2";
   text-decoration: none;
   color: #ffffff;
 }
-div.login button.confirm a span.arrow {
+div.forget button.confirm a span.arrow {
   display: block;
   margin: 0px auto;
   width: 30px;
@@ -690,7 +747,7 @@ div.login button.confirm a span.arrow {
   border-left: 10px solid #d9d9d9;
   transform: rotate(135deg);
 }
-div.login button.confirm a span.arrow::after {
+div.forget button.confirm a span.arrow::after {
   content: "";
   display: block;
   width: 10px;
@@ -700,7 +757,7 @@ div.login button.confirm a span.arrow::after {
   left: 0;
   top: 0;
 }
-div.login button:hover {
+div.forget button:hover {
   color: #f7d967;
   background: radial-gradient(
     149.95% 387.57% at 54.19% 45.2%,
@@ -708,6 +765,4 @@ div.login button:hover {
     rgba(255, 255, 255, 0.63) 100%
   );
   cursor: pointer;
-}
-
-/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
