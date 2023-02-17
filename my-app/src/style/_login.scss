@@ -29,7 +29,7 @@ div.login {
     padding: 10px;
     border: 5px solid #d9d9d9;
     color: #ffffff;
-    line-height: 72px;
+    line-height: 36px;
     font-size: 35px;
     background: rgba(217, 217, 217, 0.35);
     border-radius: 30px;
@@ -57,7 +57,11 @@ div.login {
   }
 
   input.button {
-    margin: 0px 0px 20px 99px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  div.pwd_container {
+    position: relative;
   }
 
   button.confirm {
@@ -74,8 +78,9 @@ div.login {
     text-align: center;
     width: 94px;
     height: 94px;
-    position: relative;
-    right: 110px;
+    position: absolute;
+    right: 20px;
+    top: 25px;
 
     a {
       font-family: "ToronoGlitchSans H2";

@@ -67,7 +67,11 @@ div.regist {
   }
 
   input.button {
-    margin: 0px 0px 20px 99px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  div.pwd_container {
+    position: relative;
   }
 
   button.confirm {
@@ -84,8 +88,9 @@ div.regist {
     text-align: center;
     width: 94px;
     height: 94px;
-    position: relative;
-    right: 110px;
+    position: absolute;
+    right: 20px;
+    top: 25px;
 
     a {
       font-family: "ToronoGlitchSans H2";

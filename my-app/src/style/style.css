@@ -174,6 +174,7 @@ div.card section.right div.words h1 span.E {
   color: #edb4cf;
 }
 div.card section.right div.words p {
+  -moz-text-align-last: center;
   text-align-last: center;
   letter-spacing: 3px;
   font-family: "Source Code Pro", monospace;
@@ -198,7 +199,11 @@ div.card section.right button.register {
 }
 div.card section.right button:hover {
   color: #f7d967;
-  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
   cursor: pointer;
 }
 
@@ -210,17 +215,21 @@ div.card section.right button:hover {
   }
   div.card section.left {
     order: 2;
+    width: -moz-fit-content;
     width: fit-content;
   }
   div.card section.left div.img_container {
+    width: -moz-fit-content;
     width: fit-content;
     height: 100%;
   }
   div.card section.left div.img_container img {
+    width: -moz-fit-content;
     width: fit-content;
     height: 60vh;
   }
   section.right {
+    width: -moz-fit-content;
     width: fit-content;
     padding: 0;
     order: 1;
@@ -349,7 +358,11 @@ div.info button.register a {
 }
 div.info button:hover {
   color: #f7d967;
-  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
   cursor: pointer;
 }
 
@@ -386,7 +399,7 @@ div.login input.register {
   padding: 10px;
   border: 5px solid #d9d9d9;
   color: #ffffff;
-  line-height: 72px;
+  line-height: 36px;
   font-size: 35px;
   background: rgba(217, 217, 217, 0.35);
   border-radius: 30px;
@@ -394,16 +407,26 @@ div.login input.register {
   width: 780px;
   height: 146px;
 }
+div.login ::-moz-placeholder {
+  color: #ffffff;
+}
 div.login ::placeholder {
   color: #ffffff;
 }
 div.login input:hover {
   color: #f7d967;
-  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
   cursor: pointer;
 }
 div.login input.button {
-  margin: 0px 0px 20px 99px;
+  margin: 0px 0px 20px 0px;
+}
+div.login div.pwd_container {
+  position: relative;
 }
 div.login button.confirm {
   border: 5px solid #d9d9d9;
@@ -419,8 +442,9 @@ div.login button.confirm {
   text-align: center;
   width: 94px;
   height: 94px;
-  position: relative;
-  right: 110px;
+  position: absolute;
+  right: 20px;
+  top: 25px;
 }
 div.login button.confirm a {
   font-family: "ToronoGlitchSans H2";
@@ -448,7 +472,11 @@ div.login button.confirm a span.arrow::after {
 }
 div.login button:hover {
   color: #f7d967;
-  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
   cursor: pointer;
 }
 
@@ -497,16 +525,26 @@ div.regist input.register {
   width: 780px;
   height: 146px;
 }
+div.regist ::-moz-placeholder {
+  color: #ffffff;
+}
 div.regist ::placeholder {
   color: #ffffff;
 }
 div.regist input:hover {
   color: #f7d967;
-  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
   cursor: pointer;
 }
 div.regist input.button {
-  margin: 0px 0px 20px 99px;
+  margin: 0px 0px 20px 0px;
+}
+div.regist div.pwd_container {
+  position: relative;
 }
 div.regist button.confirm {
   border: 5px solid #d9d9d9;
@@ -522,8 +560,9 @@ div.regist button.confirm {
   text-align: center;
   width: 94px;
   height: 94px;
-  position: relative;
-  right: 110px;
+  position: absolute;
+  right: 20px;
+  top: 25px;
 }
 div.regist button.confirm a {
   font-family: "ToronoGlitchSans H2";
@@ -551,7 +590,11 @@ div.regist button.confirm a span.arrow::after {
 }
 div.regist button:hover {
   color: #f7d967;
-  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
   cursor: pointer;
 }
 
@@ -609,16 +652,26 @@ div.forget input.register {
   width: 780px;
   height: 146px;
 }
+div.forget ::-moz-placeholder {
+  color: #ffffff;
+}
 div.forget ::placeholder {
   color: #ffffff;
 }
 div.forget input:hover {
   color: #f7d967;
-  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
   cursor: pointer;
 }
 div.forget input.button {
-  margin: 0px 0px 20px 99px;
+  margin: 0px 0px 20px 0px;
+}
+div.forget div.pwd_container {
+  position: relative;
 }
 div.forget button.send {
   border: 5px solid #d9d9d9;
@@ -630,12 +683,13 @@ div.forget button.send {
   background: rgba(217, 217, 217, 0.35);
   border-radius: 100px;
   padding: 0px 30px 0px 30px;
-  margin: 100px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
   text-align: center;
   width: 94px;
   height: 94px;
-  position: relative;
-  right: 110px;
+  position: absolute;
+  right: 20px;
+  top: 25px;
 }
 div.forget button.send a {
   font-family: "ToronoGlitchSans H2";
@@ -675,8 +729,9 @@ div.forget button.confirm {
   text-align: center;
   width: 94px;
   height: 94px;
-  position: relative;
-  right: 110px;
+  position: absolute;
+  right: 20px;
+  top: 25px;
 }
 div.forget button.confirm a {
   font-family: "ToronoGlitchSans H2";
@@ -704,8 +759,10 @@ div.forget button.confirm a span.arrow::after {
 }
 div.forget button:hover {
   color: #f7d967;
-  background: radial-gradient(149.95% 387.57% at 54.19% 45.2%, #000000 52.6%, rgba(255, 255, 255, 0.63) 100%);
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
   cursor: pointer;
-}
-
-/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
