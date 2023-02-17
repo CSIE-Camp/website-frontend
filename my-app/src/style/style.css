@@ -401,7 +401,7 @@ div.login input.register {
   border: 5px solid #d9d9d9;
   color: #ffffff;
   line-height: 72px;
-  font-size: 2.5rem;
+  font-size: 35px;
   background: rgba(217, 217, 217, 0.35);
   border-radius: 30px;
   margin: 0px 0px 20px 0px;
@@ -409,13 +409,9 @@ div.login input.register {
   height: 146px;
 }
 div.login ::-moz-placeholder {
-  letter-spacing: 1rem;
-  font-family: "ToronoGlitchSans H2";
   color: #ffffff;
 }
 div.login ::placeholder {
-  letter-spacing: 1rem;
-  font-family: "ToronoGlitchSans H2";
   color: #ffffff;
 }
 div.login input:hover {
@@ -519,7 +515,7 @@ div.regist input.register {
   border: 5px solid #d9d9d9;
   color: #ffffff;
   line-height: 72px;
-  font-size: 2.5rem;
+  font-size: 35px;
   background: rgba(217, 217, 217, 0.35);
   border-radius: 30px;
   margin: 0px 0px 20px 0px;
@@ -527,13 +523,9 @@ div.regist input.register {
   height: 146px;
 }
 div.regist ::-moz-placeholder {
-  letter-spacing: 1rem;
-  font-family: "ToronoGlitchSans H2";
   color: #ffffff;
 }
 div.regist ::placeholder {
-  letter-spacing: 1rem;
-  font-family: "ToronoGlitchSans H2";
   color: #ffffff;
 }
 div.regist input:hover {
@@ -646,7 +638,7 @@ div.forget input.register {
   border: 5px solid #d9d9d9;
   color: #ffffff;
   line-height: 72px;
-  font-size: 2.5rem;
+  font-size: 35px;
   background: rgba(217, 217, 217, 0.35);
   border-radius: 30px;
   margin: 0px 0px 20px 0px;
@@ -654,13 +646,9 @@ div.forget input.register {
   height: 146px;
 }
 div.forget ::-moz-placeholder {
-  letter-spacing: 1rem;
-  font-family: "ToronoGlitchSans H2";
   color: #ffffff;
 }
 div.forget ::placeholder {
-  letter-spacing: 1rem;
-  font-family: "ToronoGlitchSans H2";
   color: #ffffff;
 }
 div.forget input:hover {
