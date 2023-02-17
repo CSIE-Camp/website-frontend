@@ -9,11 +9,12 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  div a img {
-    flex: 1 1 450px;
+  img {
+    max-width: 450px;
   }
 
   padding: 1rem 1rem;
+  margin: 2rem 0;
 
   ul {
     display: flex;
@@ -27,7 +28,6 @@ nav {
       a {
         display: flex;
         padding: 1rem;
-        //
         background: rgba(183, 183, 183, 0.3);
         color: black;
         font-family: "Noto Sans TC";
