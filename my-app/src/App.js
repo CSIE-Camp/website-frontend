@@ -14,19 +14,22 @@ import Regist from "./page/Regist";
 const App = () => {
   return (
     <div className="App">
-      <div id="bg"></div>
-      <div id="container">
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/info" element={<Info />} />
-          <Route path="/more" element={<More />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/blank" element={<Blank />} />
-          <Route path="/forget" element={<Forget />} />
-          <Route path="/regist" element={<Regist />} />
-        </Routes>
+      <div id="bg">
+        <div id="container">
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/info" element={<Info />} />
+            <Route path="/more" element={<More />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/blank" element={<Blank />} />
+            <Route path="/forget" element={<Forget />} />
+            <Route path="/regist" element={<Regist />} />
+          </Routes>
+        </div>
+        {/* <div id="bg2"></div> */}
+
         <Footer />
       </div>
     </div>

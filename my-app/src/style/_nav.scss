@@ -52,7 +52,9 @@ div.dropdown {
   overflow: hidden;
 
   button {
+    margin-top: 0.5rem;
     padding: 1rem;
+
     background: rgba(183, 183, 183, 0.3);
 
     font-weight: 800;
@@ -74,8 +76,12 @@ div.dropdown {
 }
 
 .dropdownContent {
-  //display: none;
+  display: none;
   position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: #000000;
 
   box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
@@ -85,6 +91,11 @@ div.dropdown {
     display: block;
     text-align: center;
   }
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdownContent {
+  display: block;
 }
 
 // 目前所在的網頁
