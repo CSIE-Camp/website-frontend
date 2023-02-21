@@ -3,12 +3,62 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
+  position: relative;
 }
 
+html,
+body,
+body > #root,
+#root > .App {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root > .App {
+  overflow-y: auto;
+}
+
+#bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(image/Blue_background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 body {
   z-index: 1;
-  background-image: (url(image/Blue_background.png));
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H1;
+  src: local("ToronoGlitchSans H1"), url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H2;
+  src: local("ToronoGlitchSans H2"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H3;
+  src: local("ToronoGlitchSans H3"), url(./font/torono-glitch-sans/Torono_Glitch_SansH3.otf);
+}
+
+@font-face {
+  font-family: ToronoGlitchSans H4;
+  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
 }
 
 h1,
@@ -24,70 +74,11 @@ a {
   text-decoration: none;
 }
 
-nav {
-  background: white;
-  height: 10%;
-  position: sticky;
-  top: 0;
-  z-index: 5;
-
-  img {
-    height: 5vw;
-  }
-
-  padding: 1rem 1rem;
-  display: flex;
-  align-items: center;
-  flex: 5 1 400px;
-
-  ul {
-    display: flex;
-
-    list-style-type: none;
-    justify-content: space-around;
-
-    li {
-      padding: 10px;
-
-      a {
-        display: flex;
-        padding: 1rem;
-        //
-        background: rgba(183, 183, 183, 0.3);
-        color: black;
-        font-family: "Noto Sans TC";
-        font-style: normal;
-        font-weight: 800;
-        font-size: 2rem;
-        line-height: 2.5rem;
-        border-radius: 18px;
-      }
-
-      a:hover {
-        background: #000000;
-        color: #ffffff;
-      }
-    }
-  }
-}
-
-/* scrollbar */
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #3091ff;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #0c1794;
-}
+@import "./nav";
+@import "./home";
+@import "./footer";
+@import "./scrollbar";
+@import "./info";
+@import "./login";
+@import "./regist";
+@import "./forget";

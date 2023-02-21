@@ -1,0 +1,65 @@
+nav {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    max-width: 450px;
+  }
+
+  padding: 1rem 1rem;
+  margin: 2rem 0;
+
+  ul {
+    display: flex;
+
+    justify-content: flex-end;
+    list-style-type: none;
+
+    li {
+      padding: 0.5rem;
+
+      a {
+        display: flex;
+        padding: 1rem;
+        background: rgba(183, 183, 183, 0.3);
+        color: black;
+        font-family: "Noto Sans TC";
+
+        font-weight: 800;
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+        border-radius: 18px;
+      }
+
+      a:hover {
+        background: #000000;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// 目前所在的網頁
+.active {
+  background: #000000;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1220px) {
+  nav {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  nav {
+    justify-content: center;
+  }
+}

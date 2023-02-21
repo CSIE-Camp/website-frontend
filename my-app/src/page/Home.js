@@ -1,6 +1,4 @@
 import React from "react";
-import "../style/style.css";
-import "../style/app.css";
 
 const Home = () => {
   return (
@@ -12,7 +10,7 @@ const Home = () => {
               <img
                 src={require("../image/Photos.png")}
                 title="歷屆資工營照片"
-                alt="Photo Wall"
+                alt="Wall of Photos"
               />
             </div>
           </section>
@@ -34,7 +32,7 @@ const Home = () => {
               <p>2023 師大資工營 NTNU CSIE CAMP</p>
             </div>
             <button class="register">
-              <a href="#">立即報名</a>
+              <a href="/login">立即報名</a>
             </button>
           </section>
         </div>
