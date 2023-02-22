@@ -20,6 +20,12 @@ hr.bar {
   left: 3%;
 }
 
+hr.field {
+  padding: 0 0 0 0;
+  size: 1px;
+  width: 25%;
+}
+
 div.registerContain {
   color: #fff;
   text-align: center;
@@ -32,7 +38,14 @@ form {
   left: 30%;
 }
 
-form input[type="text"] {
+fieldset {
+  border: 0px;
+}
+
+form input[type="text"],
+form input[type="date"],
+input[type="tel"],
+input[type="url"] {
   padding-left: 20px;
   width: 25%;
   left: 0%;
@@ -57,7 +70,7 @@ form input:hover {
 }
 
 input[type="radio"] {
-  margin: 0 10px 0 10px;
+  margin: 0 0 0 20px;
   width: 18px;
   height: 18px;
 }
