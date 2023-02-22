@@ -5,10 +5,14 @@ const About = () => {
     <div class="infoBox">
       <h1>營隊介紹</h1>
       <div class="intro">
-        <h2>主題介紹</h2>
+        <div class="secondTitle">
+          <h2>👾 主題介紹</h2>
+        </div>
       </div>
       <div class="intro">
-        <h2>課程介紹</h2>
+        <div class="secondTitle">
+          <h2>👾 課程介紹</h2>
+        </div>
       </div>
     </div>
   );
