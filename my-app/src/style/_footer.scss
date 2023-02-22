@@ -1,5 +1,5 @@
 footer {
-  background: url('../image/island.png');
+  background: url("../image/island.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: flex;
@@ -12,6 +12,7 @@ footer {
     font-weight: 900;
     line-height: 48px;
     font-size: 2.5rem;
+    color: #000;
   }
 
   p {

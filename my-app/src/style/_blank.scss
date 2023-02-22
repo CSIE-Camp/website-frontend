@@ -1,0 +1,68 @@
+h1 {
+  padding: 10px;
+  font-family: "ToronoGlitchSans H2";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 48px;
+  font-size: 2.5rem;
+}
+
+h2 {
+  padding: 10px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+hr.bar {
+  padding: 0px 0px 0px 0px;
+  size: "1px";
+  width: "1336px";
+  left: 3%;
+}
+
+div.registerContain {
+  color: #fff;
+  text-align: center;
+}
+
+form {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: left;
+  left: 30%;
+}
+
+form input[type="text"] {
+  padding-left: 20px;
+  width: 25%;
+  left: 0%;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  background-color: #d9d9d930;
+  height: 3rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(199, 214, 229);
+}
+
+form input:focus {
+  color: #000;
+  border: 5px solid #f2a2f2;
+  background-color: #fff;
+  padding: auto;
+}
+
+form input:hover {
+  border: 3px solid #f2a2f2;
+}
+
+input[type="radio"] {
+  margin: 0 10px 0 10px;
+  width: 18px;
+  height: 18px;
+}
+
+// **hadle this is I have time
+// .genderButton {
+//     background-color: #f00;
+// }
