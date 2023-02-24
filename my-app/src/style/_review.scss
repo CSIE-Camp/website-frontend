@@ -1,0 +1,56 @@
+div#page_review {
+  margin: 1rem 1rem 5vw 1rem;
+  width: 100vw;
+  height: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+  position: relative;
+  div#ri_up_1 {
+    width: 55vw;
+    //height: 55%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    div#ri_arrow_l {
+      width: 5vw;
+      height: 45vw;
+      background-color: red;
+      z-index: 10;
+    }
+
+    div.ri_img_container {
+      width: 45vw;
+      height: 45vw;
+      position: relative;
+      img {
+        width: 39vw;
+        height: 39vw;
+        border-radius: 10%;
+        position: absolute;
+      }
+    }
+    div#ri_arrow_r {
+      width: 5vw;
+      height: 45vw;
+      background-color: red;
+      z-index: 10;
+    }
+  }
+  div#ri_up_2 {
+    width: 55vw;
+    height: auto;
+    position: relative;
+    div#ri_img_dotbar {
+      width: 45vw;
+      height: 5vw;
+      background-color: yellowgreen;
+      position: absolute;
+      left: 5vw;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

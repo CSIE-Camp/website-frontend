@@ -10,6 +10,7 @@ import Login from "./page/Login";
 import Blank from "./page/Blank";
 import Forget from "./page/Forget";
 import Regist from "./page/Regist";
+import Review from "./page/Review";
 
 const App = () => {
   return (
@@ -26,9 +27,9 @@ const App = () => {
             <Route path="/blank" element={<Blank />} />
             <Route path="/forget" element={<Forget />} />
             <Route path="/regist" element={<Regist />} />
+            <Route path="/review" element={<Review />} />
           </Routes>
         </div>
-        {/* <div id="bg2"></div> */}
 
         <Footer />
       </div>
