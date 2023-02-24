@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Blank = () => {
+export const Form = () => {
   return (
     <div class="registerContain">
       <h1>個人資料填寫</h1>
@@ -206,4 +206,4 @@ export const Blank = () => {
   );
 };
 
-export default Blank;
+export default Form;
