@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import ReviewScript from "./Review_script.js";
 const review_up_image_totle = 10;
 
 //生成<img>的函式
@@ -33,15 +34,7 @@ const dot_produce = (img_num) => {
 
 export const Review = () => {
   useEffect(() => {
-    const script = document.createElement("script"); //建立<script>元件
-    script.src = require("./Review_script.js"); //script來源、必須用require包起來
-    script.async = true;
-    script.id = "Review_script"; //除錯用id
-    document.body.appendChild(script); //將<script>加到<body>的最底部
-
-    return () => {
-      document.body.removeChild(script); //離開此routes時移除此<script>元件
-    };
+    ReviewScript();
   }, []);
   return (
     <div id="page_review">
