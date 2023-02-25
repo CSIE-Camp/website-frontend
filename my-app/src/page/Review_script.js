@@ -76,13 +76,12 @@ const img_show_func = (e) => {
     img_style.zIndex = ""; //z-index要先歸零，不然會擋到箭頭，還有可能出bug
     if (i <= 2) {
       //要顯示的三張，設transition是為了動起來
-
       img_style.top = (2 - i) * photo_yd + "vw";
       img_style.right = (2 - i) * photo_xd + "vw";
       img_style.opacity = 1;
       img_style.zIndex = 2 - i;
       img_style.transform = `scale(1)`;
-      //img_style.transition = "transform 0.2s ease,top 0.2s ease 0.2s,right 0.2s ease 0.2s";
+      img_style.filter = `blur(${i * 2}px)`;
     } else if (i === review_up_image_totle - 1) {
       //即將顯示的前一張
       img_style.top = 9 + "vw";
@@ -98,6 +97,11 @@ const img_show_func = (e) => {
       img_style.zIndex = 0;
       img_style.transform = `scale(0)`;
       //img_style.transition = "";
+    }
+    if (i === 0) {
+      img_style.border = "5px white solid";
+    } else {
+      img_style.border = "";
     }
     dot_show_func(i, nsi_temp);
   }
