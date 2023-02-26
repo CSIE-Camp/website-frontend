@@ -46,13 +46,22 @@ details > summary:hover {
   background-color: pink;
   height: 3rem;
   font-size: 1.5rem;
-  width: 80%;
-  right: 5%;
-}
+  width: 90%;
+  background-position: 0px -190px;
+  right: 10%;
+  text-align: center;
 
-details > summary > img:hover {
-  width: 3rem;
-  height: 1.8rem;
+  img {
+    width: 3rem;
+    height: 1.8rem;
+  }
+
+  img.summary {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  transition: 0.3s ease-out;
 }
 
 img.secondTitle {
