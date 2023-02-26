@@ -4,7 +4,7 @@ const ReviewScript = () => {
   const img_array = document.querySelectorAll(".review_up_image"); //將圖片設成array
   const review_up_dot = document.querySelectorAll(".review_up_dot");
   const review_up_image_totle = img_array.length;
-  const rootStyles = getComputedStyle(document.documentElement);
+  const rootStyles = getComputedStyle(document.querySelector("div#page_review"));
   const photo_xd = parseInt(rootStyles.getPropertyValue("--npr--photo_xd"));
   const photo_yd = parseInt(rootStyles.getPropertyValue("--npr--photo_yd"));
 
@@ -21,6 +21,7 @@ const ReviewScript = () => {
     }
     img_show_func(now_show_img);
     //console.log("left" + now_show_img);//D3rr0r
+    console.log(rootStyles);
   });
 
   //聽右邊的箭頭

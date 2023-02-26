@@ -1,112 +1,131 @@
-:root {
-  --npr--photo_width: 58.5vw;
-  --npr--photo_height: 39vw;
+div#page_review {
+  --npr--photo_width: 42vw;
+  --npr--photo_height: calc(var(--npr--photo_width) * 2 / 3);
   --npr--photo_xd: 4vw;
   --npr--photo_yd: 3vw;
-}
+  --npr--arrow_width: 6vw;
+  --npr--arrow_height: 5vw;
+  --npr--dotbar_height: 4vw;
 
-div#page_review {
-  margin: 1rem 0 5vw 0;
-  width: 100vw;
-  height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2 + 7vw);
+  margin: 1rem 1vw 1rem 1vw;
+  width: 98vw;
+  height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height));
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  //justify-content: center;
+  justify-content: center;
   position: relative;
-  div#ri_up_1 {
-    width: calc(var(--npr--photo_width) + var(--npr--photo_xd) * 2 + 14vw);
-    //height: 55%;
-    display: flex;
-    align-items: center;
-    position: relative;
-
-    div.ri_arrow_c {
-      width: 7vw;
-      height: 5vw;
-      //background-color: red;
-      position: relative;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      &:hover > div#ri_arrow_m1 {
-        right: 5px;
-      }
-      &:hover > div#ri_arrow_m2 {
-        right: 20px;
-      }
-      &:hover > div#ri_arrow_m3 {
-        right: 35px;
-      }
-      &:active > div.ri_arrow_m {
-        border-color: red;
-      }
-      div.ri_arrow_m {
-        width: 3.5vw;
-        height: 3.5vw;
-        position: absolute;
-        rotate: 45deg;
-        border-bottom: 5px solid white;
-        border-left: 5px solid white;
-        border-radius: 5px;
-      }
-      div#ri_arrow_m1 {
-        right: -10px;
-        transition: right 0.1s ease 0.2s;
-      }
-      div#ri_arrow_m2 {
-        right: 5px;
-        transition: right 0.1s ease 0.1s;
-      }
-      div#ri_arrow_m3 {
-        right: 20px;
-        transition: right 0.1s ease;
-      }
+  div#page_review_down {
+    width: calc(
+      97vw - (var(--npr--photo_width) + var(--npr--photo_xd) * 2 + var(--npr--arrow_width) * 2)
+    );
+    height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height));
+    padding: 0 0 0 1vw;
+    div#rt_title {
+      font-size: 5vw;
+      color: white;
     }
-
-    div.ri_img_container {
-      width: calc(var(--npr--photo_width) + var(--npr--photo_xd) * 2);
-      height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2);
-      position: relative;
-      img {
-        width: var(--npr--photo_width);
-        height: var(--npr--photo_height);
-        border-radius: 10%;
-        position: absolute;
-        transition: all 0.2s ease;
-        user-select: none;
-      }
-    }
-    div#ri_arrow_r {
-      rotate: 180deg;
+    div#rt_content {
+      font-size: 2vw;
+      color: white;
     }
   }
-  div#ri_up_2 {
-    width: auto;
-    height: auto;
-    position: relative;
-    div#ri_img_dotbar {
-      width: calc(var(--npr--photo_width) + var(--npr--photo_xd) * 2);
-      height: 5vw;
-      //background-color: yellowgreen;
-      //position: absolute;
-      //left: 5vw;
+
+  div#page_review_up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div#ri_up_1 {
+      width: calc(var(--npr--photo_width) + var(--npr--photo_xd) * 2 + var(--npr--arrow_width) * 2);
+      //max-height: 500px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      position: relative;
 
-      div.review_up_dot {
-        width: 20px;
-        height: 20px;
-        min-width: 10px;
-        //background-color: rgba(100,100,100,0.5);
-        margin: 10px;
-        border: 3px white solid;
-        border-radius: 10px;
-        transition: background-color 0.3s;
+      div.ri_arrow_c {
+        width: var(--npr--arrow_width);
+        height: var(--npr--arrow_height);
+        //background-color: red;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        &:hover > div#ri_arrow_m1 {
+          right: 5px;
+        }
+        &:hover > div#ri_arrow_m2 {
+          right: 20px;
+        }
+        &:hover > div#ri_arrow_m3 {
+          right: 35px;
+        }
+        &:active > div.ri_arrow_m {
+          border-color: red;
+        }
+        div.ri_arrow_m {
+          width: calc(var(--npr--arrow_width) / 2);
+          height: calc(var(--npr--arrow_width) / 2);
+          position: absolute;
+          rotate: 45deg;
+          border-bottom: 5px solid white;
+          border-left: 5px solid white;
+          border-radius: 5px;
+        }
+        div#ri_arrow_m1 {
+          right: -10px;
+          transition: right 0.1s ease 0.2s;
+        }
+        div#ri_arrow_m2 {
+          right: 5px;
+          transition: right 0.1s ease 0.1s;
+        }
+        div#ri_arrow_m3 {
+          right: 20px;
+          transition: right 0.1s ease;
+        }
+      }
 
-        &:hover {
-          background-color: rgba(255, 0, 0, 0.5);
+      div.ri_img_container {
+        width: calc(var(--npr--photo_width) + var(--npr--photo_xd) * 2);
+        height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2);
+        position: relative;
+        img {
+          width: var(--npr--photo_width);
+          height: var(--npr--photo_height);
+          border-radius: 10%;
+          position: absolute;
+          transition: all 0.2s ease;
+          user-select: none;
+        }
+      }
+      div#ri_arrow_r {
+        rotate: 180deg;
+      }
+    }
+    div#ri_up_2 {
+      width: auto;
+      height: auto;
+      position: relative;
+      div#ri_img_dotbar {
+        width: calc(var(--npr--photo_width) + var(--npr--photo_xd) * 2);
+        height: var(--npr--dotbar_height);
+        //background-color: yellowgreen;
+        //position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div.review_up_dot {
+          width: 20px;
+          height: 20px;
+          min-width: 10px;
+          //background-color: rgba(100,100,100,0.5);
+          margin: 10px;
+          border: 3px white solid;
+          border-radius: 10px;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: rgba(255, 0, 0, 0.5);
+          }
         }
       }
     }
