@@ -9,7 +9,7 @@ export const Login = () => {
       <div class="pwd_container">
         <input class="register button" placeholder="    請輸入密碼"></input>
         <button class="confirm">
-          <Link to="/blank">
+          <Link to="/form">
             <span class="arrow"></span>
           </Link>
         </button>
