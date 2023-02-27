@@ -18,14 +18,9 @@ const Nav = () => {
             <li>
               <Link to="/info">報名資訊</Link>
             </li>
-            <div className="dropdown">
-              <button>更多⏷</button>
-              <div className="dropdownContent">
-                <Link to="/review">歷屆回顧</Link>
-                <Link to="/scores">計分系統</Link>
-              </div>
-            </div>
-
+            <li>
+              <Link to="/review">歷屆回顧</Link>
+            </li>
             <li>
               <Link to="/login">登入/註冊</Link>
             </li>
