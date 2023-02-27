@@ -15,7 +15,7 @@ const NavScript = () => {
         Active.classList.remove();
       }
 
-      Ae.classList.add("active");
+      Ae.classList.toggle("active");
     });
   });
 };
