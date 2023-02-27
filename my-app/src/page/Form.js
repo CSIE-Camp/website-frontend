@@ -7,7 +7,7 @@ export const Form = () => {
       <hr class="bar" size="0px" width="1336px"></hr>
       <h2>下方個人資料僅申請保險用 ex.身分證字號、出生年月日等</h2>
       <br></br>
-      <form>
+      <form method="post" action="/">
         <fieldset>
           <legend>基本資料</legend>
           <hr class="field" size="0px" width="1336px"></hr>
@@ -64,7 +64,7 @@ export const Form = () => {
             name="fbLink"
             id="fbLink"
             placeholder="https://example.com"
-            pattern="https://*"
+            pattern="https://.*"
           ></input>
         </fieldset>
         <br></br>
@@ -169,14 +169,25 @@ export const Form = () => {
           ></textarea>
           <br></br>
           <br></br>
-          <label for="selfPicture">上傳本人照片（正臉清晰可辨的單人生活照）</label>
+          <h4>上傳本人照片（正臉清晰可辨的單人生活照）</h4>
           <br></br>
-          <input
-            type="file"
-            id="selfPicture"
-            name="selfPicture"
-            accept="image/png, image/jpeg"
-          ></input>
+          <div class="picture">
+            <label for="selfPicture">
+              <img src={require("../image/upload.png")} class="self" alt="upload"></img>
+              <input
+                type="file"
+                id="selfPicture"
+                name="selfPicture"
+                accept="image/png, image/jpeg"
+              ></input>
+              選擇檔案
+            </label>
+          </div>
+          <div id="pictureLoad"></div>
+          <script>
+            document.getElementById("pictureLoad").value =
+            document.getElementById("selfPicure").value;
+          </script>
         </fieldset>
         <br></br>
         <br></br>
@@ -195,6 +206,9 @@ export const Form = () => {
           <br></br>
           <input type="text" name="lanMaster" id="lanMaster" placeholder="JavaScript"></input>
         </fieldset>
+        <div>
+          <input type="submit"></input>
+        </div>
         <br></br>
         <br></br>
         <br></br>

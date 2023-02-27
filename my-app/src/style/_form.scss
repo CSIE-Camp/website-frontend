@@ -13,6 +13,10 @@ h2 {
   font-weight: 900;
 }
 
+h4 {
+  font-weight: bold;
+}
+
 hr.bar {
   padding: 0px 0px 0px 0px;
   size: "1px";
@@ -29,17 +33,18 @@ hr.field {
 div.registerContain {
   color: #fff;
   text-align: center;
+  background-color: #0000003b;
 }
 
 form {
   font-size: 1.3rem;
   font-weight: bold;
   text-align: left;
-  left: 30%;
 }
 
 fieldset {
   border: 0px;
+  margin: 0 10% 0 25%;
 }
 
 form input[type="text"],
@@ -47,26 +52,45 @@ form input[type="date"],
 input[type="tel"],
 input[type="url"] {
   padding-left: 20px;
-  width: 25%;
+  width: 45%;
   left: 0%;
   border: 2px solid #fff;
   border-radius: 15px;
-  background-color: #d9d9d930;
+  // background-color: #d9d9d930;
+  background: rgba(217, 217, 217, 0.35);
   height: 3rem;
   font-size: 1.8rem;
   font-weight: bold;
-  color: rgb(199, 214, 229);
+  color: rgb(255, 255, 255);
 }
 
 form input:focus {
   color: #000;
-  border: 5px solid #f2a2f2;
-  background-color: #fff;
+  color: #f7d967;
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
   padding: auto;
+}
+
+form input[type="file"] {
+  display: none;
+}
+
+::placeholder {
+  color: #fff;
 }
 
 form input:hover {
   border: 3px solid #f2a2f2;
+  color: #f7d967;
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
 }
 
 input[type="radio"] {
@@ -76,8 +100,9 @@ input[type="radio"] {
 }
 
 select {
-  background-color: #d9d9d930;
-  color: #000;
+  // background-color: #d9d9d930;
+  background: rgba(217, 217, 217, 0.35);
+  color: #fff;
   height: 2rem;
   padding-left: 10px;
   border-radius: 7px;
@@ -95,7 +120,7 @@ textarea {
   font-size: 1rem;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #414141;
+  background: rgba(217, 217, 217, 0.35);
   color: #fff;
   border-radius: 7px;
 }
@@ -105,13 +130,32 @@ textarea:hover {
 }
 
 textarea:focus {
-  color: #000;
+  color: #f7d967;
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
   border: 5px solid #f2a2f2;
-  background-color: #fff;
 }
 
 .experience {
   font-size: 0.8rem;
+}
+
+.self {
+  width: 2rem;
+  height: 2rem;
+  float: left;
+}
+
+div .picture {
+  background: #0630ff37;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  padding: 10px;
+  width: 25%;
+  cursor: pointer;
 }
 
 // **hadle this is I have time
