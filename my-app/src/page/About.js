@@ -32,8 +32,8 @@ const About = () => {
           </h2>
         </div>
         <div class="courseList">
-          <details>
-            <summary>
+          <div class="detail">
+            <div class="summary">
               <img
                 src={require("../image/iconForThirdTitle.png")}
                 alt="Secret!"
@@ -41,11 +41,17 @@ const About = () => {
               ></img>
               來做自己專屬的 BLOG 吧!
               <img src={require("../image/arrowDown.png")} class="summary" alt="down"></img>
-            </summary>
-            <p></p>
-          </details>
-          <details>
-            <summary>
+            </div>
+            <div class="hidden">
+              Amet nisi do ex aute labore consectetur aute laboris amet cillum ut in commodo. Eu
+              duis eu consectetur proident ipsum sint culpa amet officia. Aute eiusmod commodo dolor
+              ad ex anim aliquip voluptate excepteur dolore magna id deserunt ea. Do non
+              exercitation sint non dolore laboris mollit ut sunt velit commodo. Cillum veniam
+              tempor enim esse aliquip est exercitation quis pariatur.
+            </div>
+          </div>
+          <div class="detail">
+            <div class="summary">
               <img
                 src={require("../image/iconForThirdTitle.png")}
                 alt="Secret!"
@@ -53,11 +59,17 @@ const About = () => {
               ></img>
               創造屬於你的discord bot
               <img src={require("../image/arrowDown.png")} class="summary" alt="down"></img>
-            </summary>
-            <p></p>
-          </details>
-          <details>
-            <summary>
+            </div>
+            <div class="hidden">
+              Amet nisi do ex aute labore consectetur aute laboris amet cillum ut in commodo. Eu
+              duis eu consectetur proident ipsum sint culpa amet officia. Aute eiusmod commodo dolor
+              ad ex anim aliquip voluptate excepteur dolore magna id deserunt ea. Do non
+              exercitation sint non dolore laboris mollit ut sunt velit commodo. Cillum veniam
+              tempor enim esse aliquip est exercitation quis pariatur.
+            </div>
+          </div>
+          <div class="detail">
+            <div class="summary">
               <img
                 src={require("../image/iconForThirdTitle.png")}
                 alt="Secret!"
@@ -65,11 +77,17 @@ const About = () => {
               ></img>
               Web Design & Developement
               <img src={require("../image/arrowDown.png")} class="summary" alt="down"></img>
-            </summary>
-            <p></p>
-          </details>
-          <details>
-            <summary>
+            </div>
+            <div class="hidden">
+              Amet nisi do ex aute labore consectetur aute laboris amet cillum ut in commodo. Eu
+              duis eu consectetur proident ipsum sint culpa amet officia. Aute eiusmod commodo dolor
+              ad ex anim aliquip voluptate excepteur dolore magna id deserunt ea. Do non
+              exercitation sint non dolore laboris mollit ut sunt velit commodo. Cillum veniam
+              tempor enim esse aliquip est exercitation quis pariatur.
+            </div>
+          </div>
+          <div class="detail">
+            <div class="summary">
               <img
                 src={require("../image/iconForThirdTitle.png")}
                 alt="Secret!"
@@ -77,11 +95,17 @@ const About = () => {
               ></img>
               Cyber Security Stuff
               <img src={require("../image/arrowDown.png")} class="summary" alt="down"></img>
-            </summary>
-            <p></p>
-          </details>
-          <details>
-            <summary>
+            </div>
+            <div class="hidden">
+              Amet nisi do ex aute labore consectetur aute laboris amet cillum ut in commodo. Eu
+              duis eu consectetur proident ipsum sint culpa amet officia. Aute eiusmod commodo dolor
+              ad ex anim aliquip voluptate excepteur dolore magna id deserunt ea. Do non
+              exercitation sint non dolore laboris mollit ut sunt velit commodo. Cillum veniam
+              tempor enim esse aliquip est exercitation quis pariatur.
+            </div>
+          </div>
+          <div class="detail">
+            <div class="summary">
               <img
                 src={require("../image/iconForThirdTitle.png")}
                 alt="Secret!"
@@ -89,9 +113,15 @@ const About = () => {
               ></img>
               基礎密碼學 - 從古典到現代
               <img src={require("../image/arrowDown.png")} class="summary" alt="down"></img>
-            </summary>
-            <p></p>
-          </details>
+            </div>
+            <div class="hidden">
+              Amet nisi do ex aute labore consectetur aute laboris amet cillum ut in commodo. Eu
+              duis eu consectetur proident ipsum sint culpa amet officia. Aute eiusmod commodo dolor
+              ad ex anim aliquip voluptate excepteur dolore magna id deserunt ea. Do non
+              exercitation sint non dolore laboris mollit ut sunt velit commodo. Cillum veniam
+              tempor enim esse aliquip est exercitation quis pariatur.
+            </div>
+          </div>
         </div>
       </div>
       <br></br>

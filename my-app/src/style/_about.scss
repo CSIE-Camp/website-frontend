@@ -21,47 +21,69 @@ p {
   font-weight: bold;
 }
 
-details {
+div .detail {
   width: 70%;
-  font-weight: bold;
   left: 25%;
+  font-weight: bold;
 }
 
-details > summary {
+div .detail > .summary {
   font-size: 1rem;
   height: 2rem;
-  padding: 1% 2%;
+  padding: 1% 1%;
   text-align: left;
   margin: 10px 0;
   cursor: pointer;
   list-style: none;
   background-color: #fff;
-  color: #000;
+  color: hsl(0, 0%, 0%);
   width: 70%;
   border-radius: 30px;
   border: 2px solid #000;
 }
 
-details > summary:hover {
-  background-color: pink;
-  height: 3rem;
-  font-size: 1.5rem;
-  width: 90%;
-  background-position: 0px -190px;
-  right: 10%;
-  text-align: center;
+div .detail:hover {
+  .summary {
+    background-color: pink;
+    padding: 1% 1%;
+    margin-bottom: 0;
+    height: 3rem;
+    font-size: 1.3rem;
+    width: 95%;
+    right: 12%;
+    text-align: center;
+    position: relative;
+    transition: 0.3s ease-out;
+  }
+
+  .hidden {
+    padding: 5px;
+    opacity: 1;
+    width: 120%;
+    height: auto;
+    float: none;
+    border: 5px groove;
+    border-color: white pink;
+    border-radius: 10px;
+    border-top: 0;
+    transform: rotateX(-1deg);
+    transition: ease-in-out 1s;
+  }
 
   img {
     width: 3rem;
     height: 1.8rem;
+    transform: rotateX(-360deg) rotateY(-180deg) rotateZ(-180deg);
+    transition-duration: 0.7s;
   }
 
   img.summary {
     width: 2rem;
     height: 2rem;
+    transform: rotate(-90deg) rotateY(-360deg);
+    transition-duration: 0.7s;
+    right: 5%;
   }
-
-  transition: 0.3s ease-out;
 }
 
 img.secondTitle {
@@ -92,6 +114,26 @@ div.secondTitle {
   border: 2px solid #000;
 }
 
+div.hidden {
+  opacity: 0;
+  overflow: hidden;
+  padding: 10px;
+  border-top: 0px;
+  width: 5rem;
+  height: 0.1rem;
+  padding: 0;
+  border: 0;
+  right: 25%;
+  background: linear-gradient(
+    to bottom right,
+    hsla(0, 0%, 100%, 0.452),
+    rgba(109, 113, 113, 0.226),
+    80%,
+    rgba(44, 38, 44, 0.117)
+  );
+  color: #000;
+}
+
 div.infoBox {
   border: 12px solid #fff;
   border-radius: 7px;
@@ -103,4 +145,8 @@ div.infoBox {
 div.intro {
   text-align: center;
   color: #fff;
+}
+
+div.display {
+  display: none;
 }
