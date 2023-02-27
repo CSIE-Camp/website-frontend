@@ -44,6 +44,7 @@ body > #root,
   // background-repeat: no-repeat;
   // background-attachment: fixed;
 }
+
 // #container{
 //   background-image: url(image/Blue_background.png);
 //   background-size: cover;
@@ -96,5 +97,7 @@ a {
 @import "./info";
 @import "./login";
 @import "./regist";
+@import "./about";
 @import "./forget";
+@import "./form";
 @import "./review";

@@ -7,7 +7,7 @@ import About from "./page/About";
 import Info from "./page/Info";
 import More from "./page/More";
 import Login from "./page/Login";
-import Blank from "./page/Blank";
+import Form from "./page/Form";
 import Forget from "./page/Forget";
 import Regist from "./page/Regist";
 import Review from "./page/Review";
@@ -24,13 +24,12 @@ const App = () => {
             <Route path="/info" element={<Info />} />
             <Route path="/more" element={<More />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/blank" element={<Blank />} />
             <Route path="/forget" element={<Forget />} />
             <Route path="/regist" element={<Regist />} />
+            <Route path="/form" element={<Form />} />
             <Route path="/review" element={<Review />} />
           </Routes>
         </div>
-
         <Footer />
       </div>
     </div>
