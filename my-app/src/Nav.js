@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import NavScript from "./Nav_script";
 
 const Nav = () => {
+  useEffect(() => {
+    NavScript();
+  }, []);
   return (
     <div>
       <header>
@@ -13,7 +17,9 @@ const Nav = () => {
           </div>
           <ul>
             <li>
-              <Link to="/about">營隊介紹</Link>
+              <Link to="/about" className="about_test">
+                營隊介紹
+              </Link>
             </li>
             <li>
               <Link to="/info">報名資訊</Link>
