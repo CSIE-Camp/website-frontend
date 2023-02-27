@@ -9,6 +9,19 @@ export const Info = () => {
         <hr className="bar" width="80%"></hr>
         <p className="subTitle">報名相關資訊</p>
         <table className="mainInfo">
+          <div className="mainContent">
+            <ol>
+              <li>活動日期：2021/07/5 (一) ~ 2021/07/9 (五) </li>
+              <li>報名時間：即日起至 2021/05/17 (一) 止 </li>
+              <li>錄取名單將於 2021/05/24 (四) 公佈於粉絲專頁</li>
+              <li>報名費用 (包含食宿、上課講義、營手冊、營服和保險等) : $6500/人</li>
+              <li>屆時請錄取者務必注意網站公佈之繳費流程</li>
+            </ol>
+          </div>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
           <tr className="context">1. 活動日期：2021/07/5 (一) ~ 2021/07/9 (五)</tr>
           <tr className="context">2. 報名時間：即日起至 2021/05/17 (一) 止</tr>
           <tr className="context">3. 錄取名單將於 2021/05/24 (四) 公佈於粉絲專頁</tr>
@@ -16,12 +29,11 @@ export const Info = () => {
             4. 報名費用 (包含食宿、上課講義、營手冊、營服和保險等) : $6500/人
           </tr>
           <tr className="context">5. 屆時請錄取者務必注意網站公佈之繳費流程</tr>
-          <tr className="context2">
-            官方網址:
+          <div>
             <a target="_blank" href="https://www.facebook.com/ntnucsiecamp/" rel="noreferrer">
-              https://www.facebook.com/ntnucsiecamp/
+              官方網址
             </a>
-          </tr>
+          </div>
         </table>
         <p className="subTitle">注意事項和詳閱報名簡章</p>
         <table className="important">
