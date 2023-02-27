@@ -149,6 +149,31 @@ textarea:focus {
   float: left;
 }
 
+#presentFile {
+  display: inline-block;
+}
+
+.register {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "ToronoGlitchSans H2";
+  margin-left: 40%;
+  padding: 2% 1%;
+  border: #fff 3px solid;
+  background: rgba(217, 217, 217, 0.35);
+  color: #fff;
+  border-radius: 20px;
+}
+
+.register:hover {
+  color: #f7d967;
+  background: radial-gradient(
+    149.95% 387.57% at 54.19% 45.2%,
+    #000000 52.6%,
+    rgba(255, 255, 255, 0.63) 100%
+  );
+}
+
 div .picture {
   background: #0630ff37;
   border: 3px solid #fff;
@@ -156,6 +181,8 @@ div .picture {
   padding: 10px;
   width: 25%;
   cursor: pointer;
+  display: inline-block;
+  margin-right: 2%;
 }
 
 // **hadle this is I have time

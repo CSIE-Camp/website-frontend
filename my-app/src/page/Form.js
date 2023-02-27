@@ -7,7 +7,7 @@ export const Form = () => {
       <hr class="bar" size="0px" width="1336px"></hr>
       <h2>下方個人資料僅申請保險用 ex.身分證字號、出生年月日等</h2>
       <br></br>
-      <form method="post" action="/">
+      <form method="post" action="">
         <fieldset>
           <legend>基本資料</legend>
           <hr class="field" size="0px" width="1336px"></hr>
@@ -82,11 +82,11 @@ export const Form = () => {
           <input type="text" id="relation" name="relation" placeholder="母女、父子"></input>
           <br></br>
           <br></br>
-          <label for="parentNumber">緊急行動人行動電話</label>
+          <label for="parentPhoneNumber">緊急行動人行動電話</label>
           <br></br>
           <input
             type="tel"
-            name="phoneNumber"
+            name="parentPhoneNumber"
             id="phoneNumber"
             placeholder="行動電話"
             pattern="[0-9]{10}"
@@ -183,11 +183,12 @@ export const Form = () => {
               選擇檔案
             </label>
           </div>
+          <div id="presentFile"> 目前檔案:</div>
+          {/* <script>
+            const file = document.getElementById("selfPicture").value;
+            document.getElementById("presentFile").value =`  目前檔案: ${file}` 
+          </script> */}
           <div id="pictureLoad"></div>
-          <script>
-            document.getElementById("pictureLoad").value =
-            document.getElementById("selfPicure").value;
-          </script>
         </fieldset>
         <br></br>
         <br></br>
@@ -206,12 +207,14 @@ export const Form = () => {
           <br></br>
           <input type="text" name="lanMaster" id="lanMaster" placeholder="JavaScript"></input>
         </fieldset>
+        <br></br>
+        <br></br>
+        <br></br>
         <div>
-          <input type="submit"></input>
+          <button class="register" type="submit">
+            立即報名
+          </button>
         </div>
-        <br></br>
-        <br></br>
-        <br></br>
         <br></br>
         <br></br>
         <br></br>
