@@ -1,4 +1,5 @@
 import React from "react";
+//import Button from "react-bootstrap/Button";
 const About = () => {
   return (
     <div class="infoBox">
@@ -124,10 +125,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
     </div>
   );
 };

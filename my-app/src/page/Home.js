@@ -5,15 +5,7 @@ const Home = () => {
     <div>
       <main>
         <div class="card">
-          <section class="left">
-            <div class="img_container">
-              <img
-                src={require("../image/Photos.png")}
-                title="歷屆資工營照片"
-                alt="Wall of Photos"
-              />
-            </div>
-          </section>
+          <section class="left"></section>
           <section class="right">
             <div class="words">
               <h1>
