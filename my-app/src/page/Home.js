@@ -23,9 +23,11 @@ const Home = () => {
 
               <p>2023 師大資工營 NTNU CSIE CAMP</p>
             </div>
-            <button class="register">
-              <a href="/login">立即報名</a>
-            </button>
+            <a href="/login">
+              <button class="register">
+                <div>立即報名</div>
+              </button>
+            </a>
           </section>
         </div>
       </main>
