@@ -11,9 +11,9 @@ const Nav = () => {
       <header>
         <nav>
           <div class="logo">
-            <a href="/">
+            <Link to="/">
               <img src={require("./image/Logo.png")} alt="Background" />
-            </a>
+            </Link>
           </div>
           <ul>
             <li>
