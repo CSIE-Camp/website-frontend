@@ -5,7 +5,6 @@ export const Info = () => {
     <div className="infoFlex">
       <div className="infoContent">
         <h1 className="title">報名資訊</h1>
-
         <hr className="bar" width="80%"></hr>
         <p className="subTitle">報名相關資訊</p>
         <table className="mainInfo">
@@ -29,7 +28,7 @@ export const Info = () => {
             4. 報名費用 (包含食宿、上課講義、營手冊、營服和保險等) : $6500/人
           </tr>
           <tr className="context">5. 屆時請錄取者務必注意網站公佈之繳費流程</tr>
-          <div>
+          <div className="officialLink">
             <a target="_blank" href="https://www.facebook.com/ntnucsiecamp/" rel="noreferrer">
               官方網址
             </a>
@@ -52,9 +51,11 @@ export const Info = () => {
             </a>
           </tr>
         </table>
-        <button className="register">
-          <a href="/login">立即報名</a>
-        </button>
+        <div className="registerButton">
+          <a href="/login">
+            <button className="register">立即報名</button>
+          </a>
+        </div>
       </div>
     </div>
   );
