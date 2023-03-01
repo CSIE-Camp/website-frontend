@@ -11,6 +11,7 @@ import Blank from "./page/Blank";
 import Forget from "./page/Forget";
 import Regist from "./page/Regist";
 import Review from "./page/Review";
+import Personal from "./page/Personal";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/forget" element={<Forget />} />
             <Route path="/regist" element={<Regist />} />
             <Route path="/review" element={<Review />} />
+            <Route path="/personal" element={<Personal />} />
           </Routes>
         </div>
 
