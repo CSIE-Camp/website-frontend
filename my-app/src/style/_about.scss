@@ -1,0 +1,125 @@
+div.aboutFlex {
+  display: flex;
+  justify-content: center;
+
+  div.aboutBox {
+    width: 80vw;
+
+    div.intro {
+      div.secondTitle {
+        display: flex;
+      }
+    }
+  }
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    padding-right: 1rem;
+  }
+}
+
+h1 {
+  padding: 10px;
+  font-family: "ToronoGlitchSans H2";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 48px;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+h2 {
+  padding: 10px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+p {
+  left: 15%;
+  text-align: left;
+  font-weight: bold;
+}
+
+details {
+  font-weight: bold;
+  left: 25%;
+}
+
+details > summary {
+  font-size: 1rem;
+
+  padding: 1% 2%;
+  text-align: left;
+  margin: 10px 0;
+  cursor: pointer;
+  list-style: none;
+  background-color: #fff;
+  color: #000;
+
+  border-radius: 30px;
+  border: 2px solid #000;
+  transition: all 0.3s ease-out;
+
+  img {
+    transition: all 0.3s ease-out;
+  }
+}
+
+details > summary:hover {
+  background-color: pink;
+  font-size: 1.25rem;
+
+  //background-position: 0px -190px;
+  right: 10%;
+  text-align: center;
+
+  img {
+    width: 3rem;
+    height: 1.8rem;
+  }
+
+  img.summary {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+img.secondTitle {
+  width: 2.5rem;
+  height: 2rem;
+}
+
+img.summaryHead {
+  width: 2rem;
+  height: 1.2rem;
+}
+
+img.summary {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+div.secondTitle {
+  text-align: left;
+  left: 15%;
+  background-color: #fff;
+  color: #000;
+
+  border-radius: 5px;
+  border: 2px solid #000;
+}
+
+div.infoBox {
+  border: 5px solid #fff;
+  border-radius: 7px;
+  background-color: #b7b7b71e;
+}
+
+div.intro {
+  text-align: center;
+  color: #fff;
+}

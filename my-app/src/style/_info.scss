@@ -1,91 +1,106 @@
-div.info {
+div.infoFlex {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: #ffffff;
-  font-family: "Noto Sans TC", monospace;
-  text-align: center;
+  justify-content: center;
 
-  h1.title {
-    padding: 2.5rem;
-    font-family: "ToronoGlitchSans H2", sans-serif;
-    font-size: 2.5rem;
-  }
+  div.infoContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  hr.bar {
-    padding: 0px 0px 0px 0px;
-    size: "1px";
-    width: "1336px";
-  }
+    color: #ffffff;
+    font-family: "Noto Sans TC", monospace;
+    text-align: center;
 
-  p.subTitle {
-    padding: 2rem;
-    font-size: 1.75rem;
-    font-weight: bold;
-  }
-
-  table.mainInfor {
-    font-size: 1.25rem;
-    padding: 0.5rem;
-    width: 1090px;
-
-    tr.context {
-      text-align: left;
+    h1.title {
+      padding: 1rem;
+      font-family: "ToronoGlitchSans H2", sans-serif;
+      font-size: 2.5rem;
     }
 
-    tr.context2 {
-      margin-top: 1rem;
+    hr.bar {
+      padding: 0px 0px 0px 0px;
+      size: "1px";
+    }
 
-      a {
-        margin: 0.5rem;
+    p.subTitle {
+      padding: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    table.mainInfo {
+      font-size: 1.25rem;
+      margin: 0 1.5rem;
+
+      div.mainContent {
+        padding-left: 1.5rem;
+
+        ol {
+          list-style-type: upper-roman;
+
+          li {
+            text-align: left;
+          }
+        }
+      }
+
+      tr.context {
+        text-align: left;
+      }
+
+      div.officialLink {
+        margin-top: 1rem;
       }
     }
-  }
 
-  p.contextImport {
-    font-size: 1.5rem;
-  }
+    table.important {
+      width: 80%;
+      font-size: 1.25rem;
+      padding: 0.5rem;
 
-  table.important {
-    width: 1090px;
-    // height: 536px;
-    font-size: 1.25rem;
+      tr.contextImport {
+        text-align: left;
 
-    tr.contextImport {
-      text-align: left;
+        a {
+          margin-left: 0.75rem;
+        }
+      }
     }
-  }
 
-  button.register {
-    text-align: center;
-    padding: 10px;
-    border: 5px solid #d9d9d9;
+    div.registerButton {
+      margin: 2.5rem 0;
 
-    line-height: 72px;
-    letter-spacing: 1rem;
-    font-size: 2.5rem;
-    background: rgba(217, 217, 217, 0.35);
-    border-radius: 30px;
-    // padding: 0px 0px 50px 0px;
-    margin: 2.5rem 0 1rem 0;
+      a {
+        button {
+          text-align: center;
 
-    a {
-      font-family: "ToronoGlitchSans H2";
-      text-decoration: none;
-      color: #ffffff;
+          padding-left: 0.75rem;
+          font-family: "ToronoGlitchSans H2";
+          text-decoration: none;
+          color: #ffffff;
+          line-height: 72px;
+          letter-spacing: 1rem;
+          font-size: 1.5rem;
+          background: rgba(217, 217, 217, 0.35);
+          border-radius: 30px;
+          border: 5px solid #d9d9d9;
+
+          &:hover {
+            color: #f7d967;
+            background: radial-gradient(
+              149.95% 387.57% at 54.19% 45.2%,
+              #000000 52.6%,
+              rgba(255, 255, 255, 0.63) 100%
+            );
+
+            cursor: pointer;
+          }
+        }
+      }
     }
-  }
-
-  button:hover {
-    color: #f7d967;
-    background: radial-gradient(
-      149.95% 387.57% at 54.19% 45.2%,
-      #000000 52.6%,
-      rgba(255, 255, 255, 0.63) 100%
-    );
-
-    cursor: pointer;
   }
 }
 
