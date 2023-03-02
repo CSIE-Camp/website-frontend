@@ -3,18 +3,16 @@ import { Link } from "react-router-dom";
 
 export const Login = () => {
   return (
-    <form className="login">
-      <h1 className="title">登入報名資訊</h1>
-      <div className="inputFlex">
-        <input className="register" placeholder="請輸入電子信箱" type={"email"} />
-        <div className="pwd_container">
-          <input className="register" placeholder="請輸入密碼" type={"password"} />
-          {/* <Link to="/form"> */}
-          <button className="confirm" type="submit">
-            <span className="arrow"></span>
-          </button>
-          {/* </Link> */}
-        </div>
+    <div class="login">
+      <h1 class="title">登入報名資訊</h1>
+      <input class="register" placeholder="    請輸入電子信箱"></input>
+      <div class="pwd_container">
+        <input class="register button" placeholder="    請輸入密碼"></input>
+        <button class="confirm">
+          <Link to="/personal">
+            <span class="arrow"></span>
+          </Link>
+        </button>
       </div>
       <div className="helpFlex">
         <div className="helpContent">

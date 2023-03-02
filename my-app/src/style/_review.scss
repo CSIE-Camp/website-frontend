@@ -1,23 +1,24 @@
 div#page_review {
-  --npr--photo_width: 42vw;
+  --npr--photo_width: 60vw;
   --npr--photo_height: calc(var(--npr--photo_width) * 2 / 3);
   --npr--photo_xd: 4vw;
   --npr--photo_yd: 3vw;
   --npr--arrow_width: 6vw;
   --npr--arrow_height: 5vw;
-  --npr--dotbar_height: 4vw;
+  --npr--dotbar_height: 7vw;
 
   margin: 1rem 1vw 1rem 1vw;
   width: 98vw;
-  height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height));
+  height: calc(
+    (var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height)) * 2
+  );
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   div#page_review_down {
-    width: calc(
-      97vw - (var(--npr--photo_width) + var(--npr--photo_xd) * 2 + var(--npr--arrow_width) * 2)
-    );
-    height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height));
+    width: 50vw;
+    height: var(--npr--photo_height);
     padding: 0 0 0 1vw;
     div#rt_title {
       font-size: 5vw;
@@ -80,6 +81,9 @@ div#page_review {
         div#ri_arrow_m3 {
           right: 20px;
           transition: right 0.1s ease;
+        }
+        @media (max-width: 1000px) {
+          opacity: 0;
         }
       }
 

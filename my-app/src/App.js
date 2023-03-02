@@ -11,6 +11,7 @@ import Form from "./page/Form";
 import Forget from "./page/Forget";
 import Regist from "./page/Regist";
 import Review from "./page/Review";
+import Personal from "./page/Personal";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/regist" element={<Regist />} />
             <Route path="/form" element={<Form />} />
             <Route path="/review" element={<Review />} />
+            <Route path="/personal" element={<Personal />} />
           </Routes>
         </div>
         <Footer />
