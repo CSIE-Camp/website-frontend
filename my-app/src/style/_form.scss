@@ -36,6 +36,17 @@ div.registerContain {
   background-color: #0000003b;
 }
 
+div .picture {
+  background: #0630ff37;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  padding: 10px;
+  width: 16%;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 2%;
+}
+
 form {
   font-size: 1.3rem;
   font-weight: bold;
@@ -64,7 +75,17 @@ input[type="url"] {
   color: rgb(255, 255, 255);
 }
 
-form input:focus {
+input[type="file"] {
+  display: none;
+}
+
+input[type="radio"] {
+  margin: 0 0 0 20px;
+  width: 18px;
+  height: 18px;
+}
+
+input:focus {
   color: #000;
   color: #f7d967;
   background: radial-gradient(
@@ -75,15 +96,7 @@ form input:focus {
   padding: auto;
 }
 
-form input[type="file"] {
-  display: none;
-}
-
-::placeholder {
-  color: #fff;
-}
-
-form input:hover {
+input:hover {
   border: 3px solid #f2a2f2;
   color: #f7d967;
   background: radial-gradient(
@@ -93,10 +106,8 @@ form input:hover {
   );
 }
 
-input[type="radio"] {
-  margin: 0 0 0 20px;
-  width: 18px;
-  height: 18px;
+::placeholder {
+  color: #fff;
 }
 
 select {
@@ -125,10 +136,6 @@ textarea {
   border-radius: 7px;
 }
 
-textarea:hover {
-  border: 3px solid #f2a2f2;
-}
-
 textarea:focus {
   color: #f7d967;
   background: radial-gradient(
@@ -139,6 +146,10 @@ textarea:focus {
   border: 5px solid #f2a2f2;
 }
 
+textarea:hover {
+  border: 3px solid #f2a2f2;
+}
+
 .experience {
   font-size: 0.8rem;
 }
@@ -147,10 +158,6 @@ textarea:focus {
   width: 2rem;
   height: 2rem;
   float: left;
-}
-
-#presentFile {
-  display: inline-block;
 }
 
 .register {
@@ -174,18 +181,12 @@ textarea:focus {
   );
 }
 
-div .picture {
-  background: #0630ff37;
-  border: 3px solid #fff;
-  border-radius: 15px;
-  padding: 10px;
-  width: 25%;
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 2%;
+#pictureLoad {
+  color: #fff;
+  overflow: hidden;
+  font-size: small;
 }
 
-// **hadle this is I have time
-// .genderButton {
-//     background-color: #f00;
-// }
+#presentFile {
+  display: inline-block;
+}
