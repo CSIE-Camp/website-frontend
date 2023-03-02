@@ -11,6 +11,7 @@ import Form from "./page/Form";
 import Forget from "./page/Forget";
 import Regist from "./page/Regist";
 import Review from "./page/Review";
+import Admin from "./page/Admin";
 import Personal from "./page/Personal";
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/regist" element={<Regist />} />
             <Route path="/form" element={<Form />} />
             <Route path="/review" element={<Review />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="/personal" element={<Personal />} />
           </Routes>
         </div>

@@ -8,8 +8,8 @@
 
 html,
 body,
-body > #root,
-#root > .App {
+body>#root,
+#root>.App {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
@@ -17,7 +17,7 @@ body > #root,
   padding: 0;
 }
 
-#root > .App {
+#root>.App {
   overflow-y: auto;
   background-image: url(image/Blue_background.png);
   background-size: cover;
@@ -102,3 +102,4 @@ a {
 @import "./form";
 @import "./review";
 @import "./personal";
+@import "./admin";
