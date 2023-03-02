@@ -2,8 +2,8 @@ div.aboutFlex {
   display: flex;
   justify-content: center;
 
-  div.infoBox {
-    width: 80%;
+  div.aboutBox {
+    width: 80vw;
 
     div.intro {
       div.secondTitle {
@@ -44,7 +44,7 @@ p {
   font-weight: bold;
 }
 
-div .detail > .summary {
+div .detail>.summary {
   font-size: 1rem;
   font-weight: bold;
   height: 2rem;
@@ -151,13 +151,11 @@ div.hidden {
   padding: 0;
   border: 0;
   right: 25%;
-  background: linear-gradient(
-    to bottom right,
-    hsla(0, 0%, 100%, 0.452),
-    rgba(109, 113, 113, 0.226),
-    80%,
-    rgba(44, 38, 44, 0.117)
-  );
+  background: linear-gradient(to bottom right,
+      hsla(0, 0%, 100%, 0.452),
+      rgba(109, 113, 113, 0.226),
+      80%,
+      rgba(44, 38, 44, 0.117));
   color: #fff;
 }
 
