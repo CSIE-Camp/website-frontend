@@ -121,3 +121,16 @@ form.regist {
     cursor: pointer;
   }
 }
+
+@media screen and (max-width:600px) {
+  form.regist {
+    div.inputFlex {
+      width: 75vw;
+    }
+
+    div.passwordFlex {
+      width: 75vw;
+    }
+  }
+
+}
