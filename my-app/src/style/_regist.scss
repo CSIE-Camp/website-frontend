@@ -1,25 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Noto Sans TC", sans-serif;
-}
-
-@font-face {
-  font-family: ToronoGlitchSans H1;
-  src: local("ToronoGlitchSans H1"), url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
-}
-
-@font-face {
-  font-family: ToronoGlitchSans H2;
-  src: local("ToronoGlitchSans H2"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
-}
-
-@font-face {
-  font-family: ToronoGlitchSans H4;
-  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
-}
-
-div.regist {
+form.regist {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,105 +8,115 @@ div.regist {
   text-align: center;
 
   h1.title {
-    padding: 104px 0px 67px 0px;
+    padding: 1rem 0px;
     font-family: "ToronoGlitchSans H2", sans-serif;
-    font-size: 60px;
-  }
-
-  input.register {
-    text-align: left;
-    padding: 10px;
-    border: 5px solid #d9d9d9;
-    color: #ffffff;
-    line-height: 72px;
-    font-size: 35px;
-    background: rgba(217, 217, 217, 0.35);
-    border-radius: 30px;
-    // padding: 0px 0px 50px 0px;
-    margin: 0px 0px 20px 0px;
-    width: 780px;
-    height: 146px;
-  }
-
-  ::placeholder {
-    // letter-spacing: 1rem;
-    // font-family: "ToronoGlitchSans H2";
-    color: #ffffff;
-  }
-
-  input:hover {
-    color: #f7d967;
-    background: radial-gradient(
-      149.95% 387.57% at 54.19% 45.2%,
-      #000000 52.6%,
-      rgba(255, 255, 255, 0.63) 100%
-    );
-
-    cursor: pointer;
-  }
-
-  input.button {
-    margin: 0px 0px 20px 0px;
-  }
-
-  div.pwd_container {
-    position: relative;
-  }
-
-  button.confirm {
-    border: 5px solid #d9d9d9;
-    color: #ffffff;
-    font-family: "ToronoGlitchSans H2";
-    line-height: 72px;
-    letter-spacing: 1rem;
     font-size: 2.5rem;
-    background: rgba(217, 217, 217, 0.35);
-    border-radius: 100px;
-    padding: 0px 30px 0px 30px;
-    margin: 0px 0px 30px 0px;
-    text-align: center;
-    width: 94px;
-    height: 94px;
-    position: absolute;
-    right: 20px;
-    top: 25px;
+  }
+
+  div.inputFlex {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+
+
+    input.loginMail {
+      @include inputStyle();
+    }
+
+    ::placeholder {
+      // letter-spacing: 1rem;
+      //font-family: "ToronoGlitchSans H3";
+      color: #ffffff;
+    }
+
+    div.pwd_container {
+      display: flex;
+      position: relative;
+
+      input {
+        width: 100%;
+      }
+
+      input.loginPassword {
+        @include inputStyle;
+      }
+
+      //a {
+      button.confirm {
+        border: 3px solid #d9d9d9;
+        color: #ffffff;
+        background: rgba(217, 217, 217, 0.35);
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+
+        &:hover {
+          // color: #f7d967;
+          background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
+              #000000 52.6%,
+              rgba(255, 255, 255, 0.63) 100%);
+
+          cursor: pointer;
+        }
+
+        //箭頭尖端
+        span.arrow {
+          display: block;
+          margin: 0px auto;
+          width: 15px;
+          height: 15px;
+          //border-radius: 3px;
+          border-top: 5px solid #d9d9d9;
+          border-left: 5px solid #d9d9d9;
+          transform: rotate(135deg); // transform: rotate(180deg);
+        }
+
+        //箭頭尾部
+        span.arrow::after {
+          content: "";
+          //border-radius: 3px;
+          display: block;
+          width: 5px;
+          height: 15px;
+          background-color: #d9d9d9;
+          transform: rotate(-45deg) translate(3px, 0px);
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  div.helpFlex {
+    width: 100%;
+    padding: 0rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+
+    div.helpContent {
+      width: 50vw;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
     a {
-      font-family: "ToronoGlitchSans H2";
+      font-size: 1rem;
+      padding-bottom: 0.5rem;
+      padding-right: 2rem;
       text-decoration: none;
-
       color: #ffffff;
-
-      span.arrow {
-        display: block;
-        margin: 0px auto;
-        width: 30px;
-        height: 30px;
-        border-top: 10px solid #d9d9d9;
-        border-left: 10px solid #d9d9d9;
-        transform: rotate(135deg); // transform: rotate(180deg);
-      }
-
-      span.arrow::after {
-        content: "";
-        display: block;
-        width: 10px;
-        height: 30px;
-        background-color: #d9d9d9;
-        transform: rotate(-45deg) translate(7px, 0px);
-        left: 0;
-        top: 0;
-      }
     }
   }
 
   button:hover {
     color: #f7d967;
-    background: radial-gradient(
-      149.95% 387.57% at 54.19% 45.2%,
-      #000000 52.6%,
-      rgba(255, 255, 255, 0.63) 100%
-    );
+    background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
+        #000000 52.6%,
+        rgba(255, 255, 255, 0.63) 100%);
 
     cursor: pointer;
   }

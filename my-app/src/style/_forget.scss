@@ -1,25 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Noto Sans TC", sans-serif;
-}
-
-@font-face {
-  font-family: ToronoGlitchSans H1;
-  src: local("ToronoGlitchSans H1"), url(./font/torono-glitch-sans/Torono_Glitch_SansH1.otf);
-}
-
-@font-face {
-  font-family: ToronoGlitchSans H2;
-  src: local("ToronoGlitchSans H2"), url(./font/torono-glitch-sans/Torono_Glitch_SansH2.otf);
-}
-
-@font-face {
-  font-family: ToronoGlitchSans H4;
-  src: local("ToronoGlitchSans H4"), url(./font/torono-glitch-sans/Torono_Glitch_SansH4.otf);
-}
-
-div.forget {
+form.forget {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,164 +8,83 @@ div.forget {
   text-align: center;
 
   h1.title {
-    padding: 104px 0px 67px 0px;
+    padding: 1rem 0px;
     font-family: "ToronoGlitchSans H2", sans-serif;
-    font-size: 60px;
+    font-size: 2.5rem;
   }
 
-  p.help {
-    padding: 0px 0px 30px 0px;
-    font-size: 35px;
+  p {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    padding-right: 2rem;
+    text-decoration: none;
+    color: #ffffff;
+  }
 
-    a {
-      padding: 0px 100px 0px 100px;
-      text-decoration: none;
-      color: #ffffff;
+  div.inputFlex {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    position: relative;
+
+    div.helpFlex {
+      width: 100%;
+      padding: 0rem 0 3rem 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    button.confirm {
+      @include arrowButtonStyle();
     }
   }
 
-  input.register {
-    text-align: left;
-    padding: 10px;
-    border: 5px solid #d9d9d9;
-    color: #ffffff;
-    line-height: 72px;
-    font-size: 35px;
-    background: rgba(217, 217, 217, 0.35);
-    border-radius: 30px;
-    // padding: 0px 0px 50px 0px;
-    margin: 0px 0px 20px 0px;
-    width: 780px;
-    height: 146px;
+  input.forgetMail {
+    @include inputStyle(); //引用mixin裡面的函式 在login.scss裡面
   }
 
-  ::placeholder {
-    // letter-spacing: 1rem;
-    // font-family: "ToronoGlitchSans H2";
-    color: #ffffff;
-  }
 
-  input:hover {
-    color: #f7d967;
-    background: radial-gradient(
-      149.95% 387.57% at 54.19% 45.2%,
-      #000000 52.6%,
-      rgba(255, 255, 255, 0.63) 100%
-    );
 
-    cursor: pointer;
-  }
 
   input.button {
     margin: 0px 0px 20px 0px;
   }
 
-  div.pwd_container {
+  div.passwordFlex {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
     position: relative;
-  }
 
-  button.send {
-    border: 5px solid #d9d9d9;
-    color: #ffffff;
-    font-family: "ToronoGlitchSans H2";
-    line-height: 72px;
-    letter-spacing: 1rem;
-    font-size: 2.5rem;
-    background: rgba(217, 217, 217, 0.35);
-    border-radius: 100px;
-    padding: 0px 30px 0px 30px;
-    margin: 0px 0px 30px 0px;
-    text-align: center;
-    width: 94px;
-    height: 94px;
-    position: absolute;
-    right: 20px;
-    top: 25px;
+    // 在passwordFlex裡面的input樣式一致
+    *.forgetPassword {
+      @include inputStyle(); //引用mixin裡面的函式 在login.scss裡面
+    }
 
-    a {
-      font-family: "ToronoGlitchSans H2";
-      text-decoration: none;
+    div.pwd_container {
+      display: flex;
+      position: relative;
 
-      color: #ffffff;
-
-      span.arrow {
-        display: block;
-        margin: 0px auto;
-        width: 30px;
-        height: 30px;
-        border-top: 10px solid #d9d9d9;
-        border-left: 10px solid #d9d9d9;
-        transform: rotate(135deg); // transform: rotate(180deg);
+      input.forgetPassword {
+        width: 100%;
       }
 
-      span.arrow::after {
-        content: "";
-        display: block;
-        width: 10px;
-        height: 30px;
-        background-color: #d9d9d9;
-        transform: rotate(-45deg) translate(7px, 0px);
-        left: 0;
-        top: 0;
+      button.confirm {
+        @include arrowButtonStyle();
       }
     }
   }
+}
 
-  button.confirm {
-    border: 5px solid #d9d9d9;
-    color: #ffffff;
-    font-family: "ToronoGlitchSans H2";
-    line-height: 72px;
-    letter-spacing: 1rem;
-    font-size: 2.5rem;
-    background: rgba(217, 217, 217, 0.35);
-    border-radius: 100px;
-    padding: 0px 30px 0px 30px;
-    margin: 0px 0px 30px 0px;
-    text-align: center;
-    width: 94px;
-    height: 94px;
-    position: absolute;
-    right: 20px;
-    top: 25px;
+@media screen and (max-width:600px) {
+  form.forget {
+    div.inputFlex {
+      width: 75vw;
+    }
 
-    a {
-      font-family: "ToronoGlitchSans H2";
-      text-decoration: none;
-
-      color: #ffffff;
-
-      span.arrow {
-        display: block;
-        margin: 0px auto;
-        width: 30px;
-        height: 30px;
-        border-top: 10px solid #d9d9d9;
-        border-left: 10px solid #d9d9d9;
-        transform: rotate(135deg); // transform: rotate(180deg);
-      }
-
-      span.arrow::after {
-        content: "";
-        display: block;
-        width: 10px;
-        height: 30px;
-        background-color: #d9d9d9;
-        transform: rotate(-45deg) translate(7px, 0px);
-        left: 0;
-        top: 0;
-      }
+    div.passwordFlex {
+      width: 75vw;
     }
   }
 
-  button:hover {
-    color: #f7d967;
-    background: radial-gradient(
-      149.95% 387.57% at 54.19% 45.2%,
-      #000000 52.6%,
-      rgba(255, 255, 255, 0.63) 100%
-    );
-
-    cursor: pointer;
-  }
 }

@@ -1,24 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 export const Login = () => {
   return (
-    <div class="login">
-      <h1 class="title">登入報名資訊</h1>
-      <input class="register" placeholder="    請輸入電子信箱"></input>
-      <div class="pwd_container">
-        <input class="register button" placeholder="    請輸入密碼"></input>
-        <button class="confirm">
-          <Link to="/form">
-            <span class="arrow"></span>
-          </Link>
-        </button>
+    <form className="login">
+      <h1 className="title">登入帳號</h1>
+      <div className="inputFlex">
+        <input className="loginMail" placeholder="請輸入電子信箱" type={"email"} />
+        <div className="pwd_container">
+          <input className="loginPassword" placeholder="請輸入密碼" type={"password"} />
+          <button className="confirm" type="submit">
+            <span className="arrow"></span>
+          </button>
+        </div>
       </div>
-      <p class="help">
-        <Link to="/forget">忘記密碼?</Link>
-        <Link to="/regist">還沒註冊資工營帳號?</Link>
-      </p>
-    </div>
+      <div className="helpFlex">
+        <div className="helpContent">
+          <Link to="/forget">忘記密碼?</Link>
+          <Link to="/regist">還沒註冊資工營帳號?</Link>
+        </div>
+      </div>
+    </form>
   );
 };
 export default Login;
