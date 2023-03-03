@@ -1,9 +1,14 @@
 import React, { useEffect } from "react";
 import PersonalScript from "./Personal_script";
+var actoncekey = 1;
 
 export const Personal = () => {
   useEffect(() => {
-    PersonalScript();
+    if (actoncekey !== 1) {
+      PersonalScript();
+    } else {
+      actoncekey++;
+    }
   }, []);
   return (
     <div id="page_personal">
@@ -32,21 +37,24 @@ export const Personal = () => {
           </div>
         </div>
         <div id="pp_register">
-          <div id="ppr_button"></div>
+          <div id="ppr_button" className="pprb_close"></div>
           <div id="ppr_center">
-            <div id="ppr_text"></div>
-            <div id="ppr_state"></div>
+            <div id="ppr_state" className="pprs_no"></div>
+            <div id="ppr_text" className="pprt_no"></div>
           </div>
         </div>
         <div id="pp_isadmission">
           <div id="ppia_top">錄取結果</div>
           <hr></hr>
-          <div id="ppia_result">正取</div>
-          <div id="ppia_back_is"></div>
+          <div id="ppia_result_field" className="ppiar_accept">
+            <div id="ppia_result"></div>
+            <div id="ppia_back_is"></div>
+          </div>
         </div>
         <div id="pp_admitted">
           <div id="ppad_pay"></div>
           <div id="ppad_agreement"></div>
+          <div id="ppad_cancel"></div>
         </div>
       </div>
     </div>

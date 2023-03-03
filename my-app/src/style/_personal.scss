@@ -1,4 +1,53 @@
 div#page_personal {
+  @mixin button_open {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px white solid;
+    color: white;
+    transition: box-shadow 0.4s ease;
+    &:hover {
+      box-shadow: 0px 0px 5px 2px white;
+    }
+  }
+  @mixin button_close {
+    opacity: 0.5;
+    background-color: rgba(200, 200, 200, 0.2);
+    border: 2px gray solid;
+    color: gray;
+  }
+  @mixin button_finish {
+    background-color: rgba(100, 100, 100, 0.5);
+    border: 2px gray solid;
+    color: gray;
+  }
+  @mixin button_error {
+    background-color: rgba(100, 100, 100, 0.5);
+    border: 2px red solid;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  @mixin state_no {
+    border: 0.25vh solid red;
+    color: red;
+    &::before {
+      content: "✕";
+    }
+  }
+  @mixin state_yes {
+    border: 0.25vh solid chartreuse;
+    color: chartreuse;
+    &::before {
+      content: "✓";
+    }
+  }
+  @mixin state_error {
+    border: 0.25vh solid darkorange;
+    color: darkorange;
+    &::before {
+      content: "？";
+    }
+  }
+
   display: flex;
   justify-content: center;
   position: relative;
@@ -79,25 +128,13 @@ div#page_personal {
           cursor: pointer;
 
           &.ppas_no {
-            border: 0.25vh solid red;
-            color: red;
-            &::before {
-              content: "✕";
-            }
+            @include state_no();
           }
           &.ppas_yes {
-            border: 0.25vh solid chartreuse;
-            color: chartreuse;
-            &::before {
-              content: "✓";
-            }
+            @include state_yes();
           }
           &.ppas_error {
-            border: 0.25vh solid darkorange;
-            color: darkorange;
-            &::before {
-              content: "？";
-            }
+            @include state_error();
           }
         }
         div#ppa_inside_button {
@@ -117,130 +154,97 @@ div#page_personal {
           cursor: pointer;
         }
       }
-      div#ppa_information > div#ppa_inside_button {
+      div#ppa_information div#ppa_inside_button {
         &.ppaib_close {
-          background-color: rgba(200, 200, 200, 0.2);
-          border: 2px gray solid;
-          color: gray;
+          @include button_close();
           &::before {
             content: "尚未開啟";
           }
         }
         &.ppaib_open {
-          background-color: rgba(255, 255, 255, 0.5);
-          border: 2px white solid;
-          color: white;
+          @include button_open();
           &::before {
             content: "點此填寫";
           }
         }
         &.ppaib_finish {
-          background-color: rgba(255, 255, 255, 0.5);
-          border: 2px white solid;
-          color: white;
+          @include button_open();
           &::before {
             content: "修改資料";
           }
         }
         &.ppaib_registered {
-          background-color: rgba(100, 100, 100, 0.5);
-          border: 2px gray solid;
-          color: gray;
+          @include button_finish();
           &::before {
             content: "已完成報名作業";
           }
         }
         &.ppaib_error {
-          background-color: rgba(100, 100, 100, 0.5);
-          border: 2px red solid;
-          color: red;
-          font-size: 30px;
+          @include button_error();
           &::before {
             content: "錯誤發生";
           }
         }
       }
-      div#ppa_quiz > div#ppa_inside_button {
+      div#ppa_quiz div#ppa_inside_button {
         &.ppaib_close {
-          background-color: rgba(200, 200, 200, 0.2);
-          border: 2px gray solid;
-          color: gray;
+          @include button_close();
           &::before {
             content: "尚未開啟";
           }
         }
         &.ppaib_open {
-          background-color: rgba(255, 255, 255, 0.5);
-          border: 2px white solid;
-          color: white;
+          @include button_open();
           &::before {
             content: "點此測驗";
           }
         }
         &.ppaib_finish {
-          background-color: rgba(100, 100, 100, 0.5);
-          border: 2px gray solid;
-          color: gray;
+          @include button_finish();
           &::before {
             content: "已完成測驗";
           }
         }
         &.ppaib_registered {
-          background-color: rgba(100, 100, 100, 0.5);
-          border: 2px gray solid;
-          color: gray;
+          @include button_finish();
           &::before {
             content: "已完成報名作業";
           }
         }
         &.ppaib_error {
-          background-color: rgba(100, 100, 100, 0.5);
-          border: 2px red solid;
-          color: red;
-          font-size: 30px;
+          @include button_error();
           &::before {
             content: "錯誤發生";
           }
         }
       }
-      div#ppa_github > div#ppa_inside_button {
+      div#ppa_github div#ppa_inside_button {
         &.ppaib_close {
-          background-color: rgba(200, 200, 200, 0.2);
-          border: 2px gray solid;
-          color: gray;
+          @include button_close();
           &::before {
             content: "尚未開啟";
           }
         }
         &.ppaib_open {
-          background-color: rgba(255, 255, 255, 0.5);
-          border: 2px white solid;
-          color: white;
+          @include button_open();
           &::before {
             content: "點此綁定";
           }
         }
         &.ppaib_finish {
-          background-color: rgba(255, 255, 255, 0.5);
-          border: 2px white solid;
-          color: white;
+          @include button_open();
           &::before {
             content: "點此重新綁定";
           }
         }
         &.ppaib_registered {
-          background-color: rgba(100, 100, 100, 0.5);
-          border: 2px gray solid;
-          color: gray;
+          @include button_finish();
           &::before {
             content: "已完成報名作業";
           }
         }
         &.ppaib_error {
-          background-color: rgba(100, 100, 100, 0.5);
-          border: 2px red solid;
-          color: red;
-          font-size: 30px;
+          @include button_error();
           &::before {
             content: "錯誤發生";
           }
@@ -263,39 +267,199 @@ div#page_personal {
     }
     div#pp_register {
       width: 60vw;
-      height: 40vh;
-      background-color: yellow;
+      height: 30vh;
+      //background-color: yellow;
+      margin-top: 2vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       div#ppr_button {
         width: 30vw;
-        height: 18vh;
+        min-width: 300px;
+        max-width: 400px;
+        height: 10vh;
+        border-radius: 3vh;
         margin: 1vh;
-        background-color: brown;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        cursor: pointer;
+
+        &.pprb_close {
+          @include button_close();
+          &::before {
+            content: "尚未開啟報名";
+          }
+        }
+        &.pprb_open {
+          @include button_open();
+          &::before {
+            font-size: 40px;
+            content: "點我報名";
+          }
+        }
+        &.pprb_finish {
+          @include button_open();
+          &::before {
+            content: "取消報名";
+          }
+        }
+        &.pprb_registered {
+          @include button_finish();
+          &::before {
+            content: "已完成報名";
+          }
+        }
+        &.pprb_error {
+          @include button_error();
+          &::before {
+            content: "發生錯誤";
+          }
+        }
       }
       div#ppr_center {
-        width: 30vw;
-        height: 18vh;
+        width: 100%;
+        min-width: 320px;
+        max-width: 450px;
+        height: 16vh;
         margin: 1vh;
-        background-color: navy;
+        //background-color: navy;
+        display: flex;
+        align-items: center;
+
+        div#ppr_state {
+          width: 8vh;
+          height: 8vh;
+          margin: 1vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 6vh;
+          border-radius: 10vh;
+          user-select: none;
+          cursor: pointer;
+
+          &.pprs_no {
+            @include state_no();
+          }
+          &.pprs_yes {
+            @include state_yes();
+          }
+          &.pprs_error {
+            @include state_error();
+          }
+        }
+
+        div#ppr_text {
+          width: calc(100% - 10vh);
+          height: 100%;
+          //background-color: aqua;
+          font-size: 35px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          cursor: pointer;
+
+          &.pprt_no {
+            color: red;
+            &::before {
+              content: "未完成報名";
+            }
+          }
+          &.pprt_yes {
+            color: chartreuse;
+            &::before {
+              content: "已完成報名";
+            }
+          }
+          &.pprt_error {
+            color: darkorange;
+            &::before {
+              content: "疑發生錯誤";
+            }
+          }
+        }
       }
     }
     div#pp_isadmission {
       width: 60vw;
       //height: 200px;
-      background-color: green;
+      //background-color: green;
       margin: 3vh 0;
       div#ppia_top {
         color: white;
-        font-size: 3vh;
+        font-size: 30px;
         display: flex;
         justify-content: center;
       }
-      div#ppia_result {
-        font-size: 10vh;
+      div#ppia_result_field {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+
+        div#ppia_result {
+          width: 60%;
+          min-width: 300px;
+          height: 15vh;
+          //background-color: beige;
+          font-size: 90px;
+          line-height: normal;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+        }
+        div#ppia_back_is {
+          width: 60%;
+          min-width: 300px;
+          height: 6vh;
+          //background-color: royalblue;
+          font-size: 4vh;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+        }
+        &.ppiar_accept {
+          div#ppia_result::before {
+            color: chartreuse;
+            content: "正取";
+          }
+          div#ppia_back_is {
+            height: 0;
+          }
+        }
+        &.ppiar_waiting {
+          div#ppia_result::before {
+            color: yellow;
+            content: "被取";
+          }
+          div#ppia_back_is::before {
+            color: yellow;
+            content: "遞補狀態：等待中";
+          }
+        }
+        &.ppiar_wait_finish {
+          div#ppia_result::before {
+            color: yellow;
+            content: "被取";
+          }
+          div#ppia_back_is::before {
+            color: chartreuse;
+            content: "遞補狀態：成功";
+          }
+        }
+        &.ppiar_not_pass {
+          div#ppia_result::before {
+            color: red;
+            content: "未錄取";
+          }
+          div#ppia_back_is {
+            height: 0;
+          }
+        }
       }
     }
     div#pp_admitted {
