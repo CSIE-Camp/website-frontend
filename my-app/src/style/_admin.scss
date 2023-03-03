@@ -1,20 +1,43 @@
-div#admin {
-  * {
-    color: white;
-  }
+@mixin adminButtonStyle() {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 3px solid #d9d9d9;
+  color: #ffffff;
+  line-height: 36px;
+  font-size: 1.5rem;
+  background: rgba(217, 217, 217, 0.35);
+  border-radius: 20px;
 
-  div#adminTitle {
-    font-size: 2.5rem;
-    text-align: center;
+  &:hover {
+    cursor: pointer;
+    background: #000000;
   }
+}
 
-  div#adminTitle2 {
+div.adminFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
     font-size: 1.5rem;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
     text-align: center;
+
   }
 
-  div.adminFlex {
+  div.adminSystemSwitch {
     display: flex;
+    width: 75vw;
+    justify-content: center;
+    // align-items: center;
 
     div {
       width: 50vw;
@@ -23,62 +46,67 @@ div#admin {
       flex-direction: column;
       align-items: center;
 
-      &.adminLeft {
-        p {
-          color: red;
-        }
+      &.left {
+        color: white;
 
-        .controlText {
-          color: greenyellow;
-        }
-
-        .controlButton {
-          background: gray;
+        span {
+          color: #4DFF5E;
         }
       }
 
-      &.adminRight {
-        p {
-          color: green;
+      &.right {
+        color: white;
+
+        span {
+          color: #FF0101;
         }
 
-        .controlText {
-          color: rgb(255, 95, 47);
-        }
-
-        .controlButton {
-          background: gray;
-        }
       }
     }
   }
 
-  div.adminFlex2 {
-    div#adminButton {
+
+  div.adminPaymentStatus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1rem;
       display: flex;
-      justify-content: center;
+      align-items: center;
+      text-align: center;
+
     }
 
-    div#button {
-      margin: 1.5rem;
-      text-align: center;
-      //padding-right: 2rem;
+    div.adminSearchFilter {
+      button {
+        @include adminButtonStyle();
+      }
     }
   }
 
   form.adminSearch {
     display: flex;
     justify-content: center;
+    width: 75%;
+    padding: 1rem;
 
     input {
-      width: 50vw;
-      color: black;
+      width: 100vw;
+
+      &::placeholder {
+        color: #ffffff;
+      }
 
       &:hover {
-        color: black;
+        background: #000000;
       }
     }
-
-
   }
 }

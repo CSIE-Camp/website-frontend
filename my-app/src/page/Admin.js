@@ -2,25 +2,25 @@ import React from "react";
 
 export const Admin = () => {
   return (
-    <div>
+    <div className="adminFlex">
       <h1>帳號: admin666@gmail.com</h1>
       <h1>系統開關</h1>
-      <div className="adminFlex">
+      <div className="adminSystemSwitch">
         <div className="left">
           <p>報名系統</p>
-          <button>開放中</button>
-          <button>Open</button>
+          <span>開放中</span>
+          <span>Open</span>
         </div>
         <div className="right">
           <p>錄取狀態查詢</p>
-          <button>已關閉</button>
-          <button>Off</button>
+          <span>已關閉</span>
+          <span>Off</span>
         </div>
       </div>
-      <div>
+      <div className="adminPaymentStatus">
         <h1>匯款狀態</h1>
         <hr className="bar" width="80%"></hr>
-        <div>
+        <div className="adminSearchFilter">
           <button>聯絡資訊</button>
           <button>成績審查</button>
           <button>匯款審查</button>
@@ -28,7 +28,7 @@ export const Admin = () => {
         </div>
       </div>
 
-      <form>
+      <form className="adminSearch">
         <input type={"text"} placeholder="輸入姓名以搜尋資料" />
         <input type="submit" hidden />
       </form>
