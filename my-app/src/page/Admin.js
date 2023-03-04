@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { AdminScript } from "./Admin_script";
 
 export const Admin = () => {
   const adminTableSearch = () => {
