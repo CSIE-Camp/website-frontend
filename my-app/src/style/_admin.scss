@@ -1,18 +1,37 @@
 @mixin adminButtonStyle() {
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
   margin: 0.5rem;
   border: 3px solid #d9d9d9;
   color: #ffffff;
   line-height: 36px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background: rgba(217, 217, 217, 0.35);
-  border-radius: 20px;
+  border-radius: 18px;
 
   &:hover {
     cursor: pointer;
     background: #000000;
   }
+}
+
+@mixin adminTableStyle($bgcolor: #ffffff) {
+  background: $bgcolor;
+
+  width: 150px;
+  margin: 0.5rem 1rem 0 1rem;
+  padding: 0.25rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+
+  &:hover {
+    scale: 1.1;
+    transition: 0.5s ease-in-out all;
+    cursor: pointer;
+  }
+
 }
 
 div.adminFlex {
@@ -97,8 +116,17 @@ div.adminFlex {
     width: 75%;
     padding: 1rem;
 
+    img {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      left: 10px;
+    }
+
     input {
       width: 100vw;
+      //background-image: url(../image/searchIcon.png);
+      //background-repeat: none;
 
       &::placeholder {
         color: #ffffff;
@@ -108,5 +136,29 @@ div.adminFlex {
         background: #000000;
       }
     }
+  }
+
+  div.table {
+    border-collapse: separate;
+    padding: 0.5rem;
+
+    width: 75vw;
+
+    div.tr {
+      display: flex;
+      justify-content: center;
+
+      div.th {
+        @include adminTableStyle(#68B9B8);
+        background: #68B9B8;
+
+      }
+
+      div.td {
+        @include adminTableStyle();
+
+      }
+    }
+
   }
 }
