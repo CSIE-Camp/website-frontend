@@ -1,13 +1,9 @@
 footer {
-  background: url("../image/island.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display: flex;
   flex-flow: column wrap;
+  background-color: #fff;
   width: 100vw;
-  height: auto;
+  height: fit-content;
   margin-top: auto;
-  //align-self: flex-end;
 
   h1 {
     padding: 10px;
@@ -15,8 +11,63 @@ footer {
     font-style: normal;
     font-weight: 900;
     line-height: 48px;
-    font-size: 2.5rem;
+    font-size: 5vw;
+    position: relative;
+    left: 0;
+    top: -22%;
     color: #000;
+  }
+  a {
+    position: relative;
+    // top: -80%;
+  }
+  #email {
+    font-size: 3vw;
+    position: relative;
+    left: 0;
+    top: -22%;
+  }
+  #tel {
+    font-size: 3vw;
+    position: relative;
+    left: 0;
+    top: -22%;
+  }
+  #copyright {
+    font-size: 2vw;
+    position: relative;
+    left: 0;
+    top: -20%;
+  }
+  #left {
+    max-width: 10vw;
+    height: 5vw;
+    left: 10%;
+    top: 20%;
+  }
+  #left2 {
+    max-width: 5vw;
+    left: 17%;
+    top: 15%;
+  }
+  #middle {
+    max-width: 40vw;
+    left: 17%;
+    top: 15%;
+  }
+  #right2 {
+    max-width: 5vw;
+    left: 20%;
+    top: 15%;
+  }
+  #right {
+    max-width: 7vw;
+    left: 28%;
+    top: 18%;
+  }
+  .island {
+    position: relative;
+    bottom: 0;
   }
 
   p {
@@ -38,11 +89,13 @@ footer {
   div.icon {
     display: flex;
     justify-content: center;
+    position: relative;
+    top: -20%;
 
     a {
       img {
-        width: 100px;
-        padding: 25px;
+        width: 10vw;
+        padding: 2vw;
       }
     }
   }
