@@ -13,6 +13,7 @@ div#page_personal {
     background-color: rgba(200, 200, 200, 0.2);
     border: 2px gray solid;
     color: gray;
+    cursor: not-allowed;
   }
   @mixin button_finish {
     background-color: rgba(100, 100, 100, 0.5);
@@ -360,7 +361,7 @@ div#page_personal {
           display: flex;
           justify-content: center;
           align-items: center;
-          font-weight: bold;
+          font-weight: bolder;
           cursor: pointer;
 
           &.pprt_no {
@@ -434,7 +435,7 @@ div#page_personal {
         &.ppiar_waiting {
           div#ppia_result::before {
             color: yellow;
-            content: "被取";
+            content: "備取";
           }
           div#ppia_back_is::before {
             color: yellow;
@@ -444,7 +445,7 @@ div#page_personal {
         &.ppiar_wait_finish {
           div#ppia_result::before {
             color: yellow;
-            content: "被取";
+            content: "備取";
           }
           div#ppia_back_is::before {
             color: chartreuse;
@@ -464,8 +465,246 @@ div#page_personal {
     }
     div#pp_admitted {
       width: 60vw;
-      height: 200px;
-      background-color: cyan;
+      height: 20vh;
+      //background-color: cyan;
+      margin-bottom: 5vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      div#ppad_pay,
+      div#ppad_agreement {
+        width: 40%;
+        min-width: 300px;
+        height: 100%;
+        //background-color: blueviolet;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        div#ppad_text {
+          width: 60%;
+          height: 50%;
+          //background-color: deeppink;
+          padding-left: 5%;
+          color: white;
+          font-size: 30px;
+          display: flex;
+          align-items: center;
+        }
+        div#ppad_state {
+          width: 40%;
+          height: 50%;
+          //background-color: red;
+          font-size: 30px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        div#ppad_button {
+          width: 80%;
+          height: 50%;
+          //background-color: brown;
+          border-radius: 2vh;
+          font-size: 25px;
+          margin-left: 10%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+      }
+      div#ppad_cancel {
+        @include button_finish();
+        width: 15vw;
+        min-width: 200px;
+        height: 5vh;
+        //background-color: red;
+
+        border-radius: 1vh;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &::before {
+          content: "(逼不得已再按下)取消報名";
+        }
+      }
+
+      div#ppad_pay {
+        div#ppad_text {
+          &::before {
+            content: "繳費狀態";
+          }
+        }
+
+        &.ppadp_no {
+          div#ppad_state {
+            &::before {
+              font-weight: bold;
+              color: red;
+              content: "未繳費";
+            }
+          }
+          div#ppad_button {
+            @include button_open();
+            &::before {
+              content: "點此繳費";
+            }
+          }
+        }
+        &.ppadp_check {
+          div#ppad_state {
+            &::before {
+              font-weight: bold;
+              color: yellow;
+              content: "確認中";
+            }
+          }
+          div#ppad_button {
+            @include button_finish();
+            &::before {
+              content: "確認中";
+            }
+          }
+        }
+        &.ppadp_yes {
+          div#ppad_state {
+            &::before {
+              font-weight: bold;
+              color: chartreuse;
+              content: "成功";
+            }
+          }
+          div#ppad_button {
+            @include button_close();
+            &::before {
+              content: "繳費成功";
+            }
+          }
+        }
+        &.ppadp_error {
+          div#ppad_state {
+            &::before {
+              font-weight: bold;
+              color: red;
+              content: "請立即聯絡我們";
+            }
+          }
+          div#ppad_button {
+            @include button_error();
+            &::before {
+              content: "發生異常";
+            }
+          }
+        }
+      }
+      div#ppad_agreement {
+        div#ppad_text {
+          &::before {
+            content: "家長同意書";
+          }
+        }
+        &.ppada_no {
+          div#ppad_state {
+            &::before {
+              font-weight: bold;
+              color: red;
+              content: "未上傳";
+            }
+          }
+          div#ppad_button {
+            @include button_open();
+            &::before {
+              content: "點此上傳";
+            }
+          }
+        }
+        &.ppada_check {
+          div#ppad_state {
+            &::before {
+              font-weight: bold;
+              color: yellow;
+              content: "確認中";
+            }
+          }
+          div#ppad_button {
+            @include button_finish();
+            &::before {
+              content: "確認中";
+            }
+          }
+        }
+        &.ppada_yes {
+          div#ppad_state {
+            &::before {
+              font-weight: bold;
+              color: chartreuse;
+              content: "已通過";
+            }
+          }
+          div#ppad_button {
+            @include button_close();
+            &::before {
+              content: "上傳成功";
+            }
+          }
+        }
+        &.ppada_fail {
+          div#ppad_state {
+            &::before {
+              font-weight: bold;
+              color: red;
+              content: "未通過";
+            }
+          }
+          div#ppad_button {
+            @include button_open();
+            &::before {
+              content: "重新上傳";
+            }
+          }
+        }
+        &.ppada_error {
+          div#ppad_state {
+            &::before {
+              font-weight: bold;
+              color: red;
+              content: "請立即聯絡我們";
+            }
+          }
+          div#ppad_button {
+            @include button_error();
+            &::before {
+              content: "發生錯誤";
+            }
+          }
+        }
+      }
+
+      @media (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: normal;
+        height: 44vh;
+        margin-bottom: 10vh;
+
+        div#ppad_pay,
+        div#ppad_agreement {
+          width: 60%;
+          margin: 1vh 0;
+        }
+      }
+
+      &.pp_admitted_close {
+        display: none;
+      }
     }
   }
 }

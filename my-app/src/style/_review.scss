@@ -6,11 +6,14 @@ div#page_review {
   --npr--arrow_width: 6vw;
   --npr--arrow_height: 5vw;
   --npr--dotbar_height: 7vw;
+  @media (max-width: 600px) {
+    --npr--photo_width: 80vw;
+  }
 
   margin: 1rem 1vw 1rem 1vw;
   width: 98vw;
   height: calc(
-    (var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height)) * 2
+    var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height) + 50%
   );
   display: flex;
   flex-direction: column;
@@ -18,14 +21,18 @@ div#page_review {
   position: relative;
   div#page_review_down {
     width: 50vw;
-    height: var(--npr--photo_height);
+    min-width: 300px;
+    //height: 50%;
     padding: 0 0 0 1vw;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
     div#rt_title {
-      font-size: 5vw;
+      font-size: 60px;
       color: white;
     }
     div#rt_content {
-      font-size: 2vw;
+      font-size: 25px;
       color: white;
     }
   }
@@ -49,6 +56,7 @@ div#page_review {
         z-index: 10;
         display: flex;
         align-items: center;
+        cursor: pointer;
         &:hover > div#ri_arrow_m1 {
           right: 5px;
         }
@@ -82,15 +90,30 @@ div#page_review {
           right: 20px;
           transition: right 0.1s ease;
         }
-        @media (max-width: 1000px) {
+        @media (max-width: 600px) {
           opacity: 0;
         }
       }
 
-      div.ri_img_container {
+      div#ri_img_container {
         width: calc(var(--npr--photo_width) + var(--npr--photo_xd) * 2);
         height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2);
         position: relative;
+        user-select: none;
+        div#ri_img_touch_left {
+          width: 40%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          z-index: 5;
+        }
+        div#ri_img_touch_right {
+          width: 60%;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          z-index: 5;
+        }
         img {
           width: var(--npr--photo_width);
           height: var(--npr--photo_height);
@@ -129,6 +152,12 @@ div#page_review {
 
           &:hover {
             background-color: rgba(255, 0, 0, 0.5);
+          }
+          @media (max-width: 600px) {
+            width: 10px;
+            height: 10px;
+            box-sizing: border-box;
+            border: 5px white solid;
           }
         }
       }

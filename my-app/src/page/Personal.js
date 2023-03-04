@@ -51,9 +51,17 @@ export const Personal = () => {
             <div id="ppia_back_is"></div>
           </div>
         </div>
-        <div id="pp_admitted">
-          <div id="ppad_pay"></div>
-          <div id="ppad_agreement"></div>
+        <div id="pp_admitted" className="pp_admitted_open">
+          <div id="ppad_pay" className="ppadp_no">
+            <div id="ppad_text"></div>
+            <div id="ppad_state"></div>
+            <div id="ppad_button"></div>
+          </div>
+          <div id="ppad_agreement" className="ppada_no">
+            <div id="ppad_text"></div>
+            <div id="ppad_state"></div>
+            <div id="ppad_button"></div>
+          </div>
           <div id="ppad_cancel"></div>
         </div>
       </div>

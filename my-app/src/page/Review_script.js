@@ -7,6 +7,8 @@ const ReviewScript = () => {
   const rootStyles = getComputedStyle(document.querySelector("div#page_review"));
   const photo_xd = parseInt(rootStyles.getPropertyValue("--npr--photo_xd"));
   const photo_yd = parseInt(rootStyles.getPropertyValue("--npr--photo_yd"));
+  const img_touch_left = document.getElementById("ri_img_touch_left");
+  const img_touch_right = document.getElementById("ri_img_touch_right");
 
   var now_show_img = 0; //最前面是第幾張
   var nsi_temp, img_style;
@@ -21,7 +23,16 @@ const ReviewScript = () => {
     }
     img_show_func(now_show_img);
     //console.log("left" + now_show_img);//D3rr0r
-    console.log(rootStyles);
+  });
+  //聽左邊的觸碰
+  img_touch_left.addEventListener("click", () => {
+    if (now_show_img <= 0) {
+      //超過圖片總數要回到起點
+      now_show_img = review_up_image_totle - 1;
+    } else {
+      now_show_img--;
+    }
+    img_show_func(now_show_img);
   });
 
   //聽右邊的箭頭
@@ -34,6 +45,16 @@ const ReviewScript = () => {
     }
     img_show_func(now_show_img);
     //console.log("right" + now_show_img);//D3rr0r
+  });
+  //聽右邊的觸碰
+  img_touch_right.addEventListener("click", () => {
+    if (now_show_img >= review_up_image_totle - 1) {
+      //低於0要先到終點
+      now_show_img = 0;
+    } else {
+      now_show_img++;
+    }
+    img_show_func(now_show_img);
   });
 
   //聽下面的點點條

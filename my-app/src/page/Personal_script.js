@@ -1,8 +1,10 @@
 /*
-示範用、後端串起來後要取消
+示範用、後端串起來後大部分要取消
 */
 
 const PersonalScript = () => {
+  const PP_admitted = document.querySelector("#pp_admitted");
+
   const PPAI_state_array = document.querySelectorAll("#ppa_inside_state");
   const PPAI_state_class = ["ppas_no", "ppas_yes", "ppas_error", "ppas_no"];
   PPAI_state_array.forEach((e) => {
@@ -86,9 +88,48 @@ const PersonalScript = () => {
     for (var i = 0; i < 4; i++) {
       if (PPIA_RF.classList.contains(PPIA_RF_class[i])) {
         PPIA_RF.classList.replace(PPIA_RF_class[i], PPIA_RF_class[i + 1]);
+        if (
+          PPIA_RF.classList.contains(PPIA_RF_class[0]) ||
+          PPIA_RF.classList.contains(PPIA_RF_class[2])
+        ) {
+          PP_admitted.classList.replace("pp_admitted_close", "pp_admitted_open");
+        } else {
+          PP_admitted.classList.replace("pp_admitted_open", "pp_admitted_close");
+        }
         i = 10;
       }
     }
+  });
+  const PPAD_pay = document.querySelector("#ppad_pay");
+  const PPAD_pay_class = ["ppadp_no", "ppadp_check", "ppadp_yes", "ppadp_error", "ppadp_no"];
+  PPAD_pay.addEventListener("click", () => {
+    for (var i = 0; i < 4; i++) {
+      if (PPAD_pay.classList.contains(PPAD_pay_class[i])) {
+        PPAD_pay.classList.replace(PPAD_pay_class[i], PPAD_pay_class[i + 1]);
+        i = 10;
+      }
+    }
+  });
+  const PPAD_agreement = document.querySelector("#ppad_agreement");
+  const PPAD_agreement_class = [
+    "ppada_no",
+    "ppada_check",
+    "ppada_yes",
+    "ppada_fail",
+    "ppada_error",
+    "ppada_no",
+  ];
+  PPAD_agreement.addEventListener("click", () => {
+    for (var i = 0; i < 5; i++) {
+      if (PPAD_agreement.classList.contains(PPAD_agreement_class[i])) {
+        PPAD_agreement.classList.replace(PPAD_agreement_class[i], PPAD_agreement_class[i + 1]);
+        i = 10;
+      }
+    }
+  });
+  const PP_cancel_btn = document.querySelector("#ppad_cancel");
+  PP_cancel_btn.addEventListener("click", () => {
+    window.confirm("確定要取消報名？");
   });
 };
 export default PersonalScript;

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ReviewScript from "./Review_script.js";
 const review_up_image_totle = 10;
+var actoncekey = 1;
 
 //生成<img>的函式
 const img_produce = (img_num) => {
@@ -34,18 +35,27 @@ const dot_produce = (img_num) => {
 
 export const Review = () => {
   useEffect(() => {
-    ReviewScript();
+    if (actoncekey !== 1) {
+      ReviewScript();
+    } else {
+      actoncekey++;
+    }
   }, []);
   return (
     <div id="page_review">
       <div id="page_review_down">
         <div id="rt_title">2022 CSI:Eden</div>
         <div id="rt_content">
-          自從開發出Eden系統後，現今社會犯罪率大幅降低，一切都歸功於Eden強大的犯罪現場重現功能。
-          <tr></tr>
-          然而「蟒蛇」的出現打破了人類社會一直以來的和平，由於蟒蛇向Eden系統發起攻擊，令Eden系統喪失了重現犯罪現場的功能，導致社會動盪，罪犯橫行人心惶惶。
-          <tr></tr>
-          調查局局長立即下令調查隊隊長徹查此事件，隨著調查隊隊長和隊員們的調查逐漸深入，竟發現案情並沒有他們所想像的那麼單純……
+          自Eden系統誕生以來，社會犯罪率曾經大幅降低，一切都歸功於Eden強大的犯罪現場重現功能。
+          <br></br>
+          <br></br>
+          然而往日的榮光以被「蟒蛇」作為養分嚥下。
+          <br></br>
+          <br></br>
+          不久前，Eden系統被自稱「蟒蛇」的組織攻擊，犯罪現場重現功能失去其意義，社會犯罪率扶搖直上，造就社會動盪、人心惶惶。
+          <br></br>
+          <br></br>
+          上層立即下令調查局徹查此事件，隨著調查的逐漸深入，竟發現案情並沒有調查人員們所想像的那麼單純……
         </div>
       </div>
       <div id="page_review_up">
@@ -55,7 +65,11 @@ export const Review = () => {
             <div id="ri_arrow_m2" className="ri_arrow_m"></div>
             <div id="ri_arrow_m3" className="ri_arrow_m"></div>
           </div>
-          <div class="ri_img_container">{img_produce(review_up_image_totle)}</div>
+          <div id="ri_img_container">
+            <div id="ri_img_touch_left"></div>
+            <div id="ri_img_touch_right"></div>
+            {img_produce(review_up_image_totle)}
+          </div>
           <div id="ri_arrow_r" className="ri_arrow_c">
             <div id="ri_arrow_m1" className="ri_arrow_m"></div>
             <div id="ri_arrow_m2" className="ri_arrow_m"></div>
