@@ -44,10 +44,10 @@ p {
   font-weight: bold;
 }
 
-div .detail>.summary {
+div .detail > .summary {
   font-size: 1rem;
   font-weight: bold;
-  height: 2rem;
+  height: auto;
   padding: 1% 1%;
   text-align: left;
   margin: 10px 0;
@@ -97,7 +97,8 @@ div .detail:hover {
     border-radius: 10px;
     border-top: 0;
     transform: rotateX(-1deg);
-    transition: ease-in-out 1s;
+    transition: width ease-in-out 1s;
+    position: relative;
   }
 
   img {
@@ -144,19 +145,32 @@ div.secondTitle {
 div.hidden {
   opacity: 0;
   overflow: hidden;
-  padding: 10px;
+  overflow-wrap: normal;
+  //padding: 10px;
   border-top: 0px;
-  width: 5rem;
-  height: 0.1rem;
+  width: 0;
+  //height: 10vh;
   padding: 0;
+  margin: 0;
   border: 0;
-  right: 25%;
-  background: linear-gradient(to bottom right,
-      hsla(0, 0%, 100%, 0.452),
-      rgba(109, 113, 113, 0.226),
-      80%,
-      rgba(44, 38, 44, 0.117));
+  //right: 25%;
+  position: absolute;
+  background: linear-gradient(
+    to bottom right,
+    hsla(0, 0%, 100%, 0.452),
+    rgba(109, 113, 113, 0.226),
+    80%,
+    rgba(44, 38, 44, 0.117)
+  );
   color: #fff;
+  div.hidden_text {
+    position: relative;
+    height: auto;
+    width: 55vw;
+    padding: 1rem;
+    border: 5px black solid;
+    box-sizing: border-box;
+  }
 }
 
 div.infoBox {
