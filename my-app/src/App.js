@@ -13,6 +13,7 @@ import Regist from "./page/Regist";
 import Review from "./page/Review";
 import Admin from "./page/Admin";
 import Personal from "./page/Personal";
+import Payment from "./page/Payment";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/review" element={<Review />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/personal" element={<Personal />} />
+            <Route path="/payment" element={<Payment />} />
           </Routes>
         </div>
         <Footer />
