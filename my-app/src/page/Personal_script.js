@@ -9,7 +9,7 @@ const PersonalScript = () => {
   const PPAI_state_class = ["ppas_no", "ppas_yes", "ppas_error", "ppas_no"];
   PPAI_state_array.forEach((e) => {
     e.addEventListener("click", () => {
-      for (var i = 0; i < 5; i++) {
+      for (let i = 0; i < 5; i++) {
         if (e.classList.contains(PPAI_state_class[i])) {
           //console.log("aaaa: "+e.classList);
           e.classList.replace(PPAI_state_class[i], PPAI_state_class[i + 1]);
@@ -29,7 +29,7 @@ const PersonalScript = () => {
   ];
   PPAI_button_array.forEach((e) => {
     e.addEventListener("click", () => {
-      for (var i = 0; i < 5; i++) {
+      for (let i = 0; i < 5; i++) {
         if (e.classList.contains(PPAI_button_class[i])) {
           //console.log("aaaa: "+e.classList);
           e.classList.replace(PPAI_button_class[i], PPAI_button_class[i + 1]);
@@ -48,7 +48,7 @@ const PersonalScript = () => {
     "pprb_close",
   ];
   PPR_button.addEventListener("click", () => {
-    for (var i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
       if (PPR_button.classList.contains(PPR_button_class[i])) {
         PPR_button.classList.replace(PPR_button_class[i], PPR_button_class[i + 1]);
         i = 10;
@@ -59,7 +59,7 @@ const PersonalScript = () => {
   const PPR_state = document.querySelector("#ppr_state");
   const PPR_state_class = ["pprs_no", "pprs_yes", "pprs_error", "pprs_no"];
   PPR_state.addEventListener("click", () => {
-    for (var i = 0; i < 3; i++) {
+    for (let i = 0; i < 3; i++) {
       if (PPR_state.classList.contains(PPR_state_class[i])) {
         PPR_state.classList.replace(PPR_state_class[i], PPR_state_class[i + 1]);
         i = 10;
@@ -69,7 +69,7 @@ const PersonalScript = () => {
   const PPR_text = document.querySelector("#ppr_text");
   const PPR_text_class = ["pprt_no", "pprt_yes", "pprt_error", "pprt_no"];
   PPR_text.addEventListener("click", () => {
-    for (var i = 0; i < 3; i++) {
+    for (let i = 0; i < 3; i++) {
       if (PPR_text.classList.contains(PPR_text_class[i])) {
         PPR_text.classList.replace(PPR_text_class[i], PPR_text_class[i + 1]);
         i = 10;
@@ -85,7 +85,7 @@ const PersonalScript = () => {
     "ppiar_accept",
   ];
   PPIA_RF.addEventListener("click", () => {
-    for (var i = 0; i < 4; i++) {
+    for (let i = 0; i < 4; i++) {
       if (PPIA_RF.classList.contains(PPIA_RF_class[i])) {
         PPIA_RF.classList.replace(PPIA_RF_class[i], PPIA_RF_class[i + 1]);
         if (
@@ -103,7 +103,7 @@ const PersonalScript = () => {
   const PPAD_pay = document.querySelector("#ppad_pay");
   const PPAD_pay_class = ["ppadp_no", "ppadp_check", "ppadp_yes", "ppadp_error", "ppadp_no"];
   PPAD_pay.addEventListener("click", () => {
-    for (var i = 0; i < 4; i++) {
+    for (let i = 0; i < 4; i++) {
       if (PPAD_pay.classList.contains(PPAD_pay_class[i])) {
         PPAD_pay.classList.replace(PPAD_pay_class[i], PPAD_pay_class[i + 1]);
         i = 10;
@@ -120,7 +120,7 @@ const PersonalScript = () => {
     "ppada_no",
   ];
   PPAD_agreement.addEventListener("click", () => {
-    for (var i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
       if (PPAD_agreement.classList.contains(PPAD_agreement_class[i])) {
         PPAD_agreement.classList.replace(PPAD_agreement_class[i], PPAD_agreement_class[i + 1]);
         i = 10;

@@ -10,8 +10,8 @@ const ReviewScript = () => {
   const img_touch_left = document.getElementById("ri_img_touch_left");
   const img_touch_right = document.getElementById("ri_img_touch_right");
 
-  var now_show_img = 0; //最前面是第幾張
-  var nsi_temp, img_style;
+  let now_show_img = 0; //最前面是第幾張
+  let nsi_temp, img_style;
 
   //聽左邊的箭頭
   ri_arrow_l.addEventListener("click", () => {
@@ -89,7 +89,7 @@ const ReviewScript = () => {
   };
 
   const img_show_func = (e) => {
-    for (var i = 0; i < review_up_image_totle; i++) {
+    for (let i = 0; i < review_up_image_totle; i++) {
       nsi_temp = e + i; //第i次迴圈要控制的圖片編號
       //console.log("aaa"+nsi_temp);//D3rr0r
       if (nsi_temp >= review_up_image_totle) {

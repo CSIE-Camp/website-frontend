@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import PersonalScript from "./Personal_script";
-var actoncekey = 1;
+let actoncekey = 1;
 
 export const Personal = () => {
   useEffect(() => {

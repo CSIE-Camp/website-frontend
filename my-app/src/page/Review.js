@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import ReviewScript from "./Review_script.js";
 const review_up_image_totle = 10;
-var actoncekey = 1;
+let actoncekey = 1;
 
 //生成<img>的函式
 const img_produce = (img_num) => {
-  var img_output = [];
-  var tempa;
-  for (var i = 0; i < img_num; i++) {
+  let img_output = [];
+  let tempa;
+  for (let i = 0; i < img_num; i++) {
     tempa = "review_up_imageNum_" + i; //建立除錯用的id
     img_output.push(
       <img
@@ -24,9 +24,9 @@ const img_produce = (img_num) => {
 
 //生成點點的函式
 const dot_produce = (img_num) => {
-  var dot_output = [];
-  var tempa;
-  for (var i = 0; i < img_num; i++) {
+  let dot_output = [];
+  let tempa;
+  for (let i = 0; i < img_num; i++) {
     tempa = "review_up_dotNum_" + i; //建立編號、這次的功能不只為了除錯
     dot_output.push(<div id={tempa} className="review_up_dot" key={tempa}></div>);
   }

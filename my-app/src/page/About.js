@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 const About = () => {
+  const [summaryClick, setsummaryClick] = useState("click-false");
+
+  const handleSummaryClick = () => {
+    if (summaryClick === "click-true") {
+      setsummaryClick("click-false");
+    } else {
+      setsummaryClick("click-true");
+    }
+    console.log("aaa:" + summaryClick);
+  };
+
   return (
     <div className="aboutFlex">
       <div className="aboutBox">
@@ -35,26 +46,32 @@ const About = () => {
           </div>
           <div class="courseList">
             <div class="detail">
-              <div class="summary">
+              <div className={"summary " + summaryClick} onClick={handleSummaryClick}>
                 <img
                   src={require("../image/iconForThirdTitle.png")}
                   alt="Secret!"
                   class="summaryHead"
                 ></img>
                 來做自己專屬的 BLOG 吧!
-                <img src={require("../image/arrowDown.png")} class="summary" alt="down"></img>
+                <img src={require("../image/arrowDown.png")} className="summary " alt="down"></img>
               </div>
               <div class="hidden">
                 <div class="hidden_text">
-                  最初是幾個模糊人影，隨後是耀眼的光，光漸漸遠離，升到天上，留下一片斑駁。不多久這些光點同樣迅速遠去，就只剩一片無意義的漆黑。
-                  你想起那些斑駁皆是天體，你想起星星們的家園名為宇宙。
-                  緊接著，你的視野忽然清晰起來，光滑的金屬、密閉的空間、透明的窗口成了你的第三隻眼——你透過它，看著窗外巨大的灰色球體，在那些常人無法理解的巨構之中，它安靜地等待著自己的生父......
-                  你突然有些感動，某些體液打濕了視野。你開始尋找這份情緒的根源，你看到了一個孩子的誕生，那是你的孩子。全新的命運，靈魂的寄託......可這樣一個小小的生命與那個虛空的巨構相比，是多麼微不足道。
-                  你回到眼下，看著那些大大小小的工程艦船，作為數學家的你迅速進行了一個可笑的對比——其中最小的艦船，都數千萬倍於一個人類嬰兒的大小。
-                  但你們做到了。從遠古的遠古開始，從火或者一次狩獵開始，你們走到了今天。
-                  你很自豪。不知怎地，你對這份自豪感同身受，於是更多的信息湧入了你的腦海。你想起了自己的身份，你明白了自己就是那顆人造衛星的設計者。而在漫長的亞空間旅行之後，你終於迎來了親眼目睹它竣工的那一刻。
-                  榮譽，財富，家人，理想.....這些詞彙閃爍、盤旋、消散，最終只剩下一個，且僅有一個......
-                  ......
+                  你站在色彩斑駁的防波堤之上望向海洋，你看到數以萬計的人們正在浪頭退去的海灘上輕吻陸地。
+                  <br />
+                  <br />
+                  不對。仔細一看，他們沒有做出輕吻的動作，只是單單將臉部埋進濕漉的沙灘。你不清楚做出這樣的行為有何意義，但是他們一動也不動，而你也不知道為什麼。
+                  <br />
+                  <br />
+                  等等。你趕緊跑下那抵禦浪潮浸蝕陸地的城牆，跑過乾燥的廣闊岩石岸、越過零散的高聳岩石群、跳過寂靜的深邃岩石溝、踏進海洋與陸地的交界處之時你也沒有停下，縱使隻身一人仍持續於泥濘的土地上奔馳。
+                  <br />
+                  <br />
+                  到了。你抵達了你心中的目的地，不過方才的激烈運動讓你上氣接不過下氣，你將身體靠在你身旁夥伴身上，調整呼吸之時也能整理接下來的行動計劃。沒有溫度的海水淹過你的腳踝、沒有聲音的海風掠過你的臉頰、沒有意識的海洋已伸出清澈如水的雙手招呼著新朋友。你知道海洋的敵人即是陸地，海洋正在阻止你的不懷好意，你這麼告訴自己；而陸地的敵人也包含夢鄉，陸地現在希望你踏進海床，海洋這麼告訴你。你決定聽從海洋的建議，但是又不想背離陸地的包庇，於是你將自己的臉埋入海浪之下的沙地。當你意識到你逐漸失去氧氣，海洋不會救你，海洋僅會恭喜。
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  又一位來自陸地的旅客於海洋邊擱淺。
                 </div>
               </div>
             </div>
