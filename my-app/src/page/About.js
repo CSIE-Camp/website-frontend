@@ -4,15 +4,6 @@ const About = () => {
   const [summaryClick, setsummaryClick] = useState("");
   let Summary_ctrl = true;
 
-  // const handleSummaryClick = () => {
-  //   if (summaryClick === "click-true") {
-  //     setsummaryClick("click-false");
-  //   } else {
-  //     setsummaryClick("click-true");
-  //   }
-  //   console.log("aaa:" + summaryClick);
-  // };
-
   return (
     <div
       className="aboutFlex"
@@ -34,11 +25,10 @@ const About = () => {
               主題介紹
             </h2>
           </div>
-          <br></br>
+
           <p>
             未來的工程師發明了一種新型穿越技術，玩家可以不需頭戴式裝置直接穿越到工程師開發出的世界，此世界為無數個獨特島嶼所建構出，每個島嶼上都有相對應的風格及此風格的遊戲區。以及在處處皆可能藏有彩蛋的驚喜。
           </p>
-          <br></br>
         </div>
         <div className="intro">
           <div className="secondTitle">
@@ -70,7 +60,12 @@ const About = () => {
                 來做自己專屬的 BLOG 吧!
                 <img src={require("../image/arrowDown.png")} className="summary " alt="down"></img>
               </div>
-              <div className="hidden">
+              <div
+                className="hidden"
+                onClick={() => {
+                  Summary_ctrl = false;
+                }}
+              >
                 <div className="hidden_text">
                   你站在色彩斑駁的防波堤之上望向海洋，你看到數以萬計的人們正在浪頭退去的海灘上親吻陸地。
                   <br />
@@ -108,7 +103,12 @@ const About = () => {
                 創造屬於你的discord bot
                 <img src={require("../image/arrowDown.png")} className="summary" alt="down"></img>
               </div>
-              <div className="hidden">
+              <div
+                className="hidden"
+                onClick={() => {
+                  Summary_ctrl = false;
+                }}
+              >
                 <div className="hidden_text"></div>
               </div>
             </div>
@@ -130,7 +130,12 @@ const About = () => {
                 Web Design & Developement
                 <img src={require("../image/arrowDown.png")} className="summary" alt="down"></img>
               </div>
-              <div className="hidden">
+              <div
+                className="hidden"
+                onClick={() => {
+                  Summary_ctrl = false;
+                }}
+              >
                 <div className="hidden_text"></div>
               </div>
             </div>
@@ -152,7 +157,12 @@ const About = () => {
                 Cyber Security Stuff
                 <img src={require("../image/arrowDown.png")} className="summary" alt="down"></img>
               </div>
-              <div className="hidden">
+              <div
+                className="hidden"
+                onClick={() => {
+                  Summary_ctrl = false;
+                }}
+              >
                 <div className="hidden_text"></div>
               </div>
             </div>
@@ -174,7 +184,12 @@ const About = () => {
                 基礎密碼學 - 從古典到現代
                 <img src={require("../image/arrowDown.png")} className="summary" alt="down"></img>
               </div>
-              <div className="hidden">
+              <div
+                className="hidden"
+                onClick={() => {
+                  Summary_ctrl = false;
+                }}
+              >
                 <div className="hidden_text"></div>
               </div>
             </div>
