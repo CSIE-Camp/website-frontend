@@ -1,69 +1,71 @@
 footer {
-  flex-flow: column wrap;
   background-color: #fff;
-  width: 100vw;
-  height: fit-content;
-  margin-top: auto;
-
+  width: 100%;
+  height: 100%;
+  position: relative;
   h1 {
     padding: 10px;
     font-family: "ToronoGlitchSans H2";
-    font-style: normal;
-    font-weight: 900;
-    line-height: 48px;
-    font-size: 5vw;
-    position: relative;
-    left: 0;
-    top: -22%;
+    position: absolute;
     color: #000;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   #email {
-    font-size: 3vw;
-    position: relative;
+    font-size: 1.5rem;
+    position: absolute;
+    z-index: 1;
+    top: 4rem;
     left: 0;
-    top: -22%;
+    right: 0;
   }
   #tel {
-    font-size: 3vw;
-    position: relative;
+    font-size: 1.5rem;
+    position: absolute;
+    z-index: 1;
+    top: 7rem;
     left: 0;
-    top: -22%;
+    right: 0;
   }
-  #copyright {
-    font-size: 2vw;
-    position: relative;
-    left: 0;
-    top: -20%;
+  //Images
+  #picture {
+    justify-content: space-around;
+    display: flex;
   }
   .island {
     position: relative;
     bottom: 0;
+    display: flex;
   }
   #left {
-    max-width: 10vw;
-    height: 5vw;
-    left: 10%;
-    top: 20%;
+    top: 5rem;
+    max-width: 10rem;
+    height: 3rem;
   }
   #left2 {
-    max-width: 5vw;
-    left: 17%;
-    top: 15%;
+    top: 6rem;
+    max-width: 4rem;
+    height: 3rem;
   }
   #middle {
-    max-width: 40vw;
-    left: 17%;
-    top: 15%;
+    max-width: 20rem;
+    margin-right: 2.5rem;
+    margin-left: 1rem;
+    right: 0;
+    left: 0;
+    margin-top: 2rem;
   }
   #right2 {
-    max-width: 5vw;
-    left: 20%;
-    top: 15%;
+    top: 5rem;
+    max-width: 4rem;
+    height: 3rem;
   }
   #right {
-    max-width: 7vw;
-    left: 28%;
-    top: 18%;
+    top: 7rem;
+    max-width: 4rem;
+    height: 3rem;
   }
 
   p {
@@ -76,8 +78,6 @@ footer {
   }
 
   p.Copyright {
-    margin: 5px;
-    padding: 5px;
     font-size: 1rem;
     line-height: 1rem;
   }
@@ -86,12 +86,11 @@ footer {
     display: flex;
     justify-content: center;
     position: relative;
-    top: -20%;
 
     a {
       img {
-        width: 10vw;
-        padding: 2vw;
+        width: 3rem;
+        padding-right: 1rem;
       }
     }
   }
