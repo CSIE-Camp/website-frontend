@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const Admin = () => {
   const adminTableSearch = () => {
@@ -19,6 +19,11 @@ export const Admin = () => {
       }
     }
   };
+  const [SystemSwitch, setSystemSwitch] = useState(true);
+  function handleClickOpen() {
+    setSystemSwitch(false);
+  }
+
   return (
     <div className="adminFlex">
       <h1>帳號: admin666@gmail.com</h1>
@@ -26,8 +31,8 @@ export const Admin = () => {
       <div className="adminSystemSwitch">
         <div className="left">
           <p>報名系統</p>
-          <span>開放中</span>
-          <span>Open</span>
+          <span>{SystemSwitch ? "開放中" : "已關閉"}</span>
+          <button onClick={handleClickOpen}>{SystemSwitch ? "開放中" : "已關閉"}</button>
         </div>
         <div className="right">
           <p>錄取狀態查詢</p>
