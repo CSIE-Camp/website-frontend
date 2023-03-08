@@ -28,7 +28,7 @@ h1 {
   font-style: normal;
   font-weight: 900;
   line-height: 48px;
-  font-size: 2.5rem;
+  font-size: 5vw;
   color: #fff;
 }
 
@@ -36,16 +36,19 @@ h2 {
   padding: 10px;
   font-style: normal;
   font-weight: 900;
+  font-size: 4vw;
+  line-height: 1.8vw;
 }
 
 p {
   left: 15%;
   text-align: left;
   font-weight: bold;
+  font-size: 3vw;
 }
 
 div .detail > .summary {
-  font-size: 1.2rem;
+  font-size: 2vw;
   font-weight: bold;
   height: 2rem;
   padding: 1% 2%;

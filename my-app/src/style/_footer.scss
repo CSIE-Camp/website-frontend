@@ -17,10 +17,6 @@ footer {
     top: -22%;
     color: #000;
   }
-  a {
-    position: relative;
-    // top: -80%;
-  }
   #email {
     font-size: 3vw;
     position: relative;
@@ -38,6 +34,10 @@ footer {
     position: relative;
     left: 0;
     top: -20%;
+  }
+  .island {
+    position: relative;
+    bottom: 0;
   }
   #left {
     max-width: 10vw;
@@ -64,10 +64,6 @@ footer {
     max-width: 7vw;
     left: 28%;
     top: 18%;
-  }
-  .island {
-    position: relative;
-    bottom: 0;
   }
 
   p {
