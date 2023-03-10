@@ -1,29 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 export const Forget = () => {
   return (
-    <div class="forget">
-      <h1 class="title">登入報名資訊</h1>
-      <div class="pwd_container">
-        <input class="register button" placeholder="    請輸入電子信箱"></input>
-        <button class="send">
-          <a href="#next">
-            <span class="arrow"></span>
-          </a>
+    <form className="forget">
+      <h1 className="title">忘記密碼</h1>
+      <p className="help">* 若您忘記你的資工營帳號密碼，請填寫你的電子信箱</p>
+      <div className="inputFlex">
+        <input className="forgetMail" placeholder="請輸入電子信箱" type={"email"} />
+        <button className="confirm" type="submit">
+          <span className="arrow"></span>
         </button>
       </div>
-      <p class="help">* 請至電子信箱查收驗證信</p>
-      <input class="register" placeholder="    建立新密碼"></input>
-      <div class="pwd_container">
-        <input class="register button" placeholder="    再次輸入密碼"></input>
-        <button class="confirm">
-          <Link to="/info">
-            <span class="arrow"></span>
-          </Link>
-        </button>
+      <div className="helpFlex">
+        <p className="help">* 請至電子信箱查收驗證信</p>
       </div>
-    </div>
+      <div className="passwordFlex">
+        <input className="forgetPassword" placeholder="建立新密碼" type={"password"} />
+        <div className="pwd_container">
+          <input className="forgetPassword" placeholder="再次輸入密碼" type={"password"} />
+          <button className="confirm" type="submit">
+            <span className="arrow"></span>
+          </button>
+        </div>
+      </div>
+    </form>
   );
 };
 export default Forget;
