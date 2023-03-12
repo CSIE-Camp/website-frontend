@@ -3,9 +3,41 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      <h1>聯絡方式</h1>
-      <p>example@gmail.com</p>
-      <p>0900-000000</p>
+      <div id="footerFlex">
+        <div id="picture">
+          <img class="island" id="left" src={require("./image/island left.png")} alt="island"></img>
+          <img
+            className="island"
+            id="left2"
+            src={require("./image/island left 2.png")}
+            alt="island"
+          ></img>
+          <img
+            className="island"
+            id="middle"
+            src={require("./image/island middle.png")}
+            alt="isl"
+          ></img>
+          <img
+            className="island"
+            id="right2"
+            src={require("./image/island right 2.png")}
+            alt="island"
+          ></img>
+          <img
+            className="island"
+            id="right"
+            src={require("./image/island right.png")}
+            alt="island"
+          ></img>
+        </div>
+        <div id="text">
+          <h1>聯絡方式</h1>
+          <hr id="bar" width="75%" />
+          <p id="email">example@gmail.com</p>
+          <p id="tel">0900-000000</p>
+        </div>
+      </div>
       <div class="icon">
         <a href="/">
           <img src={require("./image/fb.png")} title="Facebook" alt="fb" />

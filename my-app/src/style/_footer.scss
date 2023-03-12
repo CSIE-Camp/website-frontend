@@ -1,22 +1,96 @@
 footer {
-  background: url("../image/island.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display: flex;
-  flex-flow: column wrap;
-  width: 100vw;
-  height: auto;
-  margin-top: auto;
-  //align-self: flex-end;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: relative;
 
-  h1 {
-    padding: 10px;
-    font-family: "ToronoGlitchSans H2";
-    font-style: normal;
-    font-weight: 900;
-    line-height: 48px;
-    font-size: 2.5rem;
-    color: #000;
+
+
+
+  div#footerFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div#text {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 25vw;
+      top: 1rem;
+
+      h1 {
+        font-size: 2rem;
+        font-family: "ToronoGlitchSans H2";
+        color: #000;
+        z-index: 1;
+      }
+
+      #bar {
+        border: 1px #000 dashed;
+      }
+
+      #email {
+        font-size: 1.25rem;
+        z-index: 1;
+      }
+
+      #tel {
+        font-size: 1.25rem;
+        z-index: 1;
+
+      }
+    }
+
+  }
+
+  //Images
+  #picture {
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
+  }
+
+  .island {
+    position: relative;
+    bottom: 0;
+    display: flex;
+
+  }
+
+  #left {
+    top: 5rem;
+    max-width: 10rem;
+    height: 3rem;
+  }
+
+  #left2 {
+    top: 6rem;
+    max-width: 4rem;
+    height: 3rem;
+  }
+
+  #middle {
+    max-width: 20rem;
+    margin-right: 2.5rem;
+    margin-left: 1rem;
+    height: 150px;
+    right: 0;
+    left: 0;
+    margin-top: 2rem;
+  }
+
+  #right2 {
+    top: 5rem;
+    max-width: 4rem;
+    height: 3rem;
+  }
+
+  #right {
+    top: 7rem;
+    max-width: 4rem;
+    height: 3rem;
   }
 
   p {
@@ -29,8 +103,6 @@ footer {
   }
 
   p.Copyright {
-    margin: 5px;
-    padding: 5px;
     font-size: 1rem;
     line-height: 1rem;
   }
@@ -38,11 +110,22 @@ footer {
   div.icon {
     display: flex;
     justify-content: center;
+    position: relative;
 
     a {
       img {
-        width: 100px;
-        padding: 25px;
+        width: 3rem;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:650px) {
+  footer {
+    div#footerFlex {
+      div#text {
+        width: 50vw;
       }
     }
   }
