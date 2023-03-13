@@ -1,23 +1,114 @@
 /*
-示範用、後端串起來後大部分要取消
+後端串接預備完成(?)
+前半是預備串接的code、後半是示範code要消除。
 */
+// const Personal_RA = (btnLink,aLink) => {
+//   const btn_e_a = document.querySelector(aLink)
+//   btnLink.removeChild(btn_e_a);
+// }
 
 const PersonalScript = () => {
-  const PP_admitted = document.querySelector("#pp_admitted");
-
-  const PPAI_state_array = document.querySelectorAll("#ppa_inside_state");
-  const PPAI_state_class = ["ppas_no", "ppas_yes", "ppas_error", "ppas_no"];
-  PPAI_state_array.forEach((e) => {
-    e.addEventListener("click", () => {
-      for (let i = 0; i < 5; i++) {
-        if (e.classList.contains(PPAI_state_class[i])) {
-          //console.log("aaaa: "+e.classList);
-          e.classList.replace(PPAI_state_class[i], PPAI_state_class[i + 1]);
-          i = 10;
-        }
-      }
+  //個人資料button
+  //需要<a>的按鈕: 點此填寫(ppaib_open)、修改資料(ppaib_finish)
+  const PPA_infor_btn = document.querySelector("#ppa_information #ppa_inside_button");
+  PPA_infor_btn.classList.add("ppaib_close");
+  if (PPA_infor_btn.classList.contains("ppaib_open")) {
+    const btn_a = document.createElement("a");
+    btn_a.href = "";
+    PPA_infor_btn.appendChild(btn_a);
+  } else if (PPA_infor_btn.classList.contains("ppaib_finish")) {
+    const btn_a = document.createElement("a");
+    btn_a.href = "";
+    PPA_infor_btn.appendChild(btn_a);
+  } else {
+    const btn_e_a = document.querySelectorAll("#ppa_information #ppa_inside_button a");
+    btn_e_a.forEach((e) => {
+      PPA_infor_btn.removeChild(e);
     });
+  }
+  //報名測驗button
+  const PPA_quiz_btn = document.querySelector("#ppa_quiz #ppa_inside_button");
+  if (PPA_quiz_btn.classList.contains("ppaib_open")) {
+    const btn_a = document.createElement("a");
+    btn_a.href = "";
+    PPA_quiz_btn.appendChild(btn_a);
+  } else {
+    const btn_e_a = document.querySelectorAll("#ppa_quiz #ppa_inside_button a");
+    btn_e_a.forEach((e) => {
+      PPA_quiz_btn.removeChild(e);
+    });
+  }
+  //Github綁定button
+  const PPA_github_btn = document.querySelector("#ppa_github #ppa_inside_button");
+  if (PPA_github_btn.classList.contains("ppaib_open")) {
+    const btn_a = document.createElement("a");
+    btn_a.href = "";
+    PPA_github_btn.appendChild(btn_a);
+  } else if (PPA_github_btn.classList.contains("ppaib_finish")) {
+    const btn_a = document.createElement("a");
+    btn_a.href = "";
+    PPA_github_btn.appendChild(btn_a);
+  } else {
+    const btn_e_a = document.querySelectorAll("#ppa_github #ppa_inside_button a");
+    btn_e_a.forEach((e) => {
+      PPA_github_btn.removeChild(e);
+    });
+  }
+  //點我報名、取消報名
+  const PPR_btn = document.querySelector("#pp_register #ppr_button");
+  if (PPR_btn.classList.contains("pprb_open")) {
+    const btn_a = document.createElement("a");
+    btn_a.href = "";
+    PPR_btn.appendChild(btn_a);
+  } else if (PPR_btn.classList.contains("pprb_finish")) {
+    const btn_a = document.createElement("a");
+    btn_a.href = "";
+    PPR_btn.appendChild(btn_a);
+  } else {
+    const btn_e_a = document.querySelectorAll("#pp_register #ppr_button a");
+    btn_e_a.forEach((e) => {
+      PPR_btn.removeChild(e);
+    });
+  }
+  //上傳付款
+  const PPAD_pay_ctrl = document.querySelector("#ppad_pay");
+  const PPAD_pay_btn = document.querySelector("#ppad_pay #ppad_button");
+  if (PPAD_pay_ctrl.classList.contains("ppadp_no")) {
+    const btn_a = document.createElement("a");
+    btn_a.href = "";
+    PPAD_pay_btn.appendChild(btn_a);
+  } else {
+    const btn_e_a = document.querySelectorAll("#pp_pay #ppr_button a");
+    btn_e_a.forEach((e) => {
+      PPAD_pay_btn.removeChild(e);
+    });
+  }
+  //家長同意書
+  const PPAD_agree_ctrl = document.querySelector("#ppad_agreement");
+  const PPAD_agree_btn = document.querySelector("#ppad_agreement #ppad_button");
+  if (PPAD_agree_ctrl.classList.contains("ppada_no")) {
+    const btn_a = document.createElement("a");
+    btn_a.href = "";
+    PPAD_agree_btn.appendChild(btn_a);
+  } else if (PPAD_agree_ctrl.classList.contains("ppada_fail")) {
+    const btn_a = document.createElement("a");
+    btn_a.href = "";
+    PPAD_agree_btn.appendChild(btn_a);
+  } else {
+    const btn_e_a = document.querySelectorAll("#pp_agreement #ppr_button a");
+    btn_e_a.forEach((e) => {
+      PPAD_agree_btn.removeChild(e);
+    });
+  }
+  //取消報名、這邊暫時不動
+  const PP_cancel_btn = document.querySelector("#ppad_cancel");
+  PP_cancel_btn.addEventListener("click", () => {
+    window.confirm("確定要取消報名？");
   });
+
+  /* --------------------  分隔  -------------------- */
+
+  /*
   const PPAI_button_array = document.querySelectorAll("#ppa_inside_button");
   const PPAI_button_class = [
     "ppaib_close",
@@ -84,6 +175,7 @@ const PersonalScript = () => {
     "ppiar_not_pass",
     "ppiar_accept",
   ];
+  const PP_admitted = document.querySelector("#pp_admitted");
   PPIA_RF.addEventListener("click", () => {
     for (let i = 0; i < 4; i++) {
       if (PPIA_RF.classList.contains(PPIA_RF_class[i])) {
@@ -126,10 +218,6 @@ const PersonalScript = () => {
         i = 10;
       }
     }
-  });
-  const PP_cancel_btn = document.querySelector("#ppad_cancel");
-  PP_cancel_btn.addEventListener("click", () => {
-    window.confirm("確定要取消報名？");
-  });
+  });*/
 };
 export default PersonalScript;

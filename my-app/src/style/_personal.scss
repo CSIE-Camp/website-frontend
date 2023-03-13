@@ -1,31 +1,51 @@
 div#page_personal {
-  @mixin button_open {
+  @mixin button_open($text_content) {
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px white solid;
     color: white;
     transition: box-shadow 0.4s ease;
+    cursor: pointer;
     &:hover {
       box-shadow: 0px 0px 5px 2px white;
     }
+    &::before {
+      content: $text_content;
+    }
   }
-  @mixin button_close {
+  @mixin button_close($text_content) {
     opacity: 0.5;
     background-color: rgba(200, 200, 200, 0.2);
     border: 2px gray solid;
     color: gray;
     cursor: not-allowed;
+    &::before {
+      content: $text_content;
+    }
   }
-  @mixin button_finish {
+  @mixin button_finish($text_content) {
     background-color: rgba(100, 100, 100, 0.5);
     border: 2px gray solid;
     color: gray;
+    cursor: default;
+    &::before {
+      content: $text_content;
+    }
   }
-  @mixin button_error {
+  @mixin button_error($text_content) {
     background-color: rgba(100, 100, 100, 0.5);
     border: 2px red solid;
     color: red;
     font-size: 30px;
     font-weight: bold;
+    cursor: help;
+
+    &::before {
+      content: $text_content;
+    }
+    &:hover::before {
+      font-size: 25px;
+      content: "請聯絡服務人員";
+    }
   }
   @mixin state_no {
     border: 0.25vh solid red;
@@ -138,117 +158,79 @@ div#page_personal {
             @include state_error();
           }
         }
+
         div#ppa_inside_button {
           width: 80%;
           height: 8vh;
           font-size: 23px;
-          margin-top: 2vh;
-          margin-left: 10%;
           border-radius: 1.2vw;
           box-sizing: border-box;
+          position: relative;
           background-color: rgba(255, 255, 255, 0.5);
+          margin-top: 2vh;
+          margin-left: 10%;
           border: 2px white solid;
           display: flex;
           justify-content: center;
           align-items: center;
           user-select: none;
-          cursor: pointer;
+
+          a {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+          }
         }
       }
       div#ppa_information div#ppa_inside_button {
         &.ppaib_close {
-          @include button_close();
-          &::before {
-            content: "尚未開啟";
-          }
+          @include button_close("尚未開啟");
         }
         &.ppaib_open {
-          @include button_open();
-          &::before {
-            content: "點此填寫";
-          }
+          @include button_open("點此填寫");
         }
         &.ppaib_finish {
-          @include button_open();
-          &::before {
-            content: "修改資料";
-          }
+          @include button_open("修改資料");
         }
         &.ppaib_registered {
-          @include button_finish();
-          &::before {
-            content: "已完成報名作業";
-          }
+          @include button_finish("已完成報名作業");
         }
         &.ppaib_error {
-          @include button_error();
-          &::before {
-            content: "錯誤發生";
-          }
+          @include button_error("錯誤發生");
         }
       }
       div#ppa_quiz div#ppa_inside_button {
         &.ppaib_close {
-          @include button_close();
-          &::before {
-            content: "尚未開啟";
-          }
+          @include button_close("尚未開啟");
         }
         &.ppaib_open {
-          @include button_open();
-          &::before {
-            content: "點此測驗";
-          }
+          @include button_open("點此測驗");
         }
         &.ppaib_finish {
-          @include button_finish();
-          &::before {
-            content: "已完成測驗";
-          }
+          @include button_finish("已完成測驗");
         }
         &.ppaib_registered {
-          @include button_finish();
-          &::before {
-            content: "已完成報名作業";
-          }
+          @include button_finish("已完成報名作業");
         }
         &.ppaib_error {
-          @include button_error();
-          &::before {
-            content: "錯誤發生";
-          }
+          @include button_error("錯誤發生");
         }
       }
       div#ppa_github div#ppa_inside_button {
         &.ppaib_close {
-          @include button_close();
-          &::before {
-            content: "尚未開啟";
-          }
+          @include button_close("尚未開啟");
         }
         &.ppaib_open {
-          @include button_open();
-          &::before {
-            content: "點此綁定";
-          }
+          @include button_open("點此綁定");
         }
         &.ppaib_finish {
-          @include button_open();
-          &::before {
-            content: "點此重新綁定";
-          }
+          @include button_open("點此重新綁定");
         }
         &.ppaib_registered {
-          @include button_finish();
-          &::before {
-            content: "已完成報名作業";
-          }
+          @include button_finish("已完成報名作業");
         }
         &.ppaib_error {
-          @include button_error();
-          &::before {
-            content: "錯誤發生";
-          }
+          @include button_error("錯誤發生");
         }
       }
 
@@ -282,42 +264,36 @@ div#page_personal {
         border-radius: 3vh;
         margin: 1vh;
         box-sizing: border-box;
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 30px;
         cursor: pointer;
 
+        a {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+        }
+
         &.pprb_close {
-          @include button_close();
-          &::before {
-            content: "尚未開啟報名";
-          }
+          @include button_close("尚未開啟報名");
         }
         &.pprb_open {
-          @include button_open();
+          @include button_open("點我報名");
           &::before {
             font-size: 40px;
-            content: "點我報名";
           }
         }
         &.pprb_finish {
-          @include button_open();
-          &::before {
-            content: "取消報名";
-          }
+          @include button_open("取消報名");
         }
         &.pprb_registered {
-          @include button_finish();
-          &::before {
-            content: "已完成報名";
-          }
+          @include button_finish("已完成報名");
         }
         &.pprb_error {
-          @include button_error();
-          &::before {
-            content: "發生錯誤";
-          }
+          @include button_error("發生錯誤");
         }
       }
       div#ppr_center {
@@ -518,7 +494,7 @@ div#page_personal {
         }
       }
       div#ppad_cancel {
-        @include button_finish();
+        @include button_finish("(逼不得已再按下)取消報名");
         width: 15vw;
         min-width: 200px;
         height: 5vh;
@@ -532,9 +508,6 @@ div#page_personal {
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        &::before {
-          content: "(逼不得已再按下)取消報名";
-        }
       }
 
       div#ppad_pay {
@@ -553,10 +526,7 @@ div#page_personal {
             }
           }
           div#ppad_button {
-            @include button_open();
-            &::before {
-              content: "點此繳費";
-            }
+            @include button_open("點此繳費");
           }
         }
         &.ppadp_check {
@@ -568,10 +538,7 @@ div#page_personal {
             }
           }
           div#ppad_button {
-            @include button_finish();
-            &::before {
-              content: "確認中";
-            }
+            @include button_finish("確認中");
           }
         }
         &.ppadp_yes {
@@ -583,10 +550,7 @@ div#page_personal {
             }
           }
           div#ppad_button {
-            @include button_close();
-            &::before {
-              content: "繳費成功";
-            }
+            @include button_close("繳費成功");
           }
         }
         &.ppadp_error {
@@ -598,10 +562,7 @@ div#page_personal {
             }
           }
           div#ppad_button {
-            @include button_error();
-            &::before {
-              content: "發生異常";
-            }
+            @include button_error("發生異常");
           }
         }
       }
@@ -620,10 +581,7 @@ div#page_personal {
             }
           }
           div#ppad_button {
-            @include button_open();
-            &::before {
-              content: "點此上傳";
-            }
+            @include button_open("點此上傳");
           }
         }
         &.ppada_check {
@@ -635,10 +593,7 @@ div#page_personal {
             }
           }
           div#ppad_button {
-            @include button_finish();
-            &::before {
-              content: "確認中";
-            }
+            @include button_finish("確認中");
           }
         }
         &.ppada_yes {
@@ -650,10 +605,7 @@ div#page_personal {
             }
           }
           div#ppad_button {
-            @include button_close();
-            &::before {
-              content: "上傳成功";
-            }
+            @include button_close("上傳成功");
           }
         }
         &.ppada_fail {
@@ -665,10 +617,7 @@ div#page_personal {
             }
           }
           div#ppad_button {
-            @include button_open();
-            &::before {
-              content: "重新上傳";
-            }
+            @include button_open("重新上傳");
           }
         }
         &.ppada_error {
@@ -680,10 +629,7 @@ div#page_personal {
             }
           }
           div#ppad_button {
-            @include button_error();
-            &::before {
-              content: "發生錯誤";
-            }
+            @include button_error("發生錯誤");
           }
         }
       }

@@ -12,7 +12,6 @@ export const Personal = () => {
   }, []);
   return (
     <div id="page_personal">
-      <div id="page_personal_derror">除錯：cursor是pointer的地方都可以點</div>
       <div id="p_personal_container">
         <div id="pp_account_name">
           <div id="pp_an_up">帳號 : a12345678@gmail.com</div>
@@ -23,7 +22,7 @@ export const Personal = () => {
           <div id="ppa_information">
             <div id="ppa_inside_text">填&zwj;寫&zwj;個&zwj;人資&zwj;料</div>
             <div id="ppa_inside_state" className="ppas_no"></div>
-            <div id="ppa_inside_button" className="ppaib_close"></div>
+            <div id="ppa_inside_button" className=""></div>
           </div>
           <div id="ppa_quiz">
             <div id="ppa_inside_text">完&zwj;成&zwj;報&zwj;名測&zwj;驗</div>
@@ -37,7 +36,7 @@ export const Personal = () => {
           </div>
         </div>
         <div id="pp_register">
-          <div id="ppr_button" className="pprb_close"></div>
+          <div id="ppr_button" className="pprb_open"></div>
           <div id="ppr_center">
             <div id="ppr_state" className="pprs_no"></div>
             <div id="ppr_text" className="pprt_no"></div>
