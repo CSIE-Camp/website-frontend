@@ -25,7 +25,7 @@ const Home = () => {
             </div>
             <div className="registerButton">
               <a href="/login">
-                <button className="register">立即報名 </button>
+                <button className="register">立即報名</button>
               </a>
             </div>
           </section>

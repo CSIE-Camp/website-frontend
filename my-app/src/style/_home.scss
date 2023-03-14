@@ -1,104 +1,105 @@
-h1 {
-  font-size: 2rem;
-  text-align: center;
+@mixin registerButton() {
+  button {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    letter-spacing: 0.75rem;
+    font-family: "ToronoGlitchSans H2";
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    background: rgba(217, 217, 217, 0.35);
+    border-radius: 30px;
+    border: 5px solid #d9d9d9;
+
+    &:hover {
+      color: #f7d967;
+      background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
+          #000000 52.6%,
+          rgba(255, 255, 255, 0.63) 100%);
+
+      cursor: pointer;
+    }
+  }
 }
 
-div.card {
-  display: flex;
-
-  section.left {
-    margin: 1rem 1rem 5vw 1rem;
-    width: 55vw;
-    height: 50vw;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+main {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
   }
 
-  section.right {
-    padding: 100px 30px;
+  div.card {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 40%;
 
-    div.words {
-      align-items: flex-start;
+    section.left {
+      margin: 1rem 1rem 5vw 1rem;
+      width: 55vw;
+      height: 50vw;
       display: flex;
-      flex-flow: column;
-
-      h1 {
-        font-family: "ToronoGlitchSans H4", sans-serif;
-        padding: 5px;
-        font-weight: 900;
-        letter-spacing: 1rem;
-        color: #ffffff;
-
-        span {
-          font-family: "ToronoGlitchSans H4", sans-serif;
-          letter-spacing: 0.35rem;
-        }
-
-        span.C {
-          color: #f2b24b;
-        }
-
-        span.S {
-          color: #d10000;
-        }
-
-        span.I {
-          color: #69bfba;
-        }
-
-        span.E {
-          color: #edb4cf;
-        }
-      }
-
-      p {
-        text-align-last: center;
-        letter-spacing: 3px;
-        font-family: "Source Code Pro", monospace;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1.5rem;
-        line-height: 44px;
-
-        text-align: center;
-        color: #ffffff;
-      }
+      flex-direction: column;
+      position: relative;
     }
 
-    div.registerButton {
-      margin: 2.5rem 0;
+    section.right {
+      margin: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 40%;
 
-      a {
-        button {
-          text-align: center;
+      div.words {
+        align-items: flex-start;
+        display: flex;
+        flex-flow: column;
 
-          padding-left: 0.75rem;
-          font-family: "ToronoGlitchSans H2";
-          text-decoration: none;
-          color: #ffffff;
-          line-height: 72px;
+        h1 {
+          font-family: "ToronoGlitchSans H4", sans-serif;
+          padding: 5px;
+          font-weight: 900;
           letter-spacing: 1rem;
-          font-size: 1.5rem;
-          background: rgba(217, 217, 217, 0.35);
-          border-radius: 30px;
-          border: 5px solid #d9d9d9;
+          color: #ffffff;
 
-          &:hover {
-            color: #f7d967;
-            background: radial-gradient(
-              149.95% 387.57% at 54.19% 45.2%,
-              #000000 52.6%,
-              rgba(255, 255, 255, 0.63) 100%
-            );
-
-            cursor: pointer;
+          span {
+            font-family: "ToronoGlitchSans H4", sans-serif;
+            letter-spacing: 0.35rem;
           }
+
+          span.C {
+            color: #f2b24b;
+          }
+
+          span.S {
+            color: #d10000;
+          }
+
+          span.I {
+            color: #69bfba;
+          }
+
+          span.E {
+            color: #edb4cf;
+          }
+        }
+
+        p {
+          text-align-last: center;
+          letter-spacing: 3px;
+          font-family: "Source Code Pro", monospace;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.5rem;
+          line-height: 44px;
+
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+
+      div.registerButton {
+        a {
+          @include registerButton();
         }
       }
     }
