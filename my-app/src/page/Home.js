@@ -8,20 +8,23 @@ const Home = () => {
           <section class="left"></section>
           <section class="right">
             <div class="words">
-              <h1>
+              <div className="h1">
                 <span class="C">C</span>hallenger
-              </h1>
-              <h1>
+              </div>
+              <div className="h1">
                 <span class="S">S</span>urviving
-              </h1>
-              <h1>
+              </div>
+              <div className="h1">
                 <span class="I">I</span>slands:
-              </h1>
-              <h1>
+              </div>
+              <div className="h1">
                 <span class="E">E</span>級玩家
-              </h1>
+              </div>
 
-              <p>2023 師大資工營 NTNU CSIE CAMP</p>
+              <div id="subtitle">
+                2023 師大資工營 <br />
+                NTNU CSIE CAMP
+              </div>
             </div>
             <div className="registerButton">
               <a href="/login">

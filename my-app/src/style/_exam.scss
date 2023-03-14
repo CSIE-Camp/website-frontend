@@ -4,6 +4,11 @@ div#examPage {
     align-items: center;
     width: 100%;
 
+    h1 {
+        color: #ffffff;
+        font-family: 'Inter';
+    }
+
     form {
         display: flex;
         flex-direction: column;
