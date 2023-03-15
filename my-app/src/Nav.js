@@ -31,6 +31,11 @@ const Nav = () => {
               <Link to="/login">登入/註冊</Link>
             </li>
           </ul>
+          <button className="hamburger isActive">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </nav>
       </header>
     </div>

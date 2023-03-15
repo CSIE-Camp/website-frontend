@@ -44,6 +44,54 @@ nav {
       }
     }
   }
+
+  button.hamburger {
+    display: block;
+    position: relative;
+    z-index: 1;
+    //appearance: none;
+    user-select: none;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 32px;
+      height: 4px;
+      position: relative;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.86);
+
+      //transition
+      transform-origin: 0 0;
+      transition: 0.4s;
+    }
+
+    &:hover {
+      span:nth-child(2) {
+        transform: translateX(10px);
+        background-color: aqua;
+      }
+    }
+
+    &.isActive {
+      span:nth-child(1) {
+        transform: translate(0px, -2px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translate(-3px, 3px) rotate(-45deg);
+      }
+    }
+  }
+
 }
 
 /*
