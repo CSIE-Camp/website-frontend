@@ -103,3 +103,18 @@ export class API {
 }
 
 export const api = new API();
+
+// Example:
+// const res = await api.fetch("/signup/email", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify({
+//     email: "example@gmail.com",
+//   }),
+// });
+// if (res) {
+//   const json = await res.json();
+// }
+// Reference: https://camp-backbone.csie.cool/api/docs/#/Signup/post_signup_email
