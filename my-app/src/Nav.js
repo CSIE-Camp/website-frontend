@@ -6,6 +6,9 @@ const Nav = () => {
   useEffect(() => {
     NavScript();
   }, []);
+  let addIsActive = (e) => {
+    e.target.classList.toggle("isActive");
+  };
   return (
     <div>
       <header>
@@ -31,7 +34,7 @@ const Nav = () => {
               <Link to="/login">登入/註冊</Link>
             </li>
           </ul>
-          <button className="hamburger isActive">
+          <button className="hamburger" onClick={addIsActive}>
             <span></span>
             <span></span>
             <span></span>
