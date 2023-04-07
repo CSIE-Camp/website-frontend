@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
         <div id="text">
           <h1>聯絡方式</h1>
-          <hr id="bar" width="75%" />
+          <hr id="bar" width="270px" />
           <p id="email">example@gmail.com</p>
           <p id="tel">0900-000000</p>
         </div>

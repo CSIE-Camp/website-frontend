@@ -6,19 +6,19 @@ div#page_review {
   --npr--arrow_width: 6vw;
   --npr--arrow_height: 5vw;
   --npr--dotbar_height: 7vw;
+
   @media (max-width: 600px) {
     --npr--photo_width: 80vw;
   }
 
   margin: 1rem 1vw 1rem 1vw;
   width: 98vw;
-  height: calc(
-    var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height) + 50%
-  );
+  height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height) + 50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+
   div#page_review_down {
     width: 50vw;
     min-width: 300px;
@@ -27,12 +27,16 @@ div#page_review {
     margin-bottom: 5vh;
     display: flex;
     flex-direction: column;
+
     div#rt_title {
-      font-size: 60px;
+      font-family: "ToronoGlitchSans H2";
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
       color: white;
     }
+
     div#rt_content {
-      font-size: 25px;
+      font-size: 1.5rem;
       color: white;
     }
   }
@@ -41,6 +45,7 @@ div#page_review {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     div#ri_up_1 {
       width: calc(var(--npr--photo_width) + var(--npr--photo_xd) * 2 + var(--npr--arrow_width) * 2);
       //max-height: 500px;
@@ -57,18 +62,23 @@ div#page_review {
         display: flex;
         align-items: center;
         cursor: pointer;
-        &:hover > div#ri_arrow_m1 {
+
+        &:hover>div#ri_arrow_m1 {
           right: 5px;
         }
-        &:hover > div#ri_arrow_m2 {
+
+        &:hover>div#ri_arrow_m2 {
           right: 20px;
         }
-        &:hover > div#ri_arrow_m3 {
+
+        &:hover>div#ri_arrow_m3 {
           right: 35px;
         }
-        &:active > div.ri_arrow_m {
+
+        &:active>div.ri_arrow_m {
           border-color: red;
         }
+
         div.ri_arrow_m {
           width: calc(var(--npr--arrow_width) / 2);
           height: calc(var(--npr--arrow_width) / 2);
@@ -78,18 +88,22 @@ div#page_review {
           border-left: 5px solid white;
           border-radius: 5px;
         }
+
         div#ri_arrow_m1 {
           right: -10px;
           transition: right 0.1s ease 0.2s;
         }
+
         div#ri_arrow_m2 {
           right: 5px;
           transition: right 0.1s ease 0.1s;
         }
+
         div#ri_arrow_m3 {
           right: 20px;
           transition: right 0.1s ease;
         }
+
         @media (max-width: 600px) {
           opacity: 0;
         }
@@ -100,6 +114,7 @@ div#page_review {
         height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2);
         position: relative;
         user-select: none;
+
         div#ri_img_touch_left {
           width: 40%;
           height: 100%;
@@ -107,6 +122,7 @@ div#page_review {
           left: 0;
           z-index: 5;
         }
+
         div#ri_img_touch_right {
           width: 60%;
           height: 100%;
@@ -114,6 +130,7 @@ div#page_review {
           right: 0;
           z-index: 5;
         }
+
         img {
           width: var(--npr--photo_width);
           height: var(--npr--photo_height);
@@ -123,14 +140,17 @@ div#page_review {
           user-select: none;
         }
       }
+
       div#ri_arrow_r {
         rotate: 180deg;
       }
     }
+
     div#ri_up_2 {
       width: auto;
       height: auto;
       position: relative;
+
       div#ri_img_dotbar {
         width: calc(var(--npr--photo_width) + var(--npr--photo_xd) * 2);
         height: var(--npr--dotbar_height);
@@ -153,6 +173,7 @@ div#page_review {
           &:hover {
             background-color: rgba(255, 0, 0, 0.5);
           }
+
           @media (max-width: 600px) {
             width: 10px;
             height: 10px;
