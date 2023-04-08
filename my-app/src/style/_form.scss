@@ -1,17 +1,22 @@
 div#formPage {
+  @mixin inputFontStyle() {
+    font-size: 1rem;
+    color: #f2a2f2;
+  }
+
   h1 {
     padding: 10px;
     font-family: "ToronoGlitchSans H2";
-    font-style: normal;
-    font-weight: 900;
-    line-height: 48px;
-    font-size: 2.5rem;
+    //font-style: normal;
+    //font-weight: 900;
+    //line-height: 48px;
+    font-size: 2rem;
   }
 
   h2 {
     padding: 10px;
-    font-style: normal;
-    font-weight: 900;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 
   h4 {
@@ -19,16 +24,16 @@ div#formPage {
   }
 
   hr.bar {
+    margin: 0 2rem;
     padding: 0px 0px 0px 0px;
     size: "1px";
-    width: "1336px";
     left: 3%;
   }
 
   hr.field {
     padding: 0 0 0 0;
     size: 1px;
-    width: 25%;
+    width: 100%;
   }
 
   div.registerContain {
@@ -38,14 +43,33 @@ div#formPage {
   }
 
   form {
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-align: left;
-  }
 
-  fieldset {
-    border: 0px;
-    margin: 0 10% 0 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    fieldset {
+      border: 0px;
+      width: 50%;
+      text-align: left;
+
+      legend {
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding-bottom: 10px;
+      }
+
+      label {
+        display: block; // 加上這行才能改padding
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+
+      input {
+        margin-top: 10px;
+        font-size: 1rem;
+      }
+    }
   }
 
   form input[type="text"],
@@ -60,9 +84,11 @@ div#formPage {
     // background-color: #d9d9d930;
     background: rgba(217, 217, 217, 0.35);
     height: 3rem;
-    font-size: 1.8rem;
+    font-size: 1rem;
+
     font-weight: bold;
     color: rgb(255, 255, 255);
+
   }
 
   form input:focus {
@@ -91,6 +117,7 @@ div#formPage {
   }
 
   input[type="radio"] {
+    @include inputFontStyle();
     margin: 0 0 0 20px;
     width: 18px;
     height: 18px;
@@ -148,16 +175,13 @@ div#formPage {
     display: inline-block;
   }
 
-  .register {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: "ToronoGlitchSans H2";
-    margin-left: 40%;
-    padding: 2% 1%;
-    border: #fff 3px solid;
-    background: rgba(217, 217, 217, 0.35);
-    color: #fff;
-    border-radius: 20px;
+  div.registerButton {
+    display: flex;
+    justify-content: center;
+
+    a {
+      @include registerButton();
+    }
   }
 
   .register:hover {
@@ -167,7 +191,7 @@ div#formPage {
         rgba(255, 255, 255, 0.63) 100%);
   }
 
-  div .picture {
+  div.picture {
     background: #0630ff37;
     border: 3px solid #fff;
     border-radius: 15px;
@@ -177,9 +201,12 @@ div#formPage {
     display: inline-block;
     margin-right: 2%;
   }
-}
 
-// **hadle this is I have time
-// .genderButton {
-//     background-color: #f00;
-// }
+  @media screen and (max-width:900px) {
+    form {
+      fieldset {
+        width: 80%;
+      }
+    }
+  }
+}
