@@ -85,7 +85,7 @@ export const Review = () => {
     </div>
   );
 };
-export default Review;
+
 const ReviewScript = () => {
   const ri_arrow_l = document.getElementById("ri_arrow_l"); //抓左邊箭頭
   const ri_arrow_r = document.getElementById("ri_arrow_r"); //抓右邊箭頭
@@ -219,3 +219,4 @@ const ReviewScript = () => {
   };
   img_show_func(now_show_img); //先載入一次進行排版
 };
+export default Review;
