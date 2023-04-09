@@ -28,6 +28,11 @@ div.aboutFlex {
       text-align: center;
       color: #fff;
 
+      @mixin borderStyle($color: #fff) {
+        border: #fff 3px groove;
+        background-color: $color;
+      }
+
       div.secondTitle {
         display: flex;
         text-align: left;
@@ -73,10 +78,11 @@ div.aboutFlex {
             margin: 10px 0;
             cursor: pointer;
             list-style: none;
-            background-color: #fff;
+
+            @include borderStyle();
             color: hsl(0, 0%, 0%);
             border-radius: 30px;
-            border: 2px solid #000;
+
             transition: all 0.3s ease-out;
             user-select: none;
 
@@ -95,7 +101,10 @@ div.aboutFlex {
             }
 
             &.click-true {
-              background-color: pink;
+              // include border style
+              @include borderStyle($yellow-1);
+              background-color: $yellow-1; // 文字方塊顏色
+              color: #fff;
               padding: 1% 1%;
               font-size: 1.3rem;
               border-radius: 15px;
@@ -112,7 +121,7 @@ div.aboutFlex {
                 height: auto;
                 float: none;
                 border: 5px groove;
-                border-color: white pink;
+                border-color: $yellow-1; //文字方塊邊框顏色
                 border-radius: 10px;
                 border-top: 0;
                 transform: rotateX(-1deg);

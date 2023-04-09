@@ -185,11 +185,11 @@ export const Form = () => {
                   id="selfPicture"
                   name="selfPicture"
                   accept="image/png, image/jpeg"
-                ></input>
-                選擇檔案
+                />
               </label>
+              選擇檔案
             </div>
-            <div id="presentFile"> 目前檔案:</div>
+            {/* <div id="presentFile"> 目前檔案:</div> */}
             {/* <script>
             const file = document.getElementById("selfPicture").value;
             document.getElementById("presentFile").value =`  目前檔案: ${file}` 

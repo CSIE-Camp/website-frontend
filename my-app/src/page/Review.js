@@ -104,15 +104,15 @@ const ReviewScript = () => {
       e //運算第e張圖片時要怎麼顯示
     ) {
       case 0:
-        review_up_dot[nsi_temp].style.backgroundColor = "rgba(255,0,0,1)";
+        review_up_dot[nsi_temp].style.backgroundColor = "rgb(218, 85, 18)";
         //review_up_dot[nsi_temp].style.borderColor = "black";
         break;
       case 1:
-        review_up_dot[nsi_temp].style.backgroundColor = "rgba(255,255,255,0.75)";
+        review_up_dot[nsi_temp].style.backgroundColor = "rgba(218, 85, 18,0.6)";
         review_up_dot[nsi_temp].style.borderColor = "";
         break;
       case 2:
-        review_up_dot[nsi_temp].style.backgroundColor = "rgba(255,255,255,0.5)";
+        review_up_dot[nsi_temp].style.backgroundColor = "rgba(218, 85, 18,0.3)";
         review_up_dot[nsi_temp].style.borderColor = "";
         break;
       default:

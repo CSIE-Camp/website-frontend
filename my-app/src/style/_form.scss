@@ -1,7 +1,25 @@
 div#formPage {
+  $orange-color: $orange-2;
+
+  $focus-color: $yellow-1;
+
   @mixin inputFontStyle() {
     font-size: 1rem;
     color: #f2a2f2;
+  }
+
+  @mixin inputHover() {
+    &:hover {
+      border: 3px solid $orange-color;
+    }
+
+    &:focus {
+      color: #f7d967;
+      background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
+          #000000 52.6%,
+          rgba(255, 255, 255, 0.63) 100%);
+      border: 5px solid $orange-color;
+    }
   }
 
   h1 {
@@ -47,22 +65,23 @@ div#formPage {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: bold;
 
     fieldset {
       border: 0px;
       width: 50%;
       text-align: left;
+      margin: 10px 0;
 
       legend {
-        font-size: 1.1rem;
-        font-weight: bold;
+        font-size: 1.25rem;
+
         padding-bottom: 10px;
       }
 
       label {
         display: block; // 加上這行才能改padding
         font-size: 1.1rem;
-        font-weight: bold;
       }
 
       input {
@@ -86,18 +105,16 @@ div#formPage {
     height: 3rem;
     font-size: 1rem;
 
-    font-weight: bold;
+
     color: rgb(255, 255, 255);
 
   }
 
   form input:focus {
-    color: #000;
-    color: #f7d967;
+    color: $focus-color;
     background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
         #000000 52.6%,
         rgba(255, 255, 255, 0.63) 100%);
-    padding: auto;
   }
 
   form input[type="file"] {
@@ -109,11 +126,9 @@ div#formPage {
   }
 
   form input:hover {
-    border: 3px solid #f2a2f2;
+    border: 3px solid $focus-color;
     color: #f7d967;
-    background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
-        #000000 52.6%,
-        rgba(255, 255, 255, 0.63) 100%);
+    background: #000000;
   }
 
   input[type="radio"] {
@@ -131,12 +146,11 @@ div#formPage {
     padding-left: 10px;
     border-radius: 7px;
     font-size: 1rem;
-    font-weight: bold;
   }
 
   select>option {
     font-size: 1rem;
-    background-color: #414141;
+    //background-color: $orange-2;
     color: #fff;
   }
 
@@ -147,19 +161,10 @@ div#formPage {
     background: rgba(217, 217, 217, 0.35);
     color: #fff;
     border-radius: 7px;
+    @include inputHover();
   }
 
-  textarea:hover {
-    border: 3px solid #f2a2f2;
-  }
 
-  textarea:focus {
-    color: #f7d967;
-    background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
-        #000000 52.6%,
-        rgba(255, 255, 255, 0.63) 100%);
-    border: 5px solid #f2a2f2;
-  }
 
   .experience {
     font-size: 0.8rem;
@@ -184,22 +189,28 @@ div#formPage {
     }
   }
 
-  .register:hover {
-    color: #f7d967;
-    background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
-        #000000 52.6%,
-        rgba(255, 255, 255, 0.63) 100%);
-  }
-
   div.picture {
     background: #0630ff37;
     border: 3px solid #fff;
     border-radius: 15px;
     padding: 10px;
-    width: 25%;
     cursor: pointer;
     display: inline-block;
-    margin-right: 2%;
+    margin-right: 2rem;
+
+
+
+    label {
+      display: inline;
+      padding-top: 5px;
+      cursor: pointer;
+
+      input {
+
+        margin-top: 10px;
+      }
+
+    }
   }
 
   @media screen and (max-width:900px) {

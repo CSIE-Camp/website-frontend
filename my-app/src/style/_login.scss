@@ -128,6 +128,10 @@ form.login {
       // padding-right: 2rem;
       text-decoration: none;
       color: #ffffff;
+
+      &:hover {
+        color: $yellow-1;
+      }
     }
   }
 }

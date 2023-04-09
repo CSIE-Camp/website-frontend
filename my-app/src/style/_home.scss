@@ -8,15 +8,13 @@
     text-decoration: none;
     color: #ffffff;
     font-size: 1.5rem;
-    background: rgba(217, 217, 217, 0.35);
+    background: $gray-bg1;
     border-radius: 30px;
     border: 5px solid #d9d9d9;
 
     &:hover {
-      color: #f7d967;
-      background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
-          #000000 52.6%,
-          rgba(255, 255, 255, 0.63) 100%);
+      color: $yellow-1;
+      background: black;
 
       cursor: pointer;
     }
@@ -66,21 +64,32 @@ main {
             font-family: "ToronoGlitchSans H4", sans-serif;
           }
 
+          @mixin textBorder() {
+            text-shadow: -2px 0 #ffffff, 0 2px rgb(255, 255, 255), 2px 0 rgb(255, 255, 255), 0 -2px rgb(255, 255, 255);
+
+          }
+
           span.C {
-            color: #f2b24b;
+            @include textBorder();
+            border-color: $blue-1;
+            color: $orange-1;
           }
 
           span.S {
-            color: #d10000;
+            @include textBorder();
+            color: $yellow-1;
           }
 
           span.I {
-            letter-spacing: 2rem;
-            color: #69bfba;
+            @include textBorder();
+            color: $orange-2;
+            letter-spacing: 2rem; // 字寬
           }
 
           span.E {
-            color: #edb4cf;
+            @include textBorder();
+            color: $blue-1;
+            letter-spacing: 1.5rem;
           }
         }
 

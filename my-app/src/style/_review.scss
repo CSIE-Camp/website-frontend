@@ -65,18 +65,22 @@ div#page_review {
 
         &:hover>div#ri_arrow_m1 {
           right: 5px;
+          border-color: $orange-2;
         }
 
         &:hover>div#ri_arrow_m2 {
           right: 20px;
+          border-color: $orange-2;
         }
 
         &:hover>div#ri_arrow_m3 {
           right: 35px;
+          border-color: $orange-2;
         }
 
         &:active>div.ri_arrow_m {
-          border-color: red;
+          border-color: $orange-2;
+
         }
 
         div.ri_arrow_m {
@@ -171,7 +175,8 @@ div#page_review {
           transition: background-color 0.3s;
 
           &:hover {
-            background-color: rgba(255, 0, 0, 0.5);
+            cursor: pointer;
+            background-color: rgb(218, 85, 18);
           }
 
           @media (max-width: 600px) {
