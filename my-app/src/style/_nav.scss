@@ -1,6 +1,6 @@
 nav {
 
-  overflow: hidden;
+  //overflow: hidden;
   background: white;
   position: sticky;
   top: 0;
@@ -188,22 +188,34 @@ nav {
 
   @media screen and (max-width:565px) {
     div.ulFlex {
-      &:has(ul.show) {
-        // apply the height to child
-        overflow: auto;
-        max-height: 458px;
-        transition: max-height 0.3s ease-out;
-      }
+      // &:has(ul.show) {
+      //   // apply the height to child
+      //   overflow: auto;
+      //   max-height: 458px;
+      //   transition: max-height 0.3s ease-out;
+      // }
 
-      &:has(ul.hide) {
-        overflow: auto;
-        max-height: 0px;
-        transition: max-height 0.3s ease-in;
-      }
+      // &:has(ul.hide) {
+      //   overflow: auto;
+      //   max-height: 0px;
+      //   transition: max-height 0.3s ease-in;
+      // }
 
       ul {
         width: 90%;
         flex-direction: column;
+
+        &.show {
+          overflow: auto;
+          max-height: 458px;
+          transition: max-height 0.3s ease-out;
+        }
+
+        &.hide {
+          overflow: auto;
+          max-height: 0px;
+          transition: max-height 0.3s ease-in;
+        }
       }
     }
   }
