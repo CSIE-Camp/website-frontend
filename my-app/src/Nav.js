@@ -24,7 +24,6 @@ const Nav = () => {
   }
   function handleClickA(e) {
     const ulChange = e.target.parentNode.parentNode;
-    const hamburger = e.target.parentNode.parentNode.parentNode.children;
     console.log(e.target.parentNode.parentNode); //ul
 
     ulChange.add("hide");
