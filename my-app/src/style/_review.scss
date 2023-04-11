@@ -11,6 +11,11 @@ div#page_review {
     --npr--photo_width: 80vw;
   }
 
+  // add to avoid footer space
+  @media (max-width: 1100px) {
+    height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height) + 50%);
+  }
+
   margin: 1rem 1vw 1rem 1vw;
   width: 98vw;
   height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height) + 50%);

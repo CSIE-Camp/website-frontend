@@ -105,7 +105,7 @@ const ReviewScript = () => {
     ) {
       case 0:
         review_up_dot[nsi_temp].style.backgroundColor = "rgb(218, 85, 18)";
-        //review_up_dot[nsi_temp].style.borderColor = "black";
+        review_up_dot[nsi_temp].style.borderColor = "rgb(218, 85, 18)";
         break;
       case 1:
         review_up_dot[nsi_temp].style.backgroundColor = "rgba(218, 85, 18,0.6)";

@@ -88,16 +88,16 @@ nav {
   div.ulFlex {
     display: flex;
     justify-content: center;
-
+    /*
     &:has(ul.show) {
-      transform: translateY(0px);
-      transition: all 0.3s linear;
+      // transform: translateY(0px);
+      //transition: all 0.3s linear;
     }
 
     &:has(ul.hide) {
-      transform: translateY(-80px);
-      transition: all 0.3s linear;
-    }
+      // transform: translateY(-80px);
+      // transition: all 0.3s linear;
+    }*/
 
 
     ul {
@@ -126,6 +126,11 @@ nav {
           background: #000000;
           color: #ffffff;
         }
+
+        a.active {
+          background: #000000;
+          color: #ffffff;
+        }
       }
 
 
@@ -136,9 +141,9 @@ nav {
 
       }
 
-      &.hide {
-        height: 0;
-      }
+      // &.hide {
+      //   // height: 0;
+      // }
 
     }
   }
@@ -152,6 +157,7 @@ nav {
   @media screen and (min-width: 870px) {
     display: flex;
     justify-content: space-between;
+
 
     div.hamburgerFlex {
       // img {
@@ -171,12 +177,30 @@ nav {
         &.show {
           flex-direction: row;
         }
+
+        &.hide {
+          transition: max-height 0.3s ease-in;
+
+        }
       }
     }
   }
 
   @media screen and (max-width:565px) {
     div.ulFlex {
+      &:has(ul.show) {
+        // apply the height to child
+        overflow: auto;
+        max-height: 458px;
+        transition: max-height 0.3s ease-out;
+      }
+
+      &:has(ul.hide) {
+        overflow: auto;
+        max-height: 0px;
+        transition: max-height 0.3s ease-in;
+      }
+
       ul {
         width: 90%;
         flex-direction: column;
@@ -192,7 +216,7 @@ nav {
 }
 
 // 目前所在的網頁
-.active {
+a.active {
   background: #000000;
   color: #ffffff;
 }

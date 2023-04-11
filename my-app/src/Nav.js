@@ -22,6 +22,14 @@ const Nav = () => {
       setNavbarShow("hide");
     }
   }
+  function handleClickA(e) {
+    const ulChange = e.target.parentNode.parentNode;
+    const hamburger = e.target.parentNode.parentNode.parentNode.children;
+    console.log(e.target.parentNode.parentNode); //ul
+
+    ulChange.add("hide");
+    ulChange.remove("show");
+  }
   return (
     <div>
       <header>
@@ -43,18 +51,24 @@ const Nav = () => {
           <div className="ulFlex">
             <ul className={navbarShow === "active" ? "show" : "hide"}>
               <li>
-                <Link to="/about" className="about_test">
+                <Link to="/about" className="about_test" onClick={handleClickA}>
                   營隊介紹
                 </Link>
               </li>
               <li>
-                <Link to="/info">報名資訊</Link>
+                <Link to="/info" onClick={handleClickA}>
+                  報名資訊
+                </Link>
               </li>
               <li>
-                <Link to="/review">歷屆回顧</Link>
+                <Link to="/review" onClick={handleClickA}>
+                  歷屆回顧{" "}
+                </Link>
               </li>
               <li>
-                <Link to="/login">登入/註冊</Link>
+                <Link to="/login" onClick={handleClickA}>
+                  登入/註冊
+                </Link>
               </li>
             </ul>
           </div>
