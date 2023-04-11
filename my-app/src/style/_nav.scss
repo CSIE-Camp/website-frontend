@@ -89,16 +89,21 @@ nav {
     display: flex;
     justify-content: center;
 
-    &:has(ul.show) {
-      transform: translateY(0px);
-      transition: all 0.3s linear;
-    }
+    // transition 
+    // &:has(ul.show) {
+    //   //transform: translateY(0px);
+    //   transition: all 0.3s linear;
+    // }
 
-    &:has(ul.hide) {
-      transform: translateY(-80px);
-      transition: all 0.3s linear;
-    }
+    // &:has(ul.hide) {
+    //   //transform: translateY(-100px);
+    //   transition: all 0.3s linear;
+    // }
 
+    // &:has(ul) {
+    //   //transform: translateY(-100px);
+    //   transition: all 0.3s linear;
+    // }
 
     ul {
       display: flex;
@@ -130,10 +135,9 @@ nav {
 
 
       // navbar show
-      .show {
+      &.show {
         display: flex;
         align-items: center;
-
       }
 
       &.hide {
@@ -154,9 +158,6 @@ nav {
     justify-content: space-between;
 
     div.hamburgerFlex {
-      // img {
-      //   width: 480px;
-      // }
 
       div#hamburger {
         display: none;
@@ -167,8 +168,18 @@ nav {
     div.ulFlex {
       display: flex;
 
+      // &:has(ul.hide) {
+      //   transform: translateY(-10px);
+      //   transition: all 0.3s linear;
+      // }
+
       ul {
+
         &.show {
+          flex-direction: row;
+        }
+
+        &.hide {
           flex-direction: row;
         }
       }
@@ -177,9 +188,26 @@ nav {
 
   @media screen and (max-width:565px) {
     div.ulFlex {
+
+      // if class == show, height = 458
+      // else, height = 0
+
+      &:has(ul.show) {
+        max-height: 458px;
+        transition: max-height 0.3s ease-out;
+      }
+
+      &:has(ul.hide) {
+        max-height: 0px;
+        transition: max-height 0.3s ease-in;
+
+      }
+
       ul {
         width: 90%;
         flex-direction: column;
+
+
       }
     }
   }

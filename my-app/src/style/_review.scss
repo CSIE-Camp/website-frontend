@@ -13,7 +13,9 @@ div#page_review {
 
   margin: 1rem 1vw 1rem 1vw;
   width: 98vw;
-  height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height) + 50%);
+  // height: calc(var(--npr--photo_height) + var(--npr--photo_yd) * 2 + var(--npr--dotbar_height) + 50%);
+  // edit this in 4/11 
+  height: calc(var(--npr--photo_height) + var(--npr--photo_yd)*2 + var(--npr--dotbar_height) + 50vh);
   display: flex;
   flex-direction: column;
   align-items: center;
