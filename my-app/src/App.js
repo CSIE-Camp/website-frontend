@@ -9,7 +9,8 @@ import More from "./page/More";
 import Login from "./page/Login";
 import Form from "./page/Form";
 import Forget from "./page/Forget";
-import Regist from "./page/Regist";
+import Register from "./page/Register";
+import RegisterSuccess from "./page/RegisterSuccess";
 import Review from "./page/Review";
 import Admin from "./page/Admin";
 import Personal from "./page/Personal";
@@ -29,7 +30,8 @@ const App = () => {
             <Route path="/more" element={<More />} />
             <Route path="/login" element={<Login />} />
             <Route path="/forget" element={<Forget />} />
-            <Route path="/regist" element={<Regist />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/registerSuccess" element={<RegisterSuccess />} />
             <Route path="/form" element={<Form />} />
             <Route path="/review" element={<Review />} />
             <Route path="/admin" element={<Admin />} />
