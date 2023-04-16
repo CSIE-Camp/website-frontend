@@ -2,6 +2,7 @@ div.aboutFlex {
   display: flex;
   justify-content: center;
 
+
   img {
     pointer-events: none;
   }
@@ -62,6 +63,7 @@ div.aboutFlex {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 1rem;
 
         div.detail {
           width: 95%;
@@ -200,5 +202,25 @@ div.aboutFlex {
     margin: 1rem;
     text-align: left;
     font-weight: bold;
+  }
+}
+
+@media screen and (max-width:770px) {
+  div.aboutFlex {
+    div.aboutBox {
+      div.intro {
+        width: 100%;
+
+        div.courseList {
+          div.detail {
+            div.hidden {
+              div.hidden_text {
+                width: calc(100% - 20px);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
