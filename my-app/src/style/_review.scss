@@ -9,6 +9,12 @@ div#page_review {
 
   @media (max-width: 600px) {
     --npr--photo_width: 80vw;
+
+    div.pageReviewFlex {
+      div#page_review_down {
+        width: 100%;
+      }
+    }
   }
 
   // add to avoid footer space
@@ -24,8 +30,15 @@ div#page_review {
   align-items: center;
   position: relative;
 
+  div.pageReviewFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+  }
+
   div#page_review_down {
-    width: 50vw;
+    width: 80%;
     min-width: 300px;
     //height: 50%;
     padding: 0 0 0 1vw;
@@ -41,7 +54,7 @@ div#page_review {
     }
 
     div#rt_content {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       color: white;
     }
   }
