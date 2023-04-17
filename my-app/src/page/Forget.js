@@ -1,13 +1,26 @@
 import React from "react";
 //import { Link } from "react-router-dom";
+import { useState } from "react";
+import { passwordReset } from "../api";
 
 export const Forget = () => {
+  const [email, setEmail] = useState("");
+  const handleForget = async (event) => {
+    event.preventDefault();
+    await passwordReset(email);
+  };
   return (
-    <form className="forget">
+    <form className="forget" onSubmit={handleForget}>
       <h1 className="title">忘記密碼</h1>
       <p className="help">* 若您忘記你的資工營帳號密碼，請填寫你的電子信箱</p>
       <div className="inputFlex">
-        <input className="forgetMail" placeholder="請輸入電子信箱" type={"email"} />
+        <input
+          className="forgetMail"
+          placeholder="請輸入電子信箱"
+          type={"email"}
+          value={email || ""}
+          onChange={(event) => setEmail(event.target.value)}
+        ></input>
         <button className="confirm" type="submit">
           <span className="arrow"></span>
         </button>

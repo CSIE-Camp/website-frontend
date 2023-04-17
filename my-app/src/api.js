@@ -136,6 +136,7 @@ export const signupPassword = async function (password) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${password.access_token}`,
     },
     body: JSON.stringify({
       password,
@@ -163,6 +164,7 @@ export const login = async function (email, password) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${password.access_token}`,
     },
     body: JSON.stringify({
       email,

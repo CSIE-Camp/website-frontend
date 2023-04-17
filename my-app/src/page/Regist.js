@@ -8,7 +8,7 @@ export const Regist = () => {
   const handleSignup = async (event) => {
     event.preventDefault();
     await signupEmail(email);
-    // await signupPassword(password);
+    await signupPassword(password);
   };
   return (
     <form className="regist" onSubmit={handleSignup}>
