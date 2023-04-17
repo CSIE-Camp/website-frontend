@@ -289,8 +289,6 @@ export const passwordUpdate = async function (password) {
     }
   }
 };
-
-//Profile/getProfile
 export const getProfile = async function () {
   const profileRes = await api.fetch("/profile", {
     method: "GET",

@@ -1,14 +1,19 @@
 import React from "react";
 //import { Link } from "react-router-dom";
 import { useState } from "react";
-import { passwordReset } from "../api";
+import { passwordReset, passwordUpdate } from "../api";
 
 export const Forget = () => {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const handleForget = async (event) => {
     event.preventDefault();
     await passwordReset(email);
   };
+  // const handleUpdate = async (event) => {
+  //   event.preventDefault();
+  //   await passwordUpdate(password);
+  // }
   return (
     <form className="forget" onSubmit={handleForget}>
       <h1 className="title">忘記密碼</h1>
@@ -31,7 +36,13 @@ export const Forget = () => {
       <div className="passwordFlex">
         <input className="forgetPassword" placeholder="建立新密碼" type={"password"} />
         <div className="pwd_container">
-          <input className="forgetPassword" placeholder="再次輸入密碼" type={"password"} />
+          <input
+            className="forgetPassword"
+            placeholder="再次輸入密碼"
+            type={"password"}
+            value={password || ""}
+            onChange={(event) => setPassword(event.target.value)}
+          />
           <button className="confirm" type="submit">
             <span className="arrow"></span>
           </button>

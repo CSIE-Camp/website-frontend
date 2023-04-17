@@ -42,14 +42,6 @@ form.forget {
   input.forgetMail {
     @include inputStyle(); //引用mixin裡面的函式 在login.scss裡面
   }
-
-
-
-
-  input.button {
-    margin: 0px 0px 20px 0px;
-  }
-
   div.passwordFlex {
     width: 50vw;
     display: flex;
@@ -68,15 +60,18 @@ form.forget {
       input.forgetPassword {
         width: 100%;
       }
-
       button.confirm {
         @include arrowButtonStyle();
       }
     }
   }
+
+  input.button {
+    margin: 0px 0px 20px 0px;
+  }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   form.forget {
     div.inputFlex {
       width: 75vw;
@@ -86,5 +81,4 @@ form.forget {
       width: 75vw;
     }
   }
-
 }
