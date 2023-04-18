@@ -6,6 +6,12 @@
   //position: relative;
 }
 
+$orange-1: #DC6A0B;
+$orange-2: #DA5512;
+$yellow-1: #E7AE16;
+$blue-1: #083A75;
+$gray-bg1: rgba(217, 217, 217, 0.35);
+
 html,
 body,
 body>#root,
@@ -16,6 +22,7 @@ body>#root,
   margin: 0;
   padding: 0;
 }
+
 
 #root>.App {
   overflow-y: auto;
@@ -88,7 +95,9 @@ h6 {
 
 a {
   text-decoration: none;
+  color: $yellow-1;
 }
+
 
 @import "./nav";
 @import "./home";
@@ -96,7 +105,8 @@ a {
 @import "./scrollbar";
 @import "./info";
 @import "./login";
-@import "./regist";
+@import "./register";
+@import "./registerSuccess";
 @import "./about";
 @import "./forget";
 @import "./form";

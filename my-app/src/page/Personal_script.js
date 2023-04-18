@@ -10,13 +10,13 @@
 const PersonalScript = () => {
   //個人資料button
   //需要<a>的按鈕: 點此填寫(ppaib_open)、修改資料(ppaib_finish)
+  const PPA_infor = document.querySelector("#ppa_information");
   const PPA_infor_btn = document.querySelector("#ppa_information #ppa_inside_button");
-  PPA_infor_btn.classList.add("ppaib_close");
-  if (PPA_infor_btn.classList.contains("ppaib_open")) {
+  if (PPA_infor.classList.contains("ppaib_open")) {
     const btn_a = document.createElement("a");
     btn_a.href = "";
     PPA_infor_btn.appendChild(btn_a);
-  } else if (PPA_infor_btn.classList.contains("ppaib_finish")) {
+  } else if (PPA_infor.classList.contains("ppaib_finish")) {
     const btn_a = document.createElement("a");
     btn_a.href = "";
     PPA_infor_btn.appendChild(btn_a);
@@ -27,8 +27,9 @@ const PersonalScript = () => {
     });
   }
   //報名測驗button
+  const PPA_quiz = document.querySelector("#ppa_quiz");
   const PPA_quiz_btn = document.querySelector("#ppa_quiz #ppa_inside_button");
-  if (PPA_quiz_btn.classList.contains("ppaib_open")) {
+  if (PPA_quiz.classList.contains("ppaib_open")) {
     const btn_a = document.createElement("a");
     btn_a.href = "";
     PPA_quiz_btn.appendChild(btn_a);
@@ -39,12 +40,13 @@ const PersonalScript = () => {
     });
   }
   //Github綁定button
+  const PPA_github = document.querySelector("#ppa_github");
   const PPA_github_btn = document.querySelector("#ppa_github #ppa_inside_button");
-  if (PPA_github_btn.classList.contains("ppaib_open")) {
+  if (PPA_github.classList.contains("ppaib_open")) {
     const btn_a = document.createElement("a");
     btn_a.href = "";
     PPA_github_btn.appendChild(btn_a);
-  } else if (PPA_github_btn.classList.contains("ppaib_finish")) {
+  } else if (PPA_github.classList.contains("ppaib_finish")) {
     const btn_a = document.createElement("a");
     btn_a.href = "";
     PPA_github_btn.appendChild(btn_a);
@@ -55,12 +57,13 @@ const PersonalScript = () => {
     });
   }
   //點我報名、取消報名
+  const PPR = document.querySelector("#pp_register #ppr_button");
   const PPR_btn = document.querySelector("#pp_register #ppr_button");
-  if (PPR_btn.classList.contains("pprb_open")) {
+  if (PPR.classList.contains("pprb_open")) {
     const btn_a = document.createElement("a");
     btn_a.href = "";
     PPR_btn.appendChild(btn_a);
-  } else if (PPR_btn.classList.contains("pprb_finish")) {
+  } else if (PPR.classList.contains("pprb_finish")) {
     const btn_a = document.createElement("a");
     btn_a.href = "";
     PPR_btn.appendChild(btn_a);

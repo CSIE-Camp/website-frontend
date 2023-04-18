@@ -33,19 +33,19 @@ const Footer = () => {
         </div>
         <div id="text">
           <h1>聯絡方式</h1>
-          <hr id="bar" width="75%" />
+          <hr id="bar" width="270px" />
           <p id="email">example@gmail.com</p>
           <p id="tel">0900-000000</p>
         </div>
       </div>
       <div class="icon">
-        <a href="/">
+        <a href="https://www.facebook.com/ntnucsiecamp">
           <img src={require("./image/fb.png")} title="Facebook" alt="fb" />
         </a>
-        <a href="/">
+        <a href="https://www.instagram.com/ntnucsiecamp2023/">
           <img src={require("./image/ig.png")} title="IG" alt="ig" />
         </a>
-        <a href="/">
+        <a href="http://m.me/ntnucsiecamp">
           <img src={require("./image/messenger.png")} title="Messenger" alt="messenger" />
         </a>
       </div>

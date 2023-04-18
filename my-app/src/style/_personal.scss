@@ -5,32 +5,39 @@ div#page_personal {
     color: white;
     transition: box-shadow 0.4s ease;
     cursor: pointer;
+
     &:hover {
       box-shadow: 0px 0px 5px 2px white;
     }
+
     &::before {
       content: $text_content;
     }
   }
+
   @mixin button_close($text_content) {
     opacity: 0.5;
     background-color: rgba(200, 200, 200, 0.2);
     border: 2px gray solid;
     color: gray;
     cursor: not-allowed;
+
     &::before {
       content: $text_content;
     }
   }
+
   @mixin button_finish($text_content) {
     background-color: rgba(100, 100, 100, 0.5);
     border: 2px gray solid;
     color: gray;
     cursor: default;
+
     &::before {
       content: $text_content;
     }
   }
+
   @mixin button_error($text_content) {
     background-color: rgba(100, 100, 100, 0.5);
     border: 2px red solid;
@@ -42,28 +49,35 @@ div#page_personal {
     &::before {
       content: $text_content;
     }
+
     &:hover::before {
       font-size: 25px;
       content: "請聯絡服務人員";
     }
   }
+
   @mixin state_no {
     border: 0.25vh solid red;
     color: red;
+
     &::before {
       content: "✕";
     }
   }
+
   @mixin state_yes {
     border: 0.25vh solid chartreuse;
     color: chartreuse;
+
     &::before {
       content: "✓";
     }
   }
+
   @mixin state_error {
     border: 0.25vh solid darkorange;
     color: darkorange;
+
     &::before {
       content: "？";
     }
@@ -72,6 +86,7 @@ div#page_personal {
   display: flex;
   justify-content: center;
   position: relative;
+
   div#page_personal_derror {
     position: absolute;
     top: -40px;
@@ -79,11 +94,13 @@ div#page_personal {
     font-size: 40px;
     overflow: hidden;
   }
+
   div#p_personal_container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80vw;
+
     div#pp_account_name {
       width: 70vw;
       height: 14vh;
@@ -101,6 +118,7 @@ div#page_personal {
         align-items: center;
       }
     }
+
     div#pp_account_field {
       width: 70vw;
       min-width: 300px;
@@ -134,6 +152,7 @@ div#page_personal {
           font-size: 25px;
           padding: 6%;
         }
+
         div#ppa_inside_state {
           position: absolute;
           right: 1vh;
@@ -146,17 +165,6 @@ div#page_personal {
           font-size: 6vh;
           border-radius: 10vh;
           user-select: none;
-          cursor: pointer;
-
-          &.ppas_no {
-            @include state_no();
-          }
-          &.ppas_yes {
-            @include state_yes();
-          }
-          &.ppas_error {
-            @include state_error();
-          }
         }
 
         div#ppa_inside_button {
@@ -182,55 +190,160 @@ div#page_personal {
           }
         }
       }
-      div#ppa_information div#ppa_inside_button {
+
+      div#ppa_information {
         &.ppaib_close {
-          @include button_close("尚未開啟");
+          div#ppa_inside_button {
+            @include button_close("尚未開啟");
+          }
+
+          div#ppa_inside_state {
+            @include state_no();
+          }
         }
+
         &.ppaib_open {
-          @include button_open("點此填寫");
+          div#ppa_inside_button {
+            @include button_open("點此填寫");
+          }
+
+          div#ppa_inside_state {
+            @include state_no();
+          }
         }
+
         &.ppaib_finish {
-          @include button_open("修改資料");
+          div#ppa_inside_button {
+            @include button_open("修改資料");
+          }
+
+          div#ppa_inside_state {
+            @include state_yes();
+          }
         }
+
         &.ppaib_registered {
-          @include button_finish("已完成報名作業");
+          div#ppa_inside_button {
+            @include button_finish("已完成報名作業");
+          }
+
+          div#ppa_inside_state {
+            @include state_yes();
+          }
         }
+
         &.ppaib_error {
-          @include button_error("錯誤發生");
+          div#ppa_inside_button {
+            @include button_error("錯誤發生");
+          }
+
+          div#ppa_inside_state {
+            @include state_error();
+          }
         }
       }
-      div#ppa_quiz div#ppa_inside_button {
+
+      div#ppa_quiz {
         &.ppaib_close {
-          @include button_close("尚未開啟");
+          div#ppa_inside_button {
+            @include button_close("尚未開啟");
+          }
+
+          div#ppa_inside_state {
+            @include state_no();
+          }
         }
+
         &.ppaib_open {
-          @include button_open("點此測驗");
+          div#ppa_inside_button {
+            @include button_open("點此測驗");
+          }
+
+          div#ppa_inside_state {
+            @include state_no();
+          }
         }
+
         &.ppaib_finish {
-          @include button_finish("已完成測驗");
+          div#ppa_inside_button {
+            @include button_finish("已完成測驗");
+          }
+
+          div#ppa_inside_state {
+            @include state_yes();
+          }
         }
+
         &.ppaib_registered {
-          @include button_finish("已完成報名作業");
+          div#ppa_inside_button {
+            @include button_finish("已完成報名作業");
+          }
+
+          div#ppa_inside_state {
+            @include state_yes();
+          }
         }
+
         &.ppaib_error {
-          @include button_error("錯誤發生");
+          div#ppa_inside_button {
+            @include button_error("錯誤發生");
+          }
+
+          div#ppa_inside_state {
+            @include state_error();
+          }
         }
       }
-      div#ppa_github div#ppa_inside_button {
+
+      div#ppa_github {
         &.ppaib_close {
-          @include button_close("尚未開啟");
+          div#ppa_inside_button {
+            @include button_close("尚未開啟");
+          }
+
+          div#ppa_inside_state {
+            @include state_no();
+          }
         }
+
         &.ppaib_open {
-          @include button_open("點此綁定");
+          div#ppa_inside_button {
+            @include button_open("點此綁定");
+          }
+
+          div#ppa_inside_state {
+            @include state_no();
+          }
         }
+
         &.ppaib_finish {
-          @include button_open("點此重新綁定");
+          div#ppa_inside_button {
+            @include button_open("點此重新綁定");
+          }
+
+          div#ppa_inside_state {
+            @include state_yes();
+          }
         }
+
         &.ppaib_registered {
-          @include button_finish("已完成報名作業");
+          div#ppa_inside_button {
+            @include button_finish("已完成報名作業");
+          }
+
+          div#ppa_inside_state {
+            @include state_yes();
+          }
         }
+
         &.ppaib_error {
-          @include button_error("錯誤發生");
+          div#ppa_inside_button {
+            @include button_error("錯誤發生");
+          }
+
+          div#ppa_inside_state {
+            @include state_error();
+          }
         }
       }
 
@@ -248,6 +361,7 @@ div#page_personal {
         }
       }
     }
+
     div#pp_register {
       width: 60vw;
       height: 30vh;
@@ -256,6 +370,7 @@ div#page_personal {
       display: flex;
       flex-direction: column;
       align-items: center;
+
       div#ppr_button {
         width: 30vw;
         min-width: 300px;
@@ -269,33 +384,14 @@ div#page_personal {
         align-items: center;
         justify-content: center;
         font-size: 30px;
-        cursor: pointer;
 
         a {
           width: 100%;
           height: 100%;
           position: absolute;
         }
-
-        &.pprb_close {
-          @include button_close("尚未開啟報名");
-        }
-        &.pprb_open {
-          @include button_open("點我報名");
-          &::before {
-            font-size: 40px;
-          }
-        }
-        &.pprb_finish {
-          @include button_open("取消報名");
-        }
-        &.pprb_registered {
-          @include button_finish("已完成報名");
-        }
-        &.pprb_error {
-          @include button_error("發生錯誤");
-        }
       }
+
       div#ppr_center {
         width: 100%;
         min-width: 320px;
@@ -316,17 +412,6 @@ div#page_personal {
           font-size: 6vh;
           border-radius: 10vh;
           user-select: none;
-          cursor: pointer;
-
-          &.pprs_no {
-            @include state_no();
-          }
-          &.pprs_yes {
-            @include state_yes();
-          }
-          &.pprs_error {
-            @include state_error();
-          }
         }
 
         div#ppr_text {
@@ -338,45 +423,122 @@ div#page_personal {
           justify-content: center;
           align-items: center;
           font-weight: bolder;
-          cursor: pointer;
+        }
+      }
 
-          &.pprt_no {
-            color: red;
-            &::before {
-              content: "未完成報名";
-            }
-          }
-          &.pprt_yes {
-            color: chartreuse;
-            &::before {
-              content: "已完成報名";
-            }
-          }
-          &.pprt_error {
-            color: darkorange;
-            &::before {
-              content: "疑發生錯誤";
-            }
+      &.pprb_close {
+        div#ppr_button {
+          @include button_close("尚未開啟報名");
+        }
+
+        div#ppr_center div#ppr_state {
+          @include state_no();
+        }
+
+        div#ppr_center div#ppr_text {
+          color: red;
+
+          &::before {
+            content: "未完成報名";
           }
         }
       }
+
+      &.pprb_open {
+        div#ppr_button {
+          @include button_open("點我報名");
+
+          &::before {
+            font-size: 40px;
+          }
+        }
+
+        div#ppr_center div#ppr_state {
+          @include state_no();
+        }
+
+        div#ppr_center div#ppr_text {
+          color: red;
+
+          &::before {
+            content: "未完成報名";
+          }
+        }
+      }
+
+      &.pprb_finish {
+        div#ppr_button {
+          @include button_open("取消報名");
+        }
+
+        div#ppr_center div#ppr_state {
+          @include state_yes();
+        }
+
+        div#ppr_center div#ppr_text {
+          color: chartreuse;
+
+          &::before {
+            content: "已完成報名";
+          }
+        }
+      }
+
+      &.pprb_registered {
+        div#ppr_button {
+          @include button_finish("已完成報名");
+        }
+
+        div#ppr_center div#ppr_state {
+          @include state_yes();
+        }
+
+        div#ppr_center div#ppr_text {
+          color: chartreuse;
+
+          &::before {
+            content: "已完成報名";
+          }
+        }
+      }
+
+      &.pprb_error {
+        div#ppr_button {
+          @include button_error("發生錯誤");
+        }
+
+        div#ppr_center div#ppr_state {
+          @include state_error();
+        }
+
+        div#ppr_center div#ppr_text {
+          color: darkorange;
+
+          &::before {
+            content: "疑發生錯誤";
+          }
+        }
+
+      }
     }
+
     div#pp_isadmission {
       width: 60vw;
       //height: 200px;
       //background-color: green;
       margin: 3vh 0;
+
       div#ppia_top {
         color: white;
         font-size: 30px;
         display: flex;
         justify-content: center;
       }
+
       div#ppia_result_field {
         display: flex;
         flex-direction: column;
         align-items: center;
-        cursor: pointer;
 
         div#ppia_result {
           width: 60%;
@@ -389,6 +551,7 @@ div#page_personal {
           display: flex;
           justify-content: center;
         }
+
         div#ppia_back_is {
           width: 60%;
           min-width: 300px;
@@ -399,46 +562,63 @@ div#page_personal {
           display: flex;
           justify-content: center;
         }
-        &.ppiar_accept {
-          div#ppia_result::before {
-            color: chartreuse;
-            content: "正取";
-          }
-          div#ppia_back_is {
-            height: 0;
-          }
+      }
+
+      &.ppiar_accept {
+        div#ppia_result_field div#ppia_result::before {
+          color: chartreuse;
+          content: "正取";
         }
-        &.ppiar_waiting {
-          div#ppia_result::before {
-            color: yellow;
-            content: "備取";
-          }
-          div#ppia_back_is::before {
-            color: yellow;
-            content: "遞補狀態：等待中";
-          }
+
+        div#ppia_result_field div#ppia_back_is {
+          height: 0;
         }
-        &.ppiar_wait_finish {
-          div#ppia_result::before {
-            color: yellow;
-            content: "備取";
-          }
-          div#ppia_back_is::before {
-            color: chartreuse;
-            content: "遞補狀態：成功";
-          }
+      }
+
+      &.ppiar_waiting {
+        ~div#pp_admitted {
+          display: none;
         }
-        &.ppiar_not_pass {
-          div#ppia_result::before {
-            color: red;
-            content: "未錄取";
-          }
-          div#ppia_back_is {
-            height: 0;
-          }
+
+        div#ppia_result_field div#ppia_result::before {
+          color: yellow;
+          content: "備取";
+        }
+
+        div#ppia_result_field div#ppia_back_is::before {
+          color: yellow;
+          content: "遞補狀態：等待中";
+        }
+      }
+
+      &.ppiar_wait_finish {
+        div#ppia_result_field div#ppia_result::before {
+          color: yellow;
+          content: "備取";
+        }
+
+        div#ppia_result_field div#ppia_back_is::before {
+          color: chartreuse;
+          content: "遞補狀態：成功";
+        }
+      }
+
+      &.ppiar_not_pass {
+        ~div#pp_admitted {
+          display: none;
+        }
+
+        div#ppia_result_field div#ppia_result::before {
+          color: red;
+          content: "未錄取";
+        }
+
+        div#ppia_result_field div#ppia_back_is {
+          height: 0;
         }
       }
     }
+
     div#pp_admitted {
       width: 60vw;
       height: 20vh;
@@ -468,6 +648,7 @@ div#page_personal {
           display: flex;
           align-items: center;
         }
+
         div#ppad_state {
           width: 40%;
           height: 50%;
@@ -480,6 +661,7 @@ div#page_personal {
           align-items: center;
           justify-content: center;
         }
+
         div#ppad_button {
           width: 80%;
           height: 50%;
@@ -493,6 +675,7 @@ div#page_personal {
           cursor: pointer;
         }
       }
+
       div#ppad_cancel {
         @include button_finish("(逼不得已再按下)取消報名");
         width: 15vw;
@@ -525,10 +708,12 @@ div#page_personal {
               content: "未繳費";
             }
           }
+
           div#ppad_button {
             @include button_open("點此繳費");
           }
         }
+
         &.ppadp_check {
           div#ppad_state {
             &::before {
@@ -537,10 +722,12 @@ div#page_personal {
               content: "確認中";
             }
           }
+
           div#ppad_button {
             @include button_finish("確認中");
           }
         }
+
         &.ppadp_yes {
           div#ppad_state {
             &::before {
@@ -549,10 +736,12 @@ div#page_personal {
               content: "成功";
             }
           }
+
           div#ppad_button {
             @include button_close("繳費成功");
           }
         }
+
         &.ppadp_error {
           div#ppad_state {
             &::before {
@@ -561,17 +750,20 @@ div#page_personal {
               content: "請立即聯絡我們";
             }
           }
+
           div#ppad_button {
             @include button_error("發生異常");
           }
         }
       }
+
       div#ppad_agreement {
         div#ppad_text {
           &::before {
             content: "家長同意書";
           }
         }
+
         &.ppada_no {
           div#ppad_state {
             &::before {
@@ -580,10 +772,12 @@ div#page_personal {
               content: "未上傳";
             }
           }
+
           div#ppad_button {
             @include button_open("點此上傳");
           }
         }
+
         &.ppada_check {
           div#ppad_state {
             &::before {
@@ -592,10 +786,12 @@ div#page_personal {
               content: "確認中";
             }
           }
+
           div#ppad_button {
             @include button_finish("確認中");
           }
         }
+
         &.ppada_yes {
           div#ppad_state {
             &::before {
@@ -604,10 +800,12 @@ div#page_personal {
               content: "已通過";
             }
           }
+
           div#ppad_button {
             @include button_close("上傳成功");
           }
         }
+
         &.ppada_fail {
           div#ppad_state {
             &::before {
@@ -616,10 +814,12 @@ div#page_personal {
               content: "未通過";
             }
           }
+
           div#ppad_button {
             @include button_open("重新上傳");
           }
         }
+
         &.ppada_error {
           div#ppad_state {
             &::before {
@@ -628,6 +828,7 @@ div#page_personal {
               content: "請立即聯絡我們";
             }
           }
+
           div#ppad_button {
             @include button_error("發生錯誤");
           }

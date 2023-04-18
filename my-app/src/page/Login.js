@@ -35,7 +35,7 @@ export const Login = () => {
       <div className="helpFlex">
         <div className="helpContent">
           <Link to="/forget">忘記密碼?</Link>
-          <Link to="/regist">還沒註冊資工營帳號?</Link>
+          <Link to="/register">還沒註冊資工營帳號?</Link>
         </div>
       </div>
     </form>

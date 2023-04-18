@@ -1,24 +1,4 @@
-@mixin inputStyle() {
-  text-align: left;
-  padding: 1rem;
-  border: 3px solid #d9d9d9;
-  color: #ffffff;
-  line-height: 36px;
-  font-size: 1.5rem;
-  background: rgba(217, 217, 217, 0.35);
-  border-radius: 20px;
-  margin-bottom: 1rem;
-
-  &::placeholder {
-    color: #ffffff;
-  }
-
-  &:hover {
-    background: #000000;
-  }
-}
-
-@mixin arrowButtonStyle() {
+/*@mixin confirmArrow() {
   border: 3px solid #d9d9d9;
   color: #ffffff;
   background: rgba(217, 217, 217, 0.35);
@@ -30,10 +10,11 @@
   top: 10px;
 
   &:hover {
-
+    // color: #f7d967;
     background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
         #000000 52.6%,
         rgba(255, 255, 255, 0.63) 100%);
+
     cursor: pointer;
   }
 
@@ -43,25 +24,28 @@
     margin: 0px auto;
     width: 15px;
     height: 15px;
+    //border-radius: 3px;
     border-top: 5px solid #d9d9d9;
     border-left: 5px solid #d9d9d9;
     transform: rotate(135deg); // transform: rotate(180deg);
+  }
 
-    //箭頭尾部
-    &::after {
-      content: "";
-      display: block;
-      width: 5px;
-      height: 15px;
-      background-color: #d9d9d9;
-      transform: rotate(-45deg) translate(3px, 0px);
-      left: 0;
-      top: 0;
-    }
+  //箭頭尾部
+  span.arrow::after {
+    content: "";
+    //border-radius: 3px;
+    display: block;
+    width: 5px;
+    height: 15px;
+    background-color: #d9d9d9;
+    transform: rotate(-45deg) translate(3px, 0px);
+    left: 0;
+    top: 0;
   }
 }
 
-form.login {
+// main scss
+form.regist {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,32 +65,43 @@ form.login {
     flex-direction: column;
     width: 50vw;
 
-
-    input.loginMail {
-      @include inputStyle(); //引用mixin裡面的函式
+    input {
+      width: 100%;
     }
 
-    input:hover {
-      color: #f7d967;
-      background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
-          #000000 52.6%,
-          rgba(255, 255, 255, 0.63) 100%);
-      cursor: auto;
-    }
-
-    div.pwd_container {
-      display: flex;
+    div.inputEmail {
       position: relative;
 
-      input.loginPassword {
-        width: 100%;
-        @include inputStyle(); //引用mixin裡面的函式
+      input.loginMail {
+        @include inputStyle();
       }
 
       button.confirm {
-        @include arrowButtonStyle();
+        @include confirmArrow();
       }
     }
+
+    ::placeholder {
+      // letter-spacing: 1rem;
+      //font-family: "ToronoGlitchSans H3";
+      color: #ffffff;
+    }
+
+    // div.pwd_container {
+    //   display: flex;
+    //   position: relative;
+
+    //   input {
+    //     width: 100%;
+    //   }
+
+    //   input.loginPassword {
+
+    //     @include inputStyle;
+
+
+    //   }
+    // }
   }
 
   div.helpFlex {
@@ -124,22 +119,32 @@ form.login {
 
     a {
       font-size: 1rem;
-      // padding-bottom: 0.5rem;
-      // padding-right: 2rem;
+      padding-bottom: 0.5rem;
+      padding-right: 2rem;
       text-decoration: none;
       color: #ffffff;
-
-      &:hover {
-        color: $yellow-1;
-      }
     }
+  }
+
+  button:hover {
+    color: #f7d967;
+    background: radial-gradient(149.95% 387.57% at 54.19% 45.2%,
+        #000000 52.6%,
+        rgba(255, 255, 255, 0.63) 100%);
+
+    cursor: pointer;
   }
 }
 
 @media screen and (max-width:600px) {
-  form.login {
+  form.regist {
     div.inputFlex {
       width: 75vw;
     }
+
+    div.passwordFlex {
+      width: 75vw;
+    }
   }
-}
+
+}*/

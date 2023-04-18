@@ -5,7 +5,11 @@ const Home = () => {
     <div>
       <main>
         <div class="card">
-          <section class="left"></section>
+          <section class="left">
+            <div className="imgFlex">
+              <img src={require("../image/3DIsland.png")} title="Island" alt="Island" />
+            </div>
+          </section>
           <section class="right">
             <div class="words">
               <div className="h1">

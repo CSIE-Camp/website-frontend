@@ -48,7 +48,7 @@ footer {
 
   //Images
   #picture {
-    justify-content: space-around;
+    justify-content: center;
     display: flex;
     width: 100%;
   }
@@ -57,7 +57,7 @@ footer {
     position: relative;
     bottom: 0;
     display: flex;
-
+    margin: 0 20px;
   }
 
   #left {

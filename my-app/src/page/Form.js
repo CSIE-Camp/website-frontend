@@ -29,13 +29,13 @@ export const Form = () => {
     <div className="registerContain" id="formPage">
       <div className="registerContain">
         <h1>個人資料填寫</h1>
-        <hr class="bar" size="0px" width="1336px"></hr>
+        <hr class="bar" size="0px"></hr>
         <h2>下方個人資料僅申請保險用 ex.身分證字號、出生年月日等</h2>
         <br></br>
         <form method="post" action="">
           <fieldset>
             <legend>基本資料</legend>
-            <hr class="field" size="0px" width="1336px"></hr>
+            <hr class="field" size="0px"></hr>
             <br></br>
             <label for="name">姓名: 若非本國籍，請填寫「中文姓名」與「護照上的姓名」。</label>
             <br></br>
@@ -225,7 +225,7 @@ export const Form = () => {
           </fieldset>
           <br></br>
           <br></br>
-          <fieldset>
+          {/* <fieldset>
             <legend>防疫旅遊史調查</legend>
             <hr class="field" size="0px" width="1336px"></hr>
             <br></br>
@@ -356,11 +356,11 @@ export const Form = () => {
                   id="selfPicture"
                   name="selfPicture"
                   accept="image/png, image/jpeg"
-                ></input>
-                選擇檔案
+                />
               </label>
+              選擇檔案
             </div>
-            <div id="presentFile"> 目前檔案:</div>
+            {/* <div id="presentFile"> 目前檔案:</div> */}
             {/* <script>
             const file = document.getElementById("selfPicture").value;
             document.getElementById("presentFile").value =`  目前檔案: ${file}` 
@@ -387,10 +387,10 @@ export const Form = () => {
           <br></br>
           <br></br>
           <br></br>
-          <div>
-            <button class="register" type="submit">
-              立即報名
-            </button>
+          <div className="registerButton">
+            <a href="/login">
+              <button className="register">立即報名</button>
+            </a>
           </div>
           <br></br>
           <br></br>
