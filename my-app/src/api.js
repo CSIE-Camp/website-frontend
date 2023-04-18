@@ -101,18 +101,20 @@ export class API {
     console.log("api", ...args);
   }
 }
-
+// experiments: {
+//   topLevelAwait: true
+// }
 export const api = new API();
 
-try {
-  //Signup/email
+//Signup/email
+export const signupEmail = async (email) => {
   const emailRes = await api.fetch("/signup/email", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      email: "example@gmail.com",
+      email,
     }),
   });
   if (emailRes) {
@@ -127,16 +129,17 @@ try {
       console.error(json.message);
     }
   }
-
-  //Signup/password
+};
+//Signup/password
+export const signupPassword = async function (password) {
   const passwordRes = await api.fetch("/signup/password", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${password.access_token}`,
     },
     body: JSON.stringify({
-      password:
-        "9cba73c31ac15d21512382ce6b21e83f8b9fddd31196ff4f54559a8e29add1e3bc4038c86c9bee7512d0d8ea72ec9480580dc677a9f172b46366ecb5198615cc",
+      password,
     }),
   });
   if (passwordRes) {
@@ -153,17 +156,19 @@ try {
       console.error(json.message);
     }
   }
+};
 
-  //Login/login
+//Login/login
+export const login = async function (email, password) {
   const loginRes = await api.fetch("/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${password.access_token}`,
     },
     body: JSON.stringify({
-      email: "example@gmail.com",
-      password:
-        "9cba73c31ac15d21512382ce6b21e83f8b9fddd31196ff4f54559a8e29add1e3bc4038c86c9bee7512d0d8ea72ec9480580dc677a9f172b46366ecb5198615cc",
+      email,
+      password,
     }),
   });
   if (loginRes) {
@@ -188,15 +193,16 @@ try {
       console.error(json.message);
     }
   }
-
-  //Login/logout
+};
+//Login/logout
+export const logout = async function (refresh_token) {
   const logoutRes = await api.fetch("/login", {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      refresh_token: "string",
+      refresh_token,
     }),
   });
   if (logoutRes) {
@@ -209,8 +215,10 @@ try {
       console.error(json.message);
     }
   }
+};
 
-  //Login/Refresh
+//Login/Refresh
+export const loginRefresh = async function () {
   const loginRefreshRes = await api.fetch("/login/refresh", {
     method: "POST",
     headers: {
@@ -231,20 +239,22 @@ try {
       console.error(json.message);
     }
   }
+};
 
-  //login/password/reset
-  const loginPasswordResetRes = await api.fetch("/login/password/reset", {
+//login/password/reset
+export const passwordReset = async function (email) {
+  const passwordResetRes = await api.fetch("/login/password/reset", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      email: "example@gmail.com",
+      email,
     }),
   });
-  if (loginPasswordResetRes) {
-    const json = await loginPasswordResetRes.json();
-    const status = loginPasswordResetRes.status;
+  if (passwordResetRes) {
+    const json = await passwordResetRes.json();
+    const status = passwordResetRes.status;
     if (status === 200) {
       console.log(json.message);
     } else if (status === 401) {
@@ -253,21 +263,21 @@ try {
       console.error(json.message);
     }
   }
-
-  //Login/password/update
-  const loginPasswordUpdateRes = await api.fetch("/login/password/update", {
+};
+//Login/password/update
+export const passwordUpdate = async function (password) {
+  const passwordUpdateRes = await api.fetch("/login/password/update", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      password:
-        "9cba73c31ac15d21512382ce6b21e83f8b9fddd31196ff4f54559a8e29add1e3bc4038c86c9bee7512d0d8ea72ec9480580dc677a9f172b46366ecb5198615ch",
+      password,
     }),
   });
-  if (loginPasswordUpdateRes) {
-    const json = loginPasswordUpdateRes.json();
-    const status = loginPasswordUpdateRes.status;
+  if (passwordUpdateRes) {
+    const json = passwordUpdateRes.json();
+    const status = passwordUpdateRes.status;
     if (status === 200) {
       console.log(json.message);
     } else if (status === 400) {
@@ -278,8 +288,8 @@ try {
       console.error(json.message);
     }
   }
-
-  //Profile/getProfile
+};
+export const getProfile = async function () {
   const profileRes = await api.fetch("/profile", {
     method: "GET",
     headers: {
@@ -289,7 +299,7 @@ try {
   if (profileRes) {
     const json = profileRes.json();
     const status = profileRes.status;
-    if (status == 200) {
+    if (status === 200) {
       const token = json.token;
       const profile = json.Profile;
       console.log(token);
@@ -316,76 +326,76 @@ try {
       console.log(profile.Discord);
     }
   }
-
-  //Profile/updateProfile
-  const profileUpdateData = {
-    name: "<name>",
-    gender: "<gender>",
-    school: "<school>",
-    birthDate: "<birthDate>",
-    personalId: "<personalId>",
-    phoneNumber: "<phoneNumber>",
-    bloodType: "<bloodType>",
-    fbLink: "<fbLink>",
-    parentName: "<parentName>",
-    relation: "<relation>",
-    parentPhoneNumber: "<parentPhoneNumber>",
-    travelHistory: "<travelHistory>",
-    foodType: "<foodType>",
-    allergySource: "<allergySource>",
-    disease: "<disease>",
-    clothesSize: "<clothesSize>",
-    selfIntro: "<selfIntro>",
-    motivation: "<motivation>",
-    selfPicture: "<selfPicture>",
-    lanlearned: "<lanlearned>",
-    lanMaster: "<lanMaster>",
-  };
-  const profileUpdateRes = await api.fetch("/profile/update", {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify(profileUpdateData),
-  });
-  if (profileUpdateRes) {
-    const json = profileUpdateRes.json();
-    const status = profileUpdateRes.status;
-    if (status == 200) {
-      const token = json.token;
-      const profile = json.Profile;
-      console.log(token);
-      console.log(profile.Name);
-      console.log(profile.Gender);
-      console.log(profile.School);
-      console.log(profile.BirthDate);
-      console.log(profile.ID_Document);
-      console.log(profile.ID.Validated);
-      console.log(profile.PhoneNumber);
-      console.log(profile.FoodType);
-      console.log(profile.AllergySource);
-      console.log(profile.Diseases);
-      console.log(profile.ClothesSize);
-      console.log(profile.SelfIntro);
-      console.log(profile.Motivation);
-      console.log(profile.Lang_Learned);
-      console.log(profile.Lang_Mastered);
-      console.log(profile.Emergency_ContactName);
-      console.log(profile.Emergency_ContactNumber);
-      console.log(profile.Emergency_ContactRelationship);
-      console.log(profile.Facebook);
-      console.log(profile.Github);
-      console.log(profile.Discord);
-      console.log(json.InvalidData);
-      console.log(json.MissingData);
-    } else if (status === 400) {
-      console.error(json.message);
-    } else if (status === 403) {
-      console.error(json.message);
-    }
-  }
-} catch (error) {
-  console.log(error);
-}
+};
+// //Profile/updateProfile
+// const profileUpdateData = {
+//   name: "<name>",
+//   gender: "<gender>",
+//   school: "<school>",
+//   birthDate: "<birthDate>",
+//   personalId: "<personalId>",
+//   phoneNumber: "<phoneNumber>",
+//   bloodType: "<bloodType>",
+//   fbLink: "<fbLink>",
+//   parentName: "<parentName>",
+//   relation: "<relation>",
+//   parentPhoneNumber: "<parentPhoneNumber>",
+//   travelHistory: "<travelHistory>",
+//   foodType: "<foodType>",
+//   allergySource: "<allergySource>",
+//   disease: "<disease>",
+//   clothesSize: "<clothesSize>",
+//   selfIntro: "<selfIntro>",
+//   motivation: "<motivation>",
+//   selfPicture: "<selfPicture>",
+//   lanlearned: "<lanlearned>",
+//   lanMaster: "<lanMaster>",
+// };
+// const profileUpdateRes = await api.fetch("/profile/update", {
+//   method: "POST",
+//   headers: {
+//     "content-type": "application/json",
+//   },
+//   body: JSON.stringify(profileUpdateData),
+// });
+// if (profileUpdateRes) {
+//   const json = profileUpdateRes.json();
+//   const status = profileUpdateRes.status;
+//   if (status === 200) {
+//     const token = json.token;
+//     const profile = json.Profile;
+//     console.log(token);
+//     console.log(profile.Name);
+//     console.log(profile.Gender);
+//     console.log(profile.School);
+//     console.log(profile.BirthDate);
+//     console.log(profile.ID_Document);
+//     console.log(profile.ID.Validated);
+//     console.log(profile.PhoneNumber);
+//     console.log(profile.FoodType);
+//     console.log(profile.AllergySource);
+//     console.log(profile.Diseases);
+//     console.log(profile.ClothesSize);
+//     console.log(profile.SelfIntro);
+//     console.log(profile.Motivation);
+//     console.log(profile.Lang_Learned);
+//     console.log(profile.Lang_Mastered);
+//     console.log(profile.Emergency_ContactName);
+//     console.log(profile.Emergency_ContactNumber);
+//     console.log(profile.Emergency_ContactRelationship);
+//     console.log(profile.Facebook);
+//     console.log(profile.Github);
+//     console.log(profile.Discord);
+//     console.log(json.InvalidData);
+//     console.log(json.MissingData);
+//   } else if (status === 400) {
+//     console.error(json.message);
+//   } else if (status === 403) {
+//     console.error(json.message);
+//   }
+// }
+// catch(error){
+//   console.error(error);
+// }
 
 // Reference: https://camp-backbone.csie.cool/api/docs/#/Signup/post_signup_email
