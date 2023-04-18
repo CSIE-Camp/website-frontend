@@ -361,12 +361,12 @@ export const Form = () => {
               選擇檔案
             </div>
             {/* <div id="presentFile"> 目前檔案:</div> */}
-            {/* <script>
+          {/* <script>
             const file = document.getElementById("selfPicture").value;
             document.getElementById("presentFile").value =`  目前檔案: ${file}` 
           </script> */}
-            <div id="pictureLoad"></div>
-          </fieldset>
+          {/* <div id="pictureLoad"></div>
+          </fieldset> */}
           <br></br>
           <br></br>
           <fieldset>
