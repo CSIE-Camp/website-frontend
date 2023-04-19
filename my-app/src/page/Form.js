@@ -225,7 +225,7 @@ export const Form = () => {
           </fieldset>
           <br></br>
           <br></br>
-          {/* <fieldset>
+          <fieldset>
             <legend>防疫旅遊史調查</legend>
             <hr class="field" size="0px" width="1336px"></hr>
             <br></br>
@@ -360,13 +360,10 @@ export const Form = () => {
               </label>
               選擇檔案
             </div>
-            {/* <div id="presentFile"> 目前檔案:</div> */}
-          {/* <script>
-            const file = document.getElementById("selfPicture").value;
-            document.getElementById("presentFile").value =`  目前檔案: ${file}` 
-          </script> */}
-          {/* <div id="pictureLoad"></div>
-          </fieldset> */}
+            <div id="presentFile"> 目前檔案:</div>
+
+            <div id="pictureLoad"></div>
+          </fieldset>
           <br></br>
           <br></br>
           <fieldset>
