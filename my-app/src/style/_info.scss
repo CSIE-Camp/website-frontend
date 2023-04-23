@@ -1,7 +1,10 @@
 div.infoFlex {
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width:650px) {}
 
   div.infoContent {
     width: 100%;
@@ -25,14 +28,16 @@ div.infoFlex {
       size: "1px";
     }
 
-    p.subTitle {
-      padding: 1.5rem;
-      font-size: 1.5rem;
+    div.subTitle {
+      width: 80vw;
+      margin: 1rem 0;
+      font-size: 1rem;
       font-weight: bold;
+      text-indent: 2rem;
     }
 
     table.mainInfo {
-      font-size: 1.25rem;
+      font-size: 1rem;
       margin: 0 1.5rem;
 
       div.mainContent {
@@ -58,7 +63,7 @@ div.infoFlex {
 
     table.important {
       width: 80%;
-      font-size: 1.25rem;
+      font-size: 1rem;
       padding: 0.5rem;
 
       tr.contextImport {

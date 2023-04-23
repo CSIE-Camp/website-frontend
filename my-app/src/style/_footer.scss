@@ -17,7 +17,7 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 25vw;
+      width: 350px;
       top: 2rem;
 
       h1 {
@@ -32,16 +32,18 @@ footer {
         border: 1px #000 dashed;
       }
 
-      #email {
-        font-size: 1.25rem;
+      // 總籌 信箱 連絡電話
+      p {
+        font-family: "Noto Sans TC", monospace;
+        font-size: 1rem;
         z-index: 1;
+        font-weight: 800;
+
+        // span {
+        //   font-size: 800;
+        // }
       }
 
-      #tel {
-        font-size: 1.25rem;
-        z-index: 1;
-
-      }
     }
 
   }
@@ -51,6 +53,7 @@ footer {
     justify-content: center;
     display: flex;
     width: 100%;
+    user-select: none;
   }
 
   .island {
@@ -95,39 +98,41 @@ footer {
   }
 
   p {
-    padding: 5px;
-    text-align: center;
-    font-family: "Inter";
-    font-style: normal;
+
     font-weight: 400;
     font-size: 1.5rem;
   }
 
   p.Copyright {
+    margin: 10px;
+    text-align: center;
+    font-family: "Noto Sans TC", monospace;
     font-size: 1rem;
     line-height: 1rem;
   }
 
   div.icon {
+    margin: 10px;
     display: flex;
     justify-content: center;
     position: relative;
+    user-select: none;
 
     a {
       img {
         width: 3rem;
         padding: 0 0.5rem;
       }
-    }
-  }
-}
 
-@media screen and (max-width:650px) {
-  footer {
-    div#footerFlex {
-      div#text {
-        width: 50vw;
+      &:hover {
+        transform: scale(1.1);
+
+        translate: all 0.4s;
       }
     }
   }
 }
+
+// @media screen and (max-width:650px) {
+//   footer {}
+// }

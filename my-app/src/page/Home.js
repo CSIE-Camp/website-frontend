@@ -1,5 +1,5 @@
 import React from "react";
-
+import video from "../video/3Disland.mp4";
 const Home = () => {
   return (
     <div>
@@ -7,7 +7,8 @@ const Home = () => {
         <div class="card">
           <section class="left">
             <div className="imgFlex">
-              <img src={require("../image/3DIsland.png")} title="Island" alt="Island" />
+              {/* <img src={require("../image/3DIsland.png")} title="Island" alt="Island" /> */}
+              <video src={video} controls autoPlay loop muted></video>
             </div>
           </section>
           <section class="right">
