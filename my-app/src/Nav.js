@@ -65,9 +65,7 @@ const Nav = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/login" onClick={handleClickA}>
-                  登入/註冊
-                </Link>
+                <Link to="https://camp-app.csie.cool/">立即報名</Link>
               </li>
             </ul>
           </div>

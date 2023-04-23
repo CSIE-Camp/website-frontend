@@ -29,22 +29,43 @@ main {
 
   div.card {
     display: flex;
+    justify-content: center;
 
     section.left {
       margin: 1rem 1rem 5vw 1rem;
-      width: 55vw;
+      width: 500px;
       //height: 50vw;
       display: flex;
       flex-direction: column;
+
+
       position: relative;
 
       div.imgFlex {
         display: flex;
-        justify-content: center;
-        width: 100%;
+        width: 450px;
+
+        // img {
+        //   width: 100%;
+        //   mix-blend-mode: normal;
+        // }
 
         video {
+          user-select: none;
+          pointer-events: none; // prevent pulse or play 
           width: 100%;
+        }
+
+        video#v1 {
+          mix-blend-mode: lighten; // 透明背景
+
+          &:hover {
+            mix-blend-mode: color-dodge;
+          }
+        }
+
+        video#v2 {
+          mix-blend-mode: screen; // 透明背景
         }
       }
     }
@@ -55,7 +76,7 @@ main {
       flex-direction: column;
       align-items: center;
       flex-wrap: wrap;
-      width: 40%;
+      width: 400px;
 
       div.words {
         align-items: flex-start;
@@ -142,14 +163,8 @@ main {
         //width: fit-content;
 
         div.imgFlex {
-
+          //position: absolute;
           width: fit-content;
-          //height: 100%;
-
-          img {
-            //  width: fit-content;
-            //height: 60vh;
-          }
         }
       }
 
@@ -157,7 +172,16 @@ main {
       section.right {
         width: 90vw;
         padding: 0;
-        order: 1;
+        order: 3;
+        transform: scale(0.9);
+        // transform: scale(1);
+        // transition: all 1s ease-out;
+
+        // &:hover {
+        //   animation: forwards;
+        //   transform: scale(1.1);
+        //   transition: all 1s ease-in;
+        // }
 
         div.words {
           div.h1 {

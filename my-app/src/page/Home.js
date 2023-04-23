@@ -1,5 +1,6 @@
 import React from "react";
 import video from "../video/3Disland.mp4";
+// import video2 from "../video/3Disland2.webm";
 const Home = () => {
   return (
     <div>
@@ -8,7 +9,9 @@ const Home = () => {
           <section class="left">
             <div className="imgFlex">
               {/* <img src={require("../image/3DIsland.png")} title="Island" alt="Island" /> */}
-              <video src={video} controls autoPlay loop muted></video>
+
+              <video id="v1" src={video} controls autoPlay loop muted></video>
+              {/* <video id="v2" src={video2} controls autoPlay loop muted></video> */}
             </div>
           </section>
           <section class="right">
@@ -32,7 +35,7 @@ const Home = () => {
               </div>
             </div>
             <div className="registerButton">
-              <a href="/login">
+              <a href="https://camp-app.csie.cool/login">
                 <button className="register">立即報名</button>
               </a>
             </div>
