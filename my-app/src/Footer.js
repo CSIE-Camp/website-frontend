@@ -45,8 +45,8 @@ const Footer = () => {
             <a style={{ color: "black" }} href="tel:0978-935-279">
               0978-935-279
             </a>
-            (張建堯 總籌)
           </p>
+          <p>(張建堯 總籌)</p>
         </div>
       </div>
       <div class="icon">
