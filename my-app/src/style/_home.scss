@@ -54,14 +54,12 @@ main {
           user-select: none;
           pointer-events: none; // prevent pulse or play 
           width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
 
         video#v1 {
           mix-blend-mode: lighten; // 透明背景
-
-          &:hover {
-            mix-blend-mode: color-dodge;
-          }
         }
 
         video#v2 {
