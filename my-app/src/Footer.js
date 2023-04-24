@@ -34,11 +34,19 @@ const Footer = () => {
         <div id="text">
           <h1>聯絡方式</h1>
           <hr id="bar" width="270px" />
-          <p id="name">
-            <span>總籌</span>：張建堯
+          <p id="email">
+            信箱：
+            <a style={{ color: "black" }} href="mailto:camp@csie.cool">
+              camp@csie.cool
+            </a>
           </p>
-          <p id="email">信箱：ntnucsiecamp2023@gmail.com</p>
-          <p id="tel">連絡電話：0978-935-279</p>
+          <p id="tel">
+            連絡電話：
+            <a style={{ color: "black" }} href="tel:0978-935-279">
+              0978-935-279
+            </a>
+            (張建堯 總籌)
+          </p>
         </div>
       </div>
       <div class="icon">

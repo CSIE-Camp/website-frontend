@@ -1,10 +1,10 @@
 div.infoFlex {
-
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width:650px) {}
+  @media screen and (max-width: 650px) {
+  }
 
   div.infoContent {
     width: 100%;
@@ -15,7 +15,6 @@ div.infoFlex {
 
     color: #ffffff;
     font-family: "Noto Sans TC", monospace;
-    text-align: center;
 
     h1.title {
       padding: 1rem;
@@ -26,38 +25,24 @@ div.infoFlex {
     hr.bar {
       padding: 0px 0px 0px 0px;
       size: "1px";
+      margin: 0.5rem 0;
     }
 
-    div.subTitle {
-      width: 80vw;
-      margin: 1rem 0;
-      font-size: 1rem;
-      font-weight: bold;
-      text-indent: 2rem;
-    }
-
-    table.mainInfo {
+    .mainInfo {
       font-size: 1rem;
       margin: 0 1.5rem;
+      max-width: 65ch;
+      width: 100%;
+      position: relative;
+      line-height: 1.5rem;
 
-      div.mainContent {
-        padding-left: 1.5rem;
-
-        ol {
-          //list-style-type: upper-roman;
-
-          li {
-            text-align: left;
-          }
-        }
+      ol,
+      ul {
+        padding-left: 2rem;
       }
 
-      tr.context {
-        text-align: left;
-      }
-
-      div.officialLink {
-        margin-top: 1rem;
+      p {
+        margin-bottom: 1rem;
       }
     }
 
@@ -80,34 +65,7 @@ div.infoFlex {
 
       a {
         @include registerButton();
-        // button {
-        //   text-align: center;
-
-        //   padding-left: 0.75rem;
-        //   font-family: "ToronoGlitchSans H2";
-        //   text-decoration: none;
-        //   color: #ffffff;
-        //   line-height: 72px;
-        //   letter-spacing: 1rem;
-        //   font-size: 1.5rem;
-        //   background: rgba(217, 217, 217, 0.35);
-        //   border-radius: 30px;
-        //   border: 5px solid #d9d9d9;
-
-        //   &:hover {
-        //     color: #f7d967;
-        //     background: radial-gradient(
-        //       149.95% 387.57% at 54.19% 45.2%,
-        //       #000000 52.6%,
-        //       rgba(255, 255, 255, 0.63) 100%
-        //     );
-
-        //     cursor: pointer;
-        //   }
-        // }
       }
     }
   }
-
-
 }
