@@ -14,7 +14,7 @@ export const Info = () => {
           Google Docs 版本
         </a>
         <p>修訂日期：2023 年 4 月 24 日</p>
-        <hr className="bar" width="80%"></hr>
+        <hr className="bar"></hr>
         <div className="mainInfo">
           <p>
             同學、家長您好：

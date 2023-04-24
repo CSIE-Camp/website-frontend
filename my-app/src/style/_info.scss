@@ -3,11 +3,11 @@ div.infoFlex {
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width: 650px) {
-  }
+
+
 
   div.infoContent {
-    width: 100%;
+    width: 65vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,6 +23,8 @@ div.infoFlex {
     }
 
     hr.bar {
+      width: 65%;
+      min-width: 580px;
       padding: 0px 0px 0px 0px;
       size: "1px";
       margin: 0.5rem 0;
@@ -65,6 +67,18 @@ div.infoFlex {
 
       a {
         @include registerButton();
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  div.infoFlex {
+    div.infoContent {
+      width: 90vw;
+
+      hr.bar {
+        min-width: 450px;
       }
     }
   }
