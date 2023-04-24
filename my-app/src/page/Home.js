@@ -10,7 +10,7 @@ const Home = () => {
             <div className="imgFlex">
               {/* <img src={require("../image/3DIsland.png")} title="Island" alt="Island" /> */}
 
-              <video id="v1" src={video} controls autoPlay loop muted></video>
+              <video id="v1" src={video} playsinline preload controls autoPlay loop muted></video>
               {/* <video id="v2" src={video2} controls autoPlay loop muted></video> */}
             </div>
           </section>
