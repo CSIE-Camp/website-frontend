@@ -5,29 +5,34 @@ const Footer = () => {
     <footer>
       <div id="footerFlex">
         <div id="picture">
-          <img class="island" id="left" src={require("./image/island left.png")} alt="island"></img>
+          <img
+            class="island"
+            id="left"
+            src={require("./image/island/island_left.png")}
+            alt="island"
+          ></img>
           <img
             className="island"
             id="left2"
-            src={require("./image/island left 2.png")}
+            src={require("./image/island/island_left_2.png")}
             alt="island"
           ></img>
           <img
             className="island"
             id="middle"
-            src={require("./image/island middle.png")}
+            src={require("./image/island/island_middle.png")}
             alt="isl"
           ></img>
           <img
             className="island"
             id="right2"
-            src={require("./image/island right 2.png")}
+            src={require("./image/island/island_right_2.png")}
             alt="island"
           ></img>
           <img
             className="island"
             id="right"
-            src={require("./image/island right.png")}
+            src={require("./image/island/island_right.png")}
             alt="island"
           ></img>
         </div>
