@@ -55,13 +55,13 @@ const Footer = () => {
         </div>
       </div>
       <div class="icon">
-        <a href="https://www.facebook.com/ntnucsiecamp" target="_blank">
+        <a href="https://www.facebook.com/ntnucsiecamp" target="_blank" rel="noreferrer">
           <img src={require("./image/fb.png")} title="Facebook" alt="fb" />
         </a>
-        <a href="https://www.instagram.com/ntnucsiecamp2023/" target="_blank">
+        <a href="https://www.instagram.com/ntnucsiecamp2023/" target="_blank" rel="noreferrer">
           <img src={require("./image/ig.png")} title="IG" alt="ig" />
         </a>
-        <a href="http://m.me/ntnucsiecamp">
+        <a href="http://m.me/ntnucsiecamp" target="_blank" rel="noreferrer">
           <img src={require("./image/messenger.png")} title="Messenger" alt="messenger" />
         </a>
       </div>
