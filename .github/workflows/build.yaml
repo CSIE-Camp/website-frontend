@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build
-        run: cd my-app && npm i && npm run build && mkdir -p deploy/2023 && cp -r build/* deploy/2023/ && cp public/_redirects deploy/ && cp public/_redirects deploy/2023/ && echo "=== deploy root ===" && ls -la deploy && echo "=== deploy/2023 ===" && ls -la deploy/2023 && echo "=== deploy/_redirects ===" && cat deploy/_redirects && echo "=== deploy/2023/_redirects ===" && cat deploy/2023/_redirects
+        run: cd my-app && npm i && npm run build && mkdir -p deploy/2023 && cp -r build/* deploy/2023/ && cp public/_redirects deploy/ && cp public/_redirects deploy/2023/ && rm -f deploy/_routes.json deploy/2023/_routes.json && echo "=== deploy root ===" && ls -la deploy && echo "=== deploy/2023 ===" && ls -la deploy/2023 && echo "=== deploy/_redirects ===" && cat deploy/_redirects && echo "=== deploy/2023/_redirects ===" && cat deploy/2023/_redirects
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
