@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "include": ["/2023/*"],
+  "exclude": ["/2023/static/*"]
+}
