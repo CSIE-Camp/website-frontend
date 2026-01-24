@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/2023/!(static|camp-icon-rounded.png|manifest.json|robots.txt)/**",
+      "destination": "/2023/index.html"
+    },
+    {
+      "source": "/2023/!(static|camp-icon-rounded.png|manifest.json|robots.txt)",
+      "destination": "/2023/index.html"
+    }
+  ]
+}

@@ -46,7 +46,8 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
-    "sass": "^1.58.1"
+    "sass": "^1.58.1",
+    "serve": "^14.2.5"
   },
   "lint-staged": {
     "*.{js,jsx,json,yaml,yml,html,scss,css}": [
