@@ -19,8 +19,8 @@ export const Info = () => {
           <p>
             同學、家長您好：
             <br />
-            很高興您有意願報名參加國立師範大學 2023 暑期資工營 ｢Challenger Surviving Islands:
-            E級玩家」。以下我們將向各位說明本營隊的相關資訊：
+            很高興您有意願報名參加國立師範大學 2023 暑期資工營 ｢Challenger Surviving Islands: E
+            級玩家」。以下我們將向各位說明本營隊的相關資訊：
           </p>
           <p>
             <ol>
@@ -118,7 +118,8 @@ export const Info = () => {
                 ntnucsiecamp2023@gmail.com)
               </li>
               <li>
-                官方網站：<a href="https://camp.csie.cool/">https://camp.csie.cool/</a>
+                官方網站：
+                <a href="https://camp.ntnucsie.info/2023">https://camp.ntnucsie.info/2023</a>
               </li>
               <li>
                 官方粉專：

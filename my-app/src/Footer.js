@@ -55,10 +55,10 @@ const Footer = () => {
         </div>
       </div>
       <div class="icon">
-        <a href="https://www.facebook.com/ntnucsiecamp">
+        <a href="https://www.facebook.com/ntnucsiecamp" target="_blank">
           <img src={require("./image/fb.png")} title="Facebook" alt="fb" />
         </a>
-        <a href="https://www.instagram.com/ntnucsiecamp2023/">
+        <a href="https://www.instagram.com/ntnucsiecamp2023/" target="_blank">
           <img src={require("./image/ig.png")} title="IG" alt="ig" />
         </a>
         <a href="http://m.me/ntnucsiecamp">
